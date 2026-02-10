@@ -10,7 +10,7 @@ from typing import Any, Dict, List, Optional, Tuple, Callable, Union
 import logging
 from enum import Enum
 
-from dallas_incidents.models import IncidentResponse, OutputFormat
+from .models import IncidentResponse, OutputFormat
 
 logger = logging.getLogger(__name__)
 

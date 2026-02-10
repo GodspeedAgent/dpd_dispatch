@@ -13,7 +13,7 @@ import logging
 
 from sodapy import Socrata
 
-from dallas_incidents.models import (
+from .models import (
     ClientConfig,
     IncidentQuery,
     IncidentResponse,
