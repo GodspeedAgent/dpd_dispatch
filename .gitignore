@@ -64,6 +64,13 @@ ENV/
 *.json
 *.geojson
 *.html
+
+# GitHub Pages site artifacts (we intentionally commit these)
+!site/**/*.json
+!site/**/*.geojson
+!site/**/*.html
+
+# Keep example HTML committed
 !examples/*.html
 
 # Logs
