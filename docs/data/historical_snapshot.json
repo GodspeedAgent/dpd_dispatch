@@ -1,12 +1,17 @@
 {
   "summary": {
-    "generated_at": "2026-02-11T00:54:11+00:00",
+    "generated_at": "2026-02-11T00:58:35+00:00",
     "dataset": "police_incidents",
     "dataset_id": "qv6i-rri7",
-    "phrase": "BMV",
+    "title": "BMV (keyword)",
     "days": 30,
     "beat": null,
     "total_incidents": 756,
+    "query": {
+      "offense_keyword": "BMV",
+      "offense_category": null,
+      "extra_where": null
+    },
     "note": "Historical dataset updates daily; this snapshot is built on-demand."
   },
   "top_beats": [
@@ -250,17 +255,6 @@
     },
     {
       "date1": "2026-02-09 00:00:00.0000000",
-      "incidentnum": "018954-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "219",
-      "division": "NORTHEAST",
-      "incident_address": "6465 E MOCKINGBIRD LN"
-    },
-    {
-      "date1": "2026-02-09 00:00:00.0000000",
       "incidentnum": "018582-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -269,6 +263,17 @@
       "beat": "253",
       "division": "NORTHEAST",
       "incident_address": "9323 AMBERTON PKWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018954-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "219",
+      "division": "NORTHEAST",
+      "incident_address": "6465 E MOCKINGBIRD LN"
     },
     {
       "date1": "2026-02-08 00:00:00.0000000",
@@ -280,83 +285,6 @@
       "beat": "154",
       "division": "CENTRAL",
       "incident_address": "2439 SWISS AVE"
-    },
-    {
-      "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018713-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "241",
-      "division": "NORTHEAST",
-      "incident_address": "11100 N CENTRAL EXPY"
-    },
-    {
-      "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018865-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "123",
-      "division": "CENTRAL",
-      "incident_address": "2217 IVAN ST"
-    },
-    {
-      "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "802685-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "517",
-      "division": "NORTHWEST",
-      "incident_address": "1313 SLOCUM ST"
-    },
-    {
-      "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018703-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "544",
-      "division": "NORTHWEST",
-      "incident_address": "4432 BOWSER AVE"
-    },
-    {
-      "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018673-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "154",
-      "division": "CENTRAL",
-      "incident_address": "2449 SWISS AVE"
-    },
-    {
-      "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018787-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "237",
-      "division": "NORTHEAST",
-      "incident_address": "7229 FERGUSON RD"
-    },
-    {
-      "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018545-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "755",
-      "division": "SOUTH CENTRAL",
-      "incident_address": "7425 BONNIE VIEW RD"
     },
     {
       "date1": "2026-02-08 00:00:00.0000000",
@@ -404,17 +332,6 @@
     },
     {
       "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018457-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "534",
-      "division": "NORTHWEST",
-      "incident_address": "10807 HARRY HINES BLVD"
-    },
-    {
-      "date1": "2026-02-08 00:00:00.0000000",
       "incidentnum": "802720-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -437,36 +354,69 @@
     },
     {
       "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018593-2026",
+      "incidentnum": "018787-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "151",
-      "division": "CENTRAL",
-      "incident_address": "1707 BOTHAM JEAN BLVD"
+      "beat": "237",
+      "division": "NORTHEAST",
+      "incident_address": "7229 FERGUSON RD"
     },
     {
       "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018672-2026",
+      "incidentnum": "018673-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "146",
+      "beat": "154",
       "division": "CENTRAL",
-      "incident_address": "5050 CAPITOL AVE"
+      "incident_address": "2449 SWISS AVE"
     },
     {
       "date1": "2026-02-08 00:00:00.0000000",
-      "incidentnum": "018672-2026",
+      "incidentnum": "018703-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "146",
+      "beat": "544",
+      "division": "NORTHWEST",
+      "incident_address": "4432 BOWSER AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "802685-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "517",
+      "division": "NORTHWEST",
+      "incident_address": "1313 SLOCUM ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018865-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "123",
       "division": "CENTRAL",
-      "incident_address": "5050 CAPITOL AVE"
+      "incident_address": "2217 IVAN ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018713-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "241",
+      "division": "NORTHEAST",
+      "incident_address": "11100 N CENTRAL EXPY"
     },
     {
       "date1": "2026-02-08 00:00:00.0000000",
@@ -478,6 +428,72 @@
       "beat": "151",
       "division": "CENTRAL",
       "incident_address": "800 ALEXANDER AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018672-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "146",
+      "division": "CENTRAL",
+      "incident_address": "5050 CAPITOL AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018672-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "146",
+      "division": "CENTRAL",
+      "incident_address": "5050 CAPITOL AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018593-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "151",
+      "division": "CENTRAL",
+      "incident_address": "1707 BOTHAM JEAN BLVD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018545-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "755",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "7425 BONNIE VIEW RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018457-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "534",
+      "division": "NORTHWEST",
+      "incident_address": "10807 HARRY HINES BLVD"
+    },
+    {
+      "date1": "2026-02-07 00:00:00.0000000",
+      "incidentnum": "802716-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "142",
+      "division": "CENTRAL",
+      "incident_address": "4123 ABRAMS RD"
     },
     {
       "date1": "2026-02-07 00:00:00.0000000",
@@ -558,6 +574,17 @@
     },
     {
       "date1": "2026-02-07 00:00:00.0000000",
+      "incidentnum": "017691-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "224",
+      "division": "NORTHEAST",
+      "incident_address": "1847 WILLIAMS WAY"
+    },
+    {
+      "date1": "2026-02-07 00:00:00.0000000",
       "incidentnum": "017899-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -588,6 +615,17 @@
       "beat": "754",
       "division": "SOUTH CENTRAL",
       "incident_address": "3434 SILVERHILL DR"
+    },
+    {
+      "date1": "2026-02-07 00:00:00.0000000",
+      "incidentnum": "802719-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "554",
+      "division": "NORTHWEST",
+      "incident_address": "10808 PINOCCHIO DR"
     },
     {
       "date1": "2026-02-07 00:00:00.0000000",
@@ -643,39 +681,6 @@
       "beat": "131",
       "division": "CENTRAL",
       "incident_address": "1855 PAYNE ST"
-    },
-    {
-      "date1": "2026-02-07 00:00:00.0000000",
-      "incidentnum": "802716-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "142",
-      "division": "CENTRAL",
-      "incident_address": "4123 ABRAMS RD"
-    },
-    {
-      "date1": "2026-02-07 00:00:00.0000000",
-      "incidentnum": "802719-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "554",
-      "division": "NORTHWEST",
-      "incident_address": "10808 PINOCCHIO DR"
-    },
-    {
-      "date1": "2026-02-07 00:00:00.0000000",
-      "incidentnum": "017691-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "224",
-      "division": "NORTHEAST",
-      "incident_address": "1847 WILLIAMS WAY"
     },
     {
       "date1": "2026-02-06 00:00:00.0000000",
@@ -745,17 +750,6 @@
     },
     {
       "date1": "2026-02-06 00:00:00.0000000",
-      "incidentnum": "802598-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "523",
-      "division": "NORTHWEST",
-      "incident_address": "3650 CEDARPLAZA LN"
-    },
-    {
-      "date1": "2026-02-06 00:00:00.0000000",
       "incidentnum": "017621-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -778,17 +772,6 @@
     },
     {
       "date1": "2026-02-06 00:00:00.0000000",
-      "incidentnum": "802667-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "541",
-      "division": "NORTHWEST",
-      "incident_address": "4859 CEDAR SPRINGS RD"
-    },
-    {
-      "date1": "2026-02-06 00:00:00.0000000",
       "incidentnum": "802670-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -797,6 +780,28 @@
       "beat": "237",
       "division": "NORTHEAST",
       "incident_address": "8440 SWEETWOOD DR"
+    },
+    {
+      "date1": "2026-02-06 00:00:00.0000000",
+      "incidentnum": "802598-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "523",
+      "division": "NORTHWEST",
+      "incident_address": "3650 CEDARPLAZA LN"
+    },
+    {
+      "date1": "2026-02-06 00:00:00.0000000",
+      "incidentnum": "018937-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "141",
+      "division": "CENTRAL",
+      "incident_address": "5645 SMU BLVD"
     },
     {
       "date1": "2026-02-06 00:00:00.0000000",
@@ -811,14 +816,25 @@
     },
     {
       "date1": "2026-02-06 00:00:00.0000000",
-      "incidentnum": "018937-2026",
+      "incidentnum": "802723-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "141",
-      "division": "CENTRAL",
-      "incident_address": "5645 SMU BLVD"
+      "beat": "252",
+      "division": "NORTHEAST",
+      "incident_address": "9050 MARKVILLE DR"
+    },
+    {
+      "date1": "2026-02-06 00:00:00.0000000",
+      "incidentnum": "802667-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "541",
+      "division": "NORTHWEST",
+      "incident_address": "4859 CEDAR SPRINGS RD"
     },
     {
       "date1": "2026-02-06 00:00:00.0000000",
@@ -888,17 +904,6 @@
     },
     {
       "date1": "2026-02-06 00:00:00.0000000",
-      "incidentnum": "802723-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "252",
-      "division": "NORTHEAST",
-      "incident_address": "9050 MARKVILLE DR"
-    },
-    {
-      "date1": "2026-02-06 00:00:00.0000000",
       "incidentnum": "017350-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -921,6 +926,17 @@
     },
     {
       "date1": "2026-02-05 00:00:00.0000000",
+      "incidentnum": "017137-2026",
+      "offincident": "BMV - PRELIMINARY INVESTIGATION",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "524",
+      "division": "NORTHWEST",
+      "incident_address": "8111 PRESTON RD"
+    },
+    {
+      "date1": "2026-02-05 00:00:00.0000000",
       "incidentnum": "017784-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -932,17 +948,6 @@
     },
     {
       "date1": "2026-02-05 00:00:00.0000000",
-      "incidentnum": "802592-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "624",
-      "division": "NORTH CENTRAL",
-      "incident_address": "6934 MIDDLE COVE DR"
-    },
-    {
-      "date1": "2026-02-05 00:00:00.0000000",
       "incidentnum": "016730-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -951,39 +956,6 @@
       "beat": "252",
       "division": "NORTHEAST",
       "incident_address": "9030 MARKVILLE DR"
-    },
-    {
-      "date1": "2026-02-05 00:00:00.0000000",
-      "incidentnum": "018325-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "126",
-      "division": "CENTRAL",
-      "incident_address": "3039 NOWITZKI WAY"
-    },
-    {
-      "date1": "2026-02-05 00:00:00.0000000",
-      "incidentnum": "017227-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "115",
-      "division": "CENTRAL",
-      "incident_address": "1661 S FITZHUGH AVE"
-    },
-    {
-      "date1": "2026-02-05 00:00:00.0000000",
-      "incidentnum": "017137-2026",
-      "offincident": "BMV - PRELIMINARY INVESTIGATION",
-      "ucr_offense": null,
-      "nibrs_code": "999",
-      "nibrs_crime": "MISCELLANEOUS",
-      "beat": "524",
-      "division": "NORTHWEST",
-      "incident_address": "8111 PRESTON RD"
     },
     {
       "date1": "2026-02-05 00:00:00.0000000",
@@ -1020,25 +992,25 @@
     },
     {
       "date1": "2026-02-05 00:00:00.0000000",
-      "incidentnum": "802589-2026",
+      "incidentnum": "018325-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "253",
-      "division": "NORTHEAST",
-      "incident_address": "9259 L B J FWY"
+      "beat": "126",
+      "division": "CENTRAL",
+      "incident_address": "3039 NOWITZKI WAY"
     },
     {
       "date1": "2026-02-05 00:00:00.0000000",
-      "incidentnum": "017268-2026",
+      "incidentnum": "017227-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "755",
-      "division": "SOUTH CENTRAL",
-      "incident_address": "34353 L B J FWY WB"
+      "beat": "115",
+      "division": "CENTRAL",
+      "incident_address": "1661 S FITZHUGH AVE"
     },
     {
       "date1": "2026-02-05 00:00:00.0000000",
@@ -1053,14 +1025,14 @@
     },
     {
       "date1": "2026-02-05 00:00:00.0000000",
-      "incidentnum": "016944-2026",
+      "incidentnum": "802592-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "525",
-      "division": "NORTHWEST",
-      "incident_address": "4049 CLOVER LN"
+      "beat": "624",
+      "division": "NORTH CENTRAL",
+      "incident_address": "6934 MIDDLE COVE DR"
     },
     {
       "date1": "2026-02-05 00:00:00.0000000",
@@ -1086,6 +1058,39 @@
     },
     {
       "date1": "2026-02-05 00:00:00.0000000",
+      "incidentnum": "802589-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "253",
+      "division": "NORTHEAST",
+      "incident_address": "9259 L B J FWY"
+    },
+    {
+      "date1": "2026-02-05 00:00:00.0000000",
+      "incidentnum": "017268-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "755",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "34353 L B J FWY WB"
+    },
+    {
+      "date1": "2026-02-05 00:00:00.0000000",
+      "incidentnum": "016944-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "525",
+      "division": "NORTHWEST",
+      "incident_address": "4049 CLOVER LN"
+    },
+    {
+      "date1": "2026-02-05 00:00:00.0000000",
       "incidentnum": "016725-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1094,61 +1099,6 @@
       "beat": "756",
       "division": "SOUTH CENTRAL",
       "incident_address": "7751 BONNIE VIEW RD"
-    },
-    {
-      "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "802505-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "513",
-      "division": "NORTHWEST",
-      "incident_address": "2234 BOMBAY AVE"
-    },
-    {
-      "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "018091-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "126",
-      "division": "CENTRAL",
-      "incident_address": "2320 N HOUSTON ST"
-    },
-    {
-      "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "016735-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "252",
-      "division": "NORTHEAST",
-      "incident_address": "9010 MARKVILLE DR"
-    },
-    {
-      "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "802503-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "513",
-      "division": "NORTHWEST",
-      "incident_address": "7335 WILDBIRD LN"
-    },
-    {
-      "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "017755-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "743",
-      "division": "SOUTH CENTRAL",
-      "incident_address": "600 HIGHCREST DR"
     },
     {
       "date1": "2026-02-04 00:00:00.0000000",
@@ -1163,6 +1113,50 @@
     },
     {
       "date1": "2026-02-04 00:00:00.0000000",
+      "incidentnum": "017755-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "743",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "600 HIGHCREST DR"
+    },
+    {
+      "date1": "2026-02-04 00:00:00.0000000",
+      "incidentnum": "802503-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "513",
+      "division": "NORTHWEST",
+      "incident_address": "7335 WILDBIRD LN"
+    },
+    {
+      "date1": "2026-02-04 00:00:00.0000000",
+      "incidentnum": "016735-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "252",
+      "division": "NORTHEAST",
+      "incident_address": "9010 MARKVILLE DR"
+    },
+    {
+      "date1": "2026-02-04 00:00:00.0000000",
+      "incidentnum": "018091-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "126",
+      "division": "CENTRAL",
+      "incident_address": "2320 N HOUSTON ST"
+    },
+    {
+      "date1": "2026-02-04 00:00:00.0000000",
       "incidentnum": "016568-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1174,36 +1168,14 @@
     },
     {
       "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "016399-2026",
+      "incidentnum": "802505-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "146",
-      "division": "CENTRAL",
-      "incident_address": "1945 BENNETT AVE"
-    },
-    {
-      "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "802558-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "143",
-      "division": "CENTRAL",
-      "incident_address": "5035 WILLIS AVE"
-    },
-    {
-      "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "802441-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "114",
-      "division": "CENTRAL",
-      "incident_address": "4711 REIGER AVE"
+      "beat": "513",
+      "division": "NORTHWEST",
+      "incident_address": "2234 BOMBAY AVE"
     },
     {
       "date1": "2026-02-04 00:00:00.0000000",
@@ -1218,14 +1190,58 @@
     },
     {
       "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "017052-2026",
+      "incidentnum": "016643-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "211",
-      "division": "NORTHEAST",
-      "incident_address": "10000 N CENTRAL EXPY"
+      "beat": "652",
+      "division": "NORTH CENTRAL",
+      "incident_address": "10720 PRESTON RD"
+    },
+    {
+      "date1": "2026-02-04 00:00:00.0000000",
+      "incidentnum": "016341-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "141",
+      "division": "CENTRAL",
+      "incident_address": "6060 N CENTRAL EXPY"
+    },
+    {
+      "date1": "2026-02-04 00:00:00.0000000",
+      "incidentnum": "016399-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "146",
+      "division": "CENTRAL",
+      "incident_address": "1945 BENNETT AVE"
+    },
+    {
+      "date1": "2026-02-04 00:00:00.0000000",
+      "incidentnum": "802441-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "114",
+      "division": "CENTRAL",
+      "incident_address": "4711 REIGER AVE"
+    },
+    {
+      "date1": "2026-02-04 00:00:00.0000000",
+      "incidentnum": "802558-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "143",
+      "division": "CENTRAL",
+      "incident_address": "5035 WILLIS AVE"
     },
     {
       "date1": "2026-02-04 00:00:00.0000000",
@@ -1262,6 +1278,17 @@
     },
     {
       "date1": "2026-02-04 00:00:00.0000000",
+      "incidentnum": "017052-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "211",
+      "division": "NORTHEAST",
+      "incident_address": "10000 N CENTRAL EXPY"
+    },
+    {
+      "date1": "2026-02-04 00:00:00.0000000",
       "incidentnum": "802516-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1270,28 +1297,6 @@
       "beat": "653",
       "division": "NORTH CENTRAL",
       "incident_address": "10651 STEPPINGTON DR"
-    },
-    {
-      "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "016643-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "652",
-      "division": "NORTH CENTRAL",
-      "incident_address": "10720 PRESTON RD"
-    },
-    {
-      "date1": "2026-02-04 00:00:00.0000000",
-      "incidentnum": "016341-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "141",
-      "division": "CENTRAL",
-      "incident_address": "6060 N CENTRAL EXPY"
     },
     {
       "date1": "2026-02-04 00:00:00.0000000",
@@ -1328,17 +1333,6 @@
     },
     {
       "date1": "2026-02-03 00:00:00.0000000",
-      "incidentnum": "015792-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "237",
-      "division": "NORTHEAST",
-      "incident_address": "7803 VILLA CLIFF DR"
-    },
-    {
-      "date1": "2026-02-03 00:00:00.0000000",
       "incidentnum": "802595-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1347,6 +1341,28 @@
       "beat": "523",
       "division": "NORTHWEST",
       "incident_address": "3650 CEDARPLAZA LN"
+    },
+    {
+      "date1": "2026-02-03 00:00:00.0000000",
+      "incidentnum": "015778-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "215",
+      "division": "NORTHEAST",
+      "incident_address": null
+    },
+    {
+      "date1": "2026-02-03 00:00:00.0000000",
+      "incidentnum": "015778-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "215",
+      "division": "NORTHEAST",
+      "incident_address": null
     },
     {
       "date1": "2026-02-03 00:00:00.0000000",
@@ -1361,25 +1377,25 @@
     },
     {
       "date1": "2026-02-03 00:00:00.0000000",
-      "incidentnum": "015778-2026",
+      "incidentnum": "015792-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "215",
+      "beat": "237",
       "division": "NORTHEAST",
-      "incident_address": null
+      "incident_address": "7803 VILLA CLIFF DR"
     },
     {
       "date1": "2026-02-03 00:00:00.0000000",
-      "incidentnum": "015778-2026",
+      "incidentnum": "016284-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "215",
-      "division": "NORTHEAST",
-      "incident_address": null
+      "beat": "445",
+      "division": "SOUTHWEST",
+      "incident_address": "2900 GROVEVIEW DR"
     },
     {
       "date1": "2026-02-03 00:00:00.0000000",
@@ -1416,6 +1432,28 @@
     },
     {
       "date1": "2026-02-03 00:00:00.0000000",
+      "incidentnum": "802354-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "513",
+      "division": "NORTHWEST",
+      "incident_address": "2525 W MOCKINGBIRD LN"
+    },
+    {
+      "date1": "2026-02-03 00:00:00.0000000",
+      "incidentnum": "802559-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "301 W 8TH ST"
+    },
+    {
+      "date1": "2026-02-03 00:00:00.0000000",
       "incidentnum": "802562-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1435,39 +1473,6 @@
       "beat": "752",
       "division": "SOUTH CENTRAL",
       "incident_address": "132 BUSHEL LN"
-    },
-    {
-      "date1": "2026-02-03 00:00:00.0000000",
-      "incidentnum": "802559-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "413",
-      "division": "SOUTHWEST",
-      "incident_address": "301 W 8TH ST"
-    },
-    {
-      "date1": "2026-02-03 00:00:00.0000000",
-      "incidentnum": "016284-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "445",
-      "division": "SOUTHWEST",
-      "incident_address": "2900 GROVEVIEW DR"
-    },
-    {
-      "date1": "2026-02-03 00:00:00.0000000",
-      "incidentnum": "802354-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "513",
-      "division": "NORTHWEST",
-      "incident_address": "2525 W MOCKINGBIRD LN"
     },
     {
       "date1": "2026-02-03 00:00:00.0000000",
@@ -1515,17 +1520,6 @@
     },
     {
       "date1": "2026-02-02 00:00:00.0000000",
-      "incidentnum": "802349-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "814",
-      "division": "CBD",
-      "incident_address": "2116 N LAMAR ST"
-    },
-    {
-      "date1": "2026-02-02 00:00:00.0000000",
       "incidentnum": "802369-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1537,6 +1531,17 @@
     },
     {
       "date1": "2026-02-02 00:00:00.0000000",
+      "incidentnum": "802355-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "122",
+      "division": "CENTRAL",
+      "incident_address": "3230 MAPLE AVE"
+    },
+    {
+      "date1": "2026-02-02 00:00:00.0000000",
       "incidentnum": "802352-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1545,6 +1550,17 @@
       "beat": "122",
       "division": "CENTRAL",
       "incident_address": "2616 HARRY HINES BLVD"
+    },
+    {
+      "date1": "2026-02-02 00:00:00.0000000",
+      "incidentnum": "802356-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "122",
+      "division": "CENTRAL",
+      "incident_address": "1903 PAYNE ST"
     },
     {
       "date1": "2026-02-02 00:00:00.0000000",
@@ -1578,6 +1594,50 @@
       "beat": "126",
       "division": "CENTRAL",
       "incident_address": "2371 VICTORY AVE"
+    },
+    {
+      "date1": "2026-02-02 00:00:00.0000000",
+      "incidentnum": "015760-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "811",
+      "division": "CBD",
+      "incident_address": "1900 N HOUSTON ST"
+    },
+    {
+      "date1": "2026-02-02 00:00:00.0000000",
+      "incidentnum": "015853-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "114",
+      "division": "CENTRAL",
+      "incident_address": "4936 REIGER AVE"
+    },
+    {
+      "date1": "2026-02-02 00:00:00.0000000",
+      "incidentnum": "015760-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "811",
+      "division": "CBD",
+      "incident_address": "1900 N HOUSTON ST"
+    },
+    {
+      "date1": "2026-02-02 00:00:00.0000000",
+      "incidentnum": "802349-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "814",
+      "division": "CBD",
+      "incident_address": "2116 N LAMAR ST"
     },
     {
       "date1": "2026-02-02 00:00:00.0000000",
@@ -1636,72 +1696,6 @@
     },
     {
       "date1": "2026-02-02 00:00:00.0000000",
-      "incidentnum": "015760-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "811",
-      "division": "CBD",
-      "incident_address": "1900 N HOUSTON ST"
-    },
-    {
-      "date1": "2026-02-02 00:00:00.0000000",
-      "incidentnum": "015853-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "114",
-      "division": "CENTRAL",
-      "incident_address": "4936 REIGER AVE"
-    },
-    {
-      "date1": "2026-02-02 00:00:00.0000000",
-      "incidentnum": "015760-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "811",
-      "division": "CBD",
-      "incident_address": "1900 N HOUSTON ST"
-    },
-    {
-      "date1": "2026-02-02 00:00:00.0000000",
-      "incidentnum": "802356-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "122",
-      "division": "CENTRAL",
-      "incident_address": "1903 PAYNE ST"
-    },
-    {
-      "date1": "2026-02-02 00:00:00.0000000",
-      "incidentnum": "802355-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "122",
-      "division": "CENTRAL",
-      "incident_address": "3230 MAPLE AVE"
-    },
-    {
-      "date1": "2026-02-02 00:00:00.0000000",
-      "incidentnum": "015815-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "216",
-      "division": "NORTHEAST",
-      "incident_address": "6011 MELODY LN"
-    },
-    {
-      "date1": "2026-02-02 00:00:00.0000000",
       "incidentnum": "016738-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1710,17 +1704,6 @@
       "beat": "756",
       "division": "SOUTH CENTRAL",
       "incident_address": "7751 BONNIE VIEW RD"
-    },
-    {
-      "date1": "2026-02-02 00:00:00.0000000",
-      "incidentnum": "802350-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "422",
-      "division": "SOUTHWEST",
-      "incident_address": "2300 CANADA DR"
     },
     {
       "date1": "2026-02-02 00:00:00.0000000",
@@ -1757,14 +1740,25 @@
     },
     {
       "date1": "2026-02-02 00:00:00.0000000",
-      "incidentnum": "015740-2026",
+      "incidentnum": "015815-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "424",
+      "beat": "216",
+      "division": "NORTHEAST",
+      "incident_address": "6011 MELODY LN"
+    },
+    {
+      "date1": "2026-02-02 00:00:00.0000000",
+      "incidentnum": "802350-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "422",
       "division": "SOUTHWEST",
-      "incident_address": "444 W COMMERCE ST"
+      "incident_address": "2300 CANADA DR"
     },
     {
       "date1": "2026-02-02 00:00:00.0000000",
@@ -1776,6 +1770,17 @@
       "beat": "654",
       "division": "NORTH CENTRAL",
       "incident_address": "6915 LUPTON DR"
+    },
+    {
+      "date1": "2026-02-02 00:00:00.0000000",
+      "incidentnum": "015740-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "424",
+      "division": "SOUTHWEST",
+      "incident_address": "444 W COMMERCE ST"
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
@@ -1798,6 +1803,17 @@
       "beat": "153",
       "division": "CENTRAL",
       "incident_address": "835 EXPOSITION AVE"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "015087-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "122",
+      "division": "CENTRAL",
+      "incident_address": "2500 MAHON ST"
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
@@ -1845,116 +1861,6 @@
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "015087-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "122",
-      "division": "CENTRAL",
-      "incident_address": "2500 MAHON ST"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "014802-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "122",
-      "division": "CENTRAL",
-      "incident_address": "2811 MAPLE AVE"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "015567-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "445",
-      "division": "SOUTHWEST",
-      "incident_address": "2838 GROVEVIEW DR"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "015567-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "445",
-      "division": "SOUTHWEST",
-      "incident_address": "2838 GROVEVIEW DR"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "014952-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "228",
-      "division": "NORTHEAST",
-      "incident_address": "11133 COTILLION DR"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "802215-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "426",
-      "division": "SOUTHWEST",
-      "incident_address": "4473 DALLAS FT WORTH TPKE"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "802323-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "534",
-      "division": "NORTHWEST",
-      "incident_address": "10679 HARRY HINES BLVD"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "802271-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "143",
-      "division": "CENTRAL",
-      "incident_address": "2737 N FITZHUGH AVE"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "015502-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "143",
-      "division": "CENTRAL",
-      "incident_address": "2707 N FITZHUGH AVE"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "015469-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "154",
-      "division": "CENTRAL",
-      "incident_address": "1707 N HALL ST"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
       "incidentnum": "802266-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1988,6 +1894,39 @@
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "015567-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "445",
+      "division": "SOUTHWEST",
+      "incident_address": "2838 GROVEVIEW DR"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "015567-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "445",
+      "division": "SOUTHWEST",
+      "incident_address": "2838 GROVEVIEW DR"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "802323-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "534",
+      "division": "NORTHWEST",
+      "incident_address": "10679 HARRY HINES BLVD"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
       "incidentnum": "014812-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -1999,36 +1938,25 @@
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "016580-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "524",
-      "division": "NORTHWEST",
-      "incident_address": "5617 W LOVERS LN"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "015446-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "343",
-      "division": "SOUTHEAST",
-      "incident_address": "3306 AL LIPSCOMB WAY"
-    },
-    {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "015118-2026",
+      "incidentnum": "802236-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
       "beat": "517",
       "division": "NORTHWEST",
-      "incident_address": "1621 DRAGON ST"
+      "incident_address": "1019 DRAGON ST"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "802271-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "143",
+      "division": "CENTRAL",
+      "incident_address": "2737 N FITZHUGH AVE"
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
@@ -2054,25 +1982,58 @@
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "802236-2026",
+      "incidentnum": "016580-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "524",
+      "division": "NORTHWEST",
+      "incident_address": "5617 W LOVERS LN"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "015446-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "343",
+      "division": "SOUTHEAST",
+      "incident_address": "3306 AL LIPSCOMB WAY"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "015502-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "143",
+      "division": "CENTRAL",
+      "incident_address": "2707 N FITZHUGH AVE"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "015118-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
       "beat": "517",
       "division": "NORTHWEST",
-      "incident_address": "1019 DRAGON ST"
+      "incident_address": "1621 DRAGON ST"
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "015057-2026",
+      "incidentnum": "015469-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "533",
-      "division": "NORTHWEST",
-      "incident_address": "9801 HARRY HINES BLVD"
+      "beat": "154",
+      "division": "CENTRAL",
+      "incident_address": "1707 N HALL ST"
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
@@ -2084,6 +2045,17 @@
       "beat": "821",
       "division": "CBD",
       "incident_address": "1717 N HARWOOD ST"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "015057-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "533",
+      "division": "NORTHWEST",
+      "incident_address": "9801 HARRY HINES BLVD"
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
@@ -2142,6 +2114,17 @@
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "802262-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "516",
+      "division": "NORTHWEST",
+      "incident_address": "120 TURTLE CREEK BLVD"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
       "incidentnum": "015332-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -2175,6 +2158,39 @@
     },
     {
       "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "014802-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "122",
+      "division": "CENTRAL",
+      "incident_address": "2811 MAPLE AVE"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "014952-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "228",
+      "division": "NORTHEAST",
+      "incident_address": "11133 COTILLION DR"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
+      "incidentnum": "802215-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "426",
+      "division": "SOUTHWEST",
+      "incident_address": "4473 DALLAS FT WORTH TPKE"
+    },
+    {
+      "date1": "2026-02-01 00:00:00.0000000",
       "incidentnum": "802237-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -2185,15 +2201,59 @@
       "incident_address": "1003 DRAGON ST"
     },
     {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "802262-2026",
+      "date1": "2026-01-31 00:00:00.0000000",
+      "incidentnum": "014444-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "516",
+      "beat": "753",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "6411 HUMORESQUE DR"
+    },
+    {
+      "date1": "2026-01-31 00:00:00.0000000",
+      "incidentnum": "014902-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "211",
+      "division": "NORTHEAST",
+      "incident_address": "8041 WALNUT HILL LN"
+    },
+    {
+      "date1": "2026-01-31 00:00:00.0000000",
+      "incidentnum": "014592-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "524",
       "division": "NORTHWEST",
-      "incident_address": "120 TURTLE CREEK BLVD"
+      "incident_address": "5560 W LOVERS LN"
+    },
+    {
+      "date1": "2026-01-31 00:00:00.0000000",
+      "incidentnum": "014581-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "248",
+      "division": "NORTHEAST",
+      "incident_address": "10301 WALNUT HILL LN"
+    },
+    {
+      "date1": "2026-01-31 00:00:00.0000000",
+      "incidentnum": "802400-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "143",
+      "division": "CENTRAL",
+      "incident_address": "5215 BELMONT AVE"
     },
     {
       "date1": "2026-01-31 00:00:00.0000000",
@@ -2241,69 +2301,14 @@
     },
     {
       "date1": "2026-01-31 00:00:00.0000000",
-      "incidentnum": "802400-2026",
+      "incidentnum": "014529-2026",
       "offincident": "BMV",
       "ucr_offense": null,
       "nibrs_code": "23F",
       "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "143",
-      "division": "CENTRAL",
-      "incident_address": "5215 BELMONT AVE"
-    },
-    {
-      "date1": "2026-01-31 00:00:00.0000000",
-      "incidentnum": "014902-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "211",
-      "division": "NORTHEAST",
-      "incident_address": "8041 WALNUT HILL LN"
-    },
-    {
-      "date1": "2026-01-31 00:00:00.0000000",
-      "incidentnum": "014581-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "248",
-      "division": "NORTHEAST",
-      "incident_address": "10301 WALNUT HILL LN"
-    },
-    {
-      "date1": "2026-01-31 00:00:00.0000000",
-      "incidentnum": "014592-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "524",
-      "division": "NORTHWEST",
-      "incident_address": "5560 W LOVERS LN"
-    },
-    {
-      "date1": "2026-01-31 00:00:00.0000000",
-      "incidentnum": "014444-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "753",
-      "division": "SOUTH CENTRAL",
-      "incident_address": "6411 HUMORESQUE DR"
-    },
-    {
-      "date1": "2026-01-31 00:00:00.0000000",
-      "incidentnum": "015406-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "524",
-      "division": "NORTHWEST",
-      "incident_address": "5560 W LOVERS LN"
+      "beat": "327",
+      "division": "SOUTHEAST",
+      "incident_address": "10328 WATERBURY DR"
     },
     {
       "date1": "2026-01-31 00:00:00.0000000",
@@ -2351,6 +2356,39 @@
     },
     {
       "date1": "2026-01-31 00:00:00.0000000",
+      "incidentnum": "015406-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "524",
+      "division": "NORTHWEST",
+      "incident_address": "5560 W LOVERS LN"
+    },
+    {
+      "date1": "2026-01-31 00:00:00.0000000",
+      "incidentnum": "802147-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "122",
+      "division": "CENTRAL",
+      "incident_address": "2717 HOWELL ST"
+    },
+    {
+      "date1": "2026-01-31 00:00:00.0000000",
+      "incidentnum": "014311-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "311",
+      "division": "SOUTHEAST",
+      "incident_address": "4310 PENELOPE ST"
+    },
+    {
+      "date1": "2026-01-31 00:00:00.0000000",
       "incidentnum": "014135-2026",
       "offincident": "BMV",
       "ucr_offense": null,
@@ -2392,39 +2430,6 @@
       "beat": "122",
       "division": "CENTRAL",
       "incident_address": "3200 MAPLE AVE"
-    },
-    {
-      "date1": "2026-01-31 00:00:00.0000000",
-      "incidentnum": "802298-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "424",
-      "division": "SOUTHWEST",
-      "incident_address": "444 W COMMERCE ST"
-    },
-    {
-      "date1": "2026-01-31 00:00:00.0000000",
-      "incidentnum": "015193-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "432",
-      "division": "SOUTHWEST",
-      "incident_address": "5050 KEENELAND PKWY"
-    },
-    {
-      "date1": "2026-01-31 00:00:00.0000000",
-      "incidentnum": "802146-2026",
-      "offincident": "BMV",
-      "ucr_offense": null,
-      "nibrs_code": "23F",
-      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
-      "beat": "124",
-      "division": "CENTRAL",
-      "incident_address": "3210 CARLISLE ST"
     }
   ]
 }

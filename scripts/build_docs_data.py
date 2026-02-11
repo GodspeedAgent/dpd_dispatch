@@ -8,7 +8,7 @@ frontend can render.
 Current outputs:
 - docs/data/active_calls_snapshot.json
 - docs/data/references.json
-- docs/data/historical_snapshot.json
+- docs/data/historical_snapshot.json (only when requested via env vars)
 
 Env:
 - DALLAS_APP_TOKEN: optional Socrata app token
@@ -166,44 +166,23 @@ def build_references() -> Dict[str, Any]:
     }
 
 
-def _phrase_to_incidentquery(phrase: str) -> Dict[str, Any]:
-    """Translate a short human phrase into IncidentQuery parameters.
-
-    This is intentionally conservative: it only handles a few well-known
-    phrases (BMV, forced burglary) and otherwise falls back to a keyword search.
-    """
-
-    from dallas_incidents.offense_categories import OFFENSE_TYPE_MAP, OffenseCategory
-
-    p = (phrase or "").strip().lower()
-
-    if p in {"bmv", "burglary of motor vehicle"}:
-        # Match BMV variants in historical dataset.
-        return {"offense_keyword": "BMV"}
-
-    if "forced" in p and "burglary" in p:
-        # Use exact offincident matches that contain FORCED ENTRY.
-        forced = [
-            off for off in OFFENSE_TYPE_MAP.get(OffenseCategory.BURGLARY, [])
-            if "FORCED ENTRY" in off.upper()
-        ]
-        if forced:
-            clause = " OR ".join([f"offincident = '{o}'" for o in forced])
-            return {"extra_where": f"({clause})"}
-
-    # Generic keyword fallback (searches offincident and ucr_offense)
-    return {"offense_keyword": phrase}
-
-
 def build_historical_snapshot(
-    phrase: str = "BMV",
-    days: int = 30,
+    *,
+    title: str,
+    days: int,
     beat: str | None = None,
+    offense_keyword: str | None = None,
+    offense_category: str | None = None,
+    extra_where: str | None = None,
     limit: int = 5000,
 ) -> Dict[str, Any]:
     """Build a historical snapshot for the last N days.
 
     Uses the Police Incidents dataset (qv6i-rri7).
+
+    No hardcoded phrase→query mappings are used. The caller must pass query
+    parameters explicitly (keyword/category/extra_where), which we can construct
+    on-the-fly from a user request.
     """
 
     from datetime import date, timedelta
@@ -214,8 +193,6 @@ def build_historical_snapshot(
 
     end = date.today()
     start = end - timedelta(days=days)
-
-    q_kwargs = _phrase_to_incidentquery(phrase)
 
     from dallas_incidents.models import DateRange
 
@@ -235,7 +212,9 @@ def build_historical_snapshot(
             "division",
             "incident_address",
         ],
-        **q_kwargs,
+        offense_keyword=offense_keyword,
+        offense_category=offense_category,
+        extra_where=extra_where,
     )
 
     resp = client.get_incidents(q)
@@ -284,10 +263,15 @@ def build_historical_snapshot(
             "generated_at": utc_now_iso(),
             "dataset": "police_incidents",
             "dataset_id": "qv6i-rri7",
-            "phrase": phrase,
+            "title": title,
             "days": days,
             "beat": beat,
             "total_incidents": len(rows),
+            "query": {
+                "offense_keyword": offense_keyword,
+                "offense_category": offense_category,
+                "extra_where": extra_where,
+            },
             "note": "Historical dataset updates daily; this snapshot is built on-demand.",
         },
         "top_beats": top_beats,
@@ -309,15 +293,36 @@ def main() -> None:
     refs_path.write_text(json.dumps(refs, indent=2), encoding="utf-8")
     print(f"Wrote {refs_path}")
 
-    # Historical snapshot (on-demand example). You can override via env.
-    phrase = os.getenv("HISTORICAL_PHRASE", "BMV")
-    days = int(os.getenv("HISTORICAL_DAYS", "30"))
-    beat = os.getenv("HISTORICAL_BEAT") or None
+    # Historical snapshot is generated ONLY when explicitly requested.
+    # Set HISTORICAL_ENABLE=1 and provide at least one of:
+    # - HISTORICAL_OFFENSE_KEYWORD
+    # - HISTORICAL_OFFENSE_CATEGORY (matches OffenseCategory enum values)
+    # - HISTORICAL_EXTRA_WHERE (raw SoQL, use carefully)
+    if os.getenv("HISTORICAL_ENABLE") == "1":
+        title = os.getenv("HISTORICAL_TITLE", "Historical query")
+        days = int(os.getenv("HISTORICAL_DAYS", "30"))
+        beat = os.getenv("HISTORICAL_BEAT") or None
+        offense_keyword = os.getenv("HISTORICAL_OFFENSE_KEYWORD") or None
+        offense_category = os.getenv("HISTORICAL_OFFENSE_CATEGORY") or None
+        extra_where = os.getenv("HISTORICAL_EXTRA_WHERE") or None
 
-    hist = build_historical_snapshot(phrase=phrase, days=days, beat=beat)
-    hist_path = DOCS_DATA / "historical_snapshot.json"
-    hist_path.write_text(json.dumps(hist, indent=2), encoding="utf-8")
-    print(f"Wrote {hist_path}")
+        if not any([offense_keyword, offense_category, extra_where]):
+            raise SystemExit(
+                "HISTORICAL_ENABLE=1 requires HISTORICAL_OFFENSE_KEYWORD or "
+                "HISTORICAL_OFFENSE_CATEGORY or HISTORICAL_EXTRA_WHERE"
+            )
+
+        hist = build_historical_snapshot(
+            title=title,
+            days=days,
+            beat=beat,
+            offense_keyword=offense_keyword,
+            offense_category=offense_category,
+            extra_where=extra_where,
+        )
+        hist_path = DOCS_DATA / "historical_snapshot.json"
+        hist_path.write_text(json.dumps(hist, indent=2), encoding="utf-8")
+        print(f"Wrote {hist_path}")
 
 
 if __name__ == "__main__":

@@ -69,7 +69,7 @@ function setStatus(text, ok=true){
     // Historical snapshot
     try{
       const hist = await fetchJson('./data/historical_snapshot.json');
-      document.getElementById('histTitle').textContent = `Historical (last ${hist?.summary?.days ?? '—'} days): ${hist?.summary?.phrase ?? ''}`;
+      document.getElementById('histTitle').textContent = `Historical (last ${hist?.summary?.days ?? '—'} days): ${hist?.summary?.title ?? ''}`;
       document.getElementById('histTotal').textContent = hist?.summary?.total_incidents ?? '—';
       document.getElementById('histGenerated').textContent = hist?.summary?.generated_at ?? '—';
 
