@@ -66,6 +66,34 @@ function setStatus(text, ok=true){
       { key:'time', label:'Time' },
     ]);
 
+    // Historical snapshot
+    try{
+      const hist = await fetchJson('./data/historical_snapshot.json');
+      document.getElementById('histTitle').textContent = `Historical (last ${hist?.summary?.days ?? '—'} days): ${hist?.summary?.phrase ?? ''}`;
+      document.getElementById('histTotal').textContent = hist?.summary?.total_incidents ?? '—';
+      document.getElementById('histGenerated').textContent = hist?.summary?.generated_at ?? '—';
+
+      renderTable('histTopBeats', hist.top_beats ?? [], [
+        { key:'beat', label:'Beat' },
+        { key:'count', label:'Incidents' },
+      ]);
+      renderTable('histTopOffenses', hist.top_offenses ?? [], [
+        { key:'offincident', label:'offincident' },
+        { key:'count', label:'Count' },
+      ]);
+      renderTable('histRows', (hist.incidents ?? []).slice(0,200), [
+        { key:'date1', label:'Date' },
+        { key:'incidentnum', label:'Incident #' },
+        { key:'offincident', label:'Offense' },
+        { key:'beat', label:'Beat' },
+        { key:'division', label:'Division' },
+        { key:'incident_address', label:'Address' },
+      ]);
+    }catch(e){
+      // If file isn't present yet, don't fail the whole page.
+      console.warn('historical_snapshot.json not available', e);
+    }
+
     setStatus('OK');
   }catch(e){
     console.error(e);

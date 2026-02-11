@@ -8,6 +8,7 @@ frontend can render.
 Current outputs:
 - docs/data/active_calls_snapshot.json
 - docs/data/references.json
+- docs/data/historical_snapshot.json
 
 Env:
 - DALLAS_APP_TOKEN: optional Socrata app token
@@ -165,6 +166,136 @@ def build_references() -> Dict[str, Any]:
     }
 
 
+def _phrase_to_incidentquery(phrase: str) -> Dict[str, Any]:
+    """Translate a short human phrase into IncidentQuery parameters.
+
+    This is intentionally conservative: it only handles a few well-known
+    phrases (BMV, forced burglary) and otherwise falls back to a keyword search.
+    """
+
+    from dallas_incidents.offense_categories import OFFENSE_TYPE_MAP, OffenseCategory
+
+    p = (phrase or "").strip().lower()
+
+    if p in {"bmv", "burglary of motor vehicle"}:
+        # Match BMV variants in historical dataset.
+        return {"offense_keyword": "BMV"}
+
+    if "forced" in p and "burglary" in p:
+        # Use exact offincident matches that contain FORCED ENTRY.
+        forced = [
+            off for off in OFFENSE_TYPE_MAP.get(OffenseCategory.BURGLARY, [])
+            if "FORCED ENTRY" in off.upper()
+        ]
+        if forced:
+            clause = " OR ".join([f"offincident = '{o}'" for o in forced])
+            return {"extra_where": f"({clause})"}
+
+    # Generic keyword fallback (searches offincident and ucr_offense)
+    return {"offense_keyword": phrase}
+
+
+def build_historical_snapshot(
+    phrase: str = "BMV",
+    days: int = 30,
+    beat: str | None = None,
+    limit: int = 5000,
+) -> Dict[str, Any]:
+    """Build a historical snapshot for the last N days.
+
+    Uses the Police Incidents dataset (qv6i-rri7).
+    """
+
+    from datetime import date, timedelta
+
+    app_token = os.getenv("DALLAS_APP_TOKEN")
+
+    client = DallasIncidentsClient(preset="police_incidents", app_token=app_token)
+
+    end = date.today()
+    start = end - timedelta(days=days)
+
+    q_kwargs = _phrase_to_incidentquery(phrase)
+
+    from dallas_incidents.models import DateRange
+
+    q = IncidentQuery(
+        beats=[beat] if beat else None,
+        date_range=DateRange(start=start, end=end),
+        limit=limit,
+        order_by="date1 DESC",
+        select_fields=[
+            "date1",
+            "incidentnum",
+            "offincident",
+            "ucr_offense",
+            "nibrs_code",
+            "nibrs_crime",
+            "beat",
+            "division",
+            "incident_address",
+        ],
+        **q_kwargs,
+    )
+
+    resp = client.get_incidents(q)
+    rows: List[Dict[str, Any]] = resp.data
+
+    # Aggregates
+    by_beat: Dict[str, int] = {}
+    by_offincident: Dict[str, int] = {}
+
+    for r in rows:
+        b = str(r.get("beat") or "").strip()
+        off = str(r.get("offincident") or "").strip()
+        if b:
+            by_beat[b] = by_beat.get(b, 0) + 1
+        if off:
+            by_offincident[off] = by_offincident.get(off, 0) + 1
+
+    top_beats = [
+        {"beat": k, "count": v}
+        for k, v in sorted(by_beat.items(), key=lambda kv: (-kv[1], kv[0]))
+    ][:50]
+
+    top_offenses = [
+        {"offincident": k, "count": v}
+        for k, v in sorted(by_offincident.items(), key=lambda kv: (-kv[1], kv[0]))
+    ][:50]
+
+    simplified = []
+    for r in rows[:200]:
+        simplified.append(
+            {
+                "date1": r.get("date1"),
+                "incidentnum": r.get("incidentnum"),
+                "offincident": r.get("offincident"),
+                "ucr_offense": r.get("ucr_offense"),
+                "nibrs_code": r.get("nibrs_code"),
+                "nibrs_crime": r.get("nibrs_crime"),
+                "beat": r.get("beat"),
+                "division": r.get("division"),
+                "incident_address": r.get("incident_address"),
+            }
+        )
+
+    return {
+        "summary": {
+            "generated_at": utc_now_iso(),
+            "dataset": "police_incidents",
+            "dataset_id": "qv6i-rri7",
+            "phrase": phrase,
+            "days": days,
+            "beat": beat,
+            "total_incidents": len(rows),
+            "note": "Historical dataset updates daily; this snapshot is built on-demand.",
+        },
+        "top_beats": top_beats,
+        "top_offenses": top_offenses,
+        "incidents": simplified,
+    }
+
+
 def main() -> None:
     DOCS_DATA.mkdir(parents=True, exist_ok=True)
 
@@ -177,6 +308,16 @@ def main() -> None:
     refs_path = DOCS_DATA / "references.json"
     refs_path.write_text(json.dumps(refs, indent=2), encoding="utf-8")
     print(f"Wrote {refs_path}")
+
+    # Historical snapshot (on-demand example). You can override via env.
+    phrase = os.getenv("HISTORICAL_PHRASE", "BMV")
+    days = int(os.getenv("HISTORICAL_DAYS", "30"))
+    beat = os.getenv("HISTORICAL_BEAT") or None
+
+    hist = build_historical_snapshot(phrase=phrase, days=days, beat=beat)
+    hist_path = DOCS_DATA / "historical_snapshot.json"
+    hist_path.write_text(json.dumps(hist, indent=2), encoding="utf-8")
+    print(f"Wrote {hist_path}")
 
 
 if __name__ == "__main__":
