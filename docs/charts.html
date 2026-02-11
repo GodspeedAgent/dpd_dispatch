@@ -25,23 +25,26 @@
       </section>
 
       <section class="card">
+        <h2>Render rules</h2>
+        <p class="muted">To keep this page readable on mobile, charts only render when the current historical snapshot is <em>scoped</em> (beat specified and/or a short date range).</p>
+        <p class="muted">If you want charts, generate a historical snapshot like: “beat 215, last 30 days, BMV” — then refresh this page.</p>
+        <div id="chartGate" class="badge">Checking snapshot scope…</div>
+      </section>
+
+      <section class="card" id="activeSection" style="display:none;">
         <h2>Active Calls — Top Beats</h2>
+        <p class="muted">Disabled by default (active calls rotate and citywide top-beats is noisy). If you want this later, we can add beat-scoped active snapshots.</p>
         <canvas id="activeTopBeats" height="140"></canvas>
       </section>
 
-      <section class="card">
+      <section class="card" id="histBeatsSection" style="display:none;">
         <h2>Historical — Top Beats (current snapshot)</h2>
         <canvas id="histTopBeats" height="140"></canvas>
       </section>
 
-      <section class="card">
+      <section class="card" id="histOffensesSection" style="display:none;">
         <h2>Historical — Top Offenses (current snapshot)</h2>
         <canvas id="histTopOffenses" height="180"></canvas>
-      </section>
-
-      <section class="card">
-        <h2>Maps (next)</h2>
-        <p class="muted">Active calls don’t include coordinates. For maps we’ll either (a) geocode active calls, or (b) generate GeoJSON from historical incidents. Tell me which you prefer and what accuracy/caching constraints you want.</p>
       </section>
     </main>
 

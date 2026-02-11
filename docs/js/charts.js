@@ -42,19 +42,35 @@ function mkBar(ctx, labels, data, label){
   try{
     setStatus('Loading…');
 
-    // Active calls: by_region_beat is effectively by-beat counts
-    const active = await fetchJson('./data/active_calls_snapshot.json');
-    const byBeat = (active.by_region_beat ?? []).slice().sort((a,b) => (b.count ?? 0) - (a.count ?? 0)).slice(0, 15);
-    mkBar(
-      document.getElementById('activeTopBeats'),
-      byBeat.map(x => x.beat ?? '—'),
-      byBeat.map(x => x.count ?? 0),
-      'Active calls'
-    );
+    const gate = document.getElementById('chartGate');
 
     // Historical snapshot (optional)
     try{
       const hist = await fetchJson('./data/historical_snapshot.json');
+
+      const days = hist?.summary?.days;
+      const beat = hist?.summary?.beat;
+
+      // Render charts ONLY if scoped:
+      // - beat is specified OR
+      // - days is reasonably short (<= 14)
+      const scoped = Boolean((beat && String(beat).trim() !== '') || (typeof days === 'number' && days <= 14));
+
+      if(!scoped){
+        if(gate){
+          gate.textContent = `Charts paused: snapshot too broad (beat not set; days=${days ?? '—'}).`;
+        }
+        setStatus('OK');
+        return;
+      }
+
+      if(gate){
+        gate.textContent = `Charts on: ${beat ? `beat=${beat}` : ''}${(beat && days) ? ' | ' : ''}${days ? `days=${days}` : ''}`.trim();
+      }
+
+      // Show sections
+      document.getElementById('histBeatsSection').style.display = '';
+      document.getElementById('histOffensesSection').style.display = '';
 
       const topBeats = (hist.top_beats ?? []).slice(0, 15);
       mkBar(
@@ -74,6 +90,9 @@ function mkBar(ctx, labels, data, label){
 
     }catch(e){
       console.warn('historical_snapshot.json not available', e);
+      if(gate){
+        gate.textContent = 'Charts paused: no historical snapshot yet.';
+      }
     }
 
     setStatus('OK');
