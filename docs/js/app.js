@@ -48,6 +48,30 @@ function normalize(s){
   return (s ?? '').toString().trim().toLowerCase();
 }
 
+function fmtChicago(iso){
+  if(!iso) return '—';
+  try{
+    const d = new Date(iso);
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago',
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit',
+      hour12: false,
+      timeZoneName: 'short'
+    }).formatToParts(d);
+    const get = (t) => parts.find(p => p.type === t)?.value;
+    const mm = get('month');
+    const dd = get('day');
+    const yy = get('year');
+    const hh = get('hour');
+    const mi = get('minute');
+    const tz = get('timeZoneName');
+    return `${yy}-${mm}-${dd} ${hh}:${mi} ${tz}`;
+  }catch(e){
+    return String(iso);
+  }
+}
+
 function wireInput(id, fn){
   const n = document.getElementById(id);
   if(!n) return;
@@ -61,7 +85,7 @@ function wireInput(id, fn){
     const snapshot = await fetchJson('./data/active_calls_snapshot.json');
 
     document.getElementById('totalCalls').textContent = snapshot?.summary?.total_calls ?? '—';
-    document.getElementById('updatedAt').textContent = snapshot?.summary?.generated_at ?? '—';
+    document.getElementById('updatedAt').textContent = fmtChicago(snapshot?.summary?.generated_at);
 
     renderTable('byRegionBeat', snapshot.by_region_beat ?? [], [
       { key:'beat', label:'Beat' },
