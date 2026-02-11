@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DPD Dispatch — References</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">📟 DPD Dispatch</div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <a class="badge" href="./index.html">Dashboard</a>
+        <a class="badge" href="./references.html">References</a>
+        <div class="status" id="status">Loading…</div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h1>References</h1>
+        <p class="muted">Generated from the Python codebase. Use this to see available presets, offense categories, keywords, and known offense strings.</p>
+      </section>
+
+      <section class="card">
+        <h2>Datasets / Presets</h2>
+        <div id="presets" class="table"></div>
+      </section>
+
+      <section class="card">
+        <h2>Offense Categories</h2>
+        <div id="categories" class="table"></div>
+      </section>
+
+      <section class="card">
+        <h2>Offense Types (official strings)</h2>
+        <p class="muted">These are exact <code>offincident</code> strings the client can target for the historical dataset. (List is from the repo mapping, not a live scrape.)</p>
+        <div id="offenseTypes" class="table"></div>
+      </section>
+    </main>
+
+    <script src="./js/references.js"></script>
+  </body>
+</html>

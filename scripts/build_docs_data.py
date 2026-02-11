@@ -7,6 +7,7 @@ frontend can render.
 
 Current outputs:
 - docs/data/active_calls_snapshot.json
+- docs/data/references.json
 
 Env:
 - DALLAS_APP_TOKEN: optional Socrata app token
@@ -106,14 +107,76 @@ def build_active_calls_snapshot(limit: int = 500) -> Dict[str, Any]:
     }
 
 
+def build_references() -> Dict[str, Any]:
+    # Import from repo mappings (not live dataset introspection)
+    from dallas_incidents.models import DatasetPreset
+    from dallas_incidents.offense_categories import OFFENSE_KEYWORDS, OFFENSE_TYPE_MAP
+
+    presets = [
+        {
+            "name": "police_incidents",
+            "dataset_id": DatasetPreset.POLICE_INCIDENTS.value,
+            "kind": "historical",
+            "notes": "2014–present; has timestamps, coordinates, NIBRS/UCR, etc.",
+        },
+        {
+            "name": "active_calls_all",
+            "dataset_id": DatasetPreset.ACTIVE_CALLS_ALL.value,
+            "kind": "active",
+            "notes": "Real-time citywide active calls; no timestamps/coords.",
+        },
+        {
+            "name": "active_calls_northeast",
+            "dataset_id": DatasetPreset.ACTIVE_CALLS_NORTHEAST.value,
+            "kind": "active",
+            "notes": "Real-time active calls (Northeast division); no timestamps/coords.",
+        },
+    ]
+
+    offense_categories = []
+    offense_type_map = []
+
+    # OFFENSE_TYPE_MAP keys are OffenseCategory enums
+    for cat, types in OFFENSE_TYPE_MAP.items():
+        keywords = sorted(list(OFFENSE_KEYWORDS.get(cat, set())))
+        offense_categories.append(
+            {
+                "category": cat.value if hasattr(cat, "value") else str(cat),
+                "keyword_count": len(keywords),
+                "type_count": len(types),
+            }
+        )
+        offense_type_map.append(
+            {
+                "category": cat.value if hasattr(cat, "value") else str(cat),
+                "keywords": keywords,
+                "offense_types": types,
+            }
+        )
+
+    offense_categories.sort(key=lambda x: x["category"])
+    offense_type_map.sort(key=lambda x: x["category"])
+
+    return {
+        "generated_at": utc_now_iso(),
+        "presets": presets,
+        "offense_categories": offense_categories,
+        "offense_type_map": offense_type_map,
+    }
+
+
 def main() -> None:
     DOCS_DATA.mkdir(parents=True, exist_ok=True)
 
     active = build_active_calls_snapshot()
     out_path = DOCS_DATA / "active_calls_snapshot.json"
     out_path.write_text(json.dumps(active, indent=2), encoding="utf-8")
-
     print(f"Wrote {out_path}")
+
+    refs = build_references()
+    refs_path = DOCS_DATA / "references.json"
+    refs_path.write_text(json.dumps(refs, indent=2), encoding="utf-8")
+    print(f"Wrote {refs_path}")
 
 
 if __name__ == "__main__":
