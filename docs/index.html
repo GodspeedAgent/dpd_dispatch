@@ -38,7 +38,32 @@
       </section>
 
       <section class="card">
-        <h2>Raw Calls (first 200)</h2>
+        <h2>Active Calls — Filters</h2>
+        <div class="controls">
+          <div class="control">
+            <label for="activeBeat">Beat</label>
+            <input id="activeBeat" placeholder="e.g. 215" />
+          </div>
+          <div class="control">
+            <label for="activeNature">Nature contains</label>
+            <input id="activeNature" placeholder="e.g. burglary" />
+          </div>
+          <div class="control">
+            <label for="activeLimit">Rows</label>
+            <select id="activeLimit">
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200" selected>200</option>
+              <option value="500">500</option>
+            </select>
+          </div>
+          <button class="button" id="activeClear">Clear</button>
+        </div>
+        <p class="muted" id="activeFilterSummary">—</p>
+      </section>
+
+      <section class="card">
+        <h2>Raw Calls</h2>
         <div id="rawCalls" class="table"></div>
       </section>
 
@@ -55,6 +80,34 @@
             <div class="value" id="histGenerated">—</div>
           </div>
         </div>
+      </section>
+
+      <section class="card">
+        <h2>Historical — Filters (client-side)</h2>
+        <div class="controls">
+          <div class="control">
+            <label for="histBeat">Beat</label>
+            <input id="histBeat" placeholder="e.g. 215" />
+          </div>
+          <div class="control">
+            <label for="histDivision">Division</label>
+            <input id="histDivision" placeholder="e.g. NORTHEAST" />
+          </div>
+          <div class="control">
+            <label for="histText">Offense/address contains</label>
+            <input id="histText" placeholder="e.g. forced entry" />
+          </div>
+          <div class="control">
+            <label for="histLimit">Rows</label>
+            <select id="histLimit">
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200" selected>200</option>
+            </select>
+          </div>
+          <button class="button" id="histClear">Clear</button>
+        </div>
+        <p class="muted" id="histFilterSummary">—</p>
       </section>
 
       <section class="card">
