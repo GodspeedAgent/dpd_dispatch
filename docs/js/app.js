@@ -64,7 +64,6 @@ function wireInput(id, fn){
     document.getElementById('updatedAt').textContent = snapshot?.summary?.generated_at ?? '—';
 
     renderTable('byRegionBeat', snapshot.by_region_beat ?? [], [
-      { key:'region', label:'Region' },
       { key:'beat', label:'Beat' },
       { key:'count', label:'Calls' },
     ]);

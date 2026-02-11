@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DPD Dispatch — Charts</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">📟 DPD Dispatch</div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <a class="badge" href="./index.html">Dashboard</a>
+        <a class="badge" href="./references.html">References</a>
+        <a class="badge" href="./charts.html">Charts</a>
+        <div class="status" id="status">Loading…</div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h1>Charts</h1>
+        <p class="muted">These charts are rendered client-side from the static JSON snapshots in <code>/docs/data</code>.</p>
+      </section>
+
+      <section class="card">
+        <h2>Active Calls — Top Beats</h2>
+        <canvas id="activeTopBeats" height="140"></canvas>
+      </section>
+
+      <section class="card">
+        <h2>Historical — Top Beats (current snapshot)</h2>
+        <canvas id="histTopBeats" height="140"></canvas>
+      </section>
+
+      <section class="card">
+        <h2>Historical — Top Offenses (current snapshot)</h2>
+        <canvas id="histTopOffenses" height="180"></canvas>
+      </section>
+
+      <section class="card">
+        <h2>Maps (next)</h2>
+        <p class="muted">Active calls don’t include coordinates. For maps we’ll either (a) geocode active calls, or (b) generate GeoJSON from historical incidents. Tell me which you prefer and what accuracy/caching constraints you want.</p>
+      </section>
+    </main>
+
+    <script src="./js/charts.js"></script>
+  </body>
+</html>
