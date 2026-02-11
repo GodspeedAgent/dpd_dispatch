@@ -472,50 +472,248 @@ def main() -> None:
             )
             daily_counts = [{"day": r.get("date1"), "count": int(r.get("n", 0))} for r in daily]
 
-            def synthesize_narrative() -> Dict[str, Any]:
-                # Basic synthesis from the aggregates (no external calls)
-                bullets = []
+            def build_narrative_90d() -> Dict[str, Any] | None:
+                """Build an analysis-style narrative.
+
+                Per your spec, we only generate this for the 90-day window.
+
+                Includes:
+                - total + rate
+                - delta vs previous 90-day window
+                - outlier/spike days + what drove them
+                - offense mix shift vs previous window
+                - time patterns (watch + day-of-week)
+                - NIBRS framing (crimeagainst / type / group)
+                """
+
+                if days != 90:
+                    return None
 
                 if total == 0:
                     return {
-                        "headline": f"Quiet period: 0 incidents in the last {days} days",
+                        "headline": f"Beat {beat}: no incidents in the last 90 days",
                         "text": "No incidents were returned for this window.",
                         "bullets": [],
                     }
 
+                # --- Baseline comparison: previous 90 days ---
+                prev_end = start
+                prev_start = prev_end - timedelta(days=90)
+                prev_where = (
+                    f"date1 >= '{prev_start.isoformat()}T00:00:00.000' AND "
+                    f"date1 <= '{prev_end.isoformat()}T23:59:59.999' AND "
+                    f"beat = '{beat}'"
+                )
+                prev_total_rows = client.client.get(dataset_id, select="count(1) as n", where=prev_where, limit=1)
+                prev_total = int(prev_total_rows[0].get("n", 0)) if prev_total_rows else 0
+
+                rate = round(total / 90.0, 2)
+                prev_rate = round(prev_total / 90.0, 2) if prev_total else 0.0
+                delta = total - prev_total
+                pct = round((delta / prev_total * 100.0), 1) if prev_total else None
+
+                # --- Spike days (top 3) ---
+                spike_days = sorted(daily_counts, key=lambda x: -x["count"])[:3]
+                spike_details = []
+                for sd in spike_days:
+                    day = sd.get("day")
+                    if not day:
+                        continue
+                    # attribute drivers by top offenses on that day
+                    day_where = prev_where.replace(prev_start.isoformat(), prev_start.isoformat())  # no-op to keep formatting stable
+                    day_where = (
+                        f"date1 = '{day}' AND beat = '{beat}'"
+                    )
+                    drivers = client.client.get(
+                        dataset_id,
+                        select="offincident, count(1) as n",
+                        where=day_where,
+                        group="offincident",
+                        order="n DESC",
+                        limit=5,
+                    )
+                    spike_details.append(
+                        {
+                            "day": day,
+                            "count": sd.get("count"),
+                            "top_offenses": [
+                                {"offincident": r.get("offincident"), "count": int(r.get("n", 0))}
+                                for r in drivers
+                            ],
+                        }
+                    )
+
+                # --- Offense mix shift (current vs prev) ---
+                # Pull a moderately-sized distribution for both windows.
+                dist_limit = 250
+                cur_dist = client.client.get(
+                    dataset_id,
+                    select="offincident, count(1) as n",
+                    where=where,
+                    group="offincident",
+                    order="n DESC",
+                    limit=dist_limit,
+                )
+                prev_dist = client.client.get(
+                    dataset_id,
+                    select="offincident, count(1) as n",
+                    where=prev_where,
+                    group="offincident",
+                    order="n DESC",
+                    limit=dist_limit,
+                )
+                cur_map = {r.get("offincident"): int(r.get("n", 0)) for r in cur_dist if r.get("offincident")}
+                prev_map = {r.get("offincident"): int(r.get("n", 0)) for r in prev_dist if r.get("offincident")}
+                keys = set(cur_map) | set(prev_map)
+                movers = []
+                for k in keys:
+                    c = cur_map.get(k, 0)
+                    p = prev_map.get(k, 0)
+                    # share change (percentage points)
+                    cs = (c / total * 100.0) if total else 0.0
+                    ps = (p / prev_total * 100.0) if prev_total else 0.0
+                    movers.append({"offincident": k, "cur": c, "prev": p, "share_pp": round(cs - ps, 2)})
+                movers.sort(key=lambda x: -abs(x["share_pp"]))
+                top_mix_shift = movers[:8]
+
+                # --- Time patterns (watch + day-of-week) ---
+                watch_rows = client.client.get(
+                    dataset_id,
+                    select="watch, count(1) as n",
+                    where=where + " AND watch IS NOT NULL",
+                    group="watch",
+                    order="n DESC",
+                    limit=50,
+                )
+                watch_counts = [{"watch": r.get("watch"), "count": int(r.get("n", 0))} for r in watch_rows]
+
+                dow_rows = client.client.get(
+                    dataset_id,
+                    select="day1, count(1) as n",
+                    where=where + " AND day1 IS NOT NULL",
+                    group="day1",
+                    order="n DESC",
+                    limit=50,
+                )
+                dow_counts = [{"day": r.get("day1"), "count": int(r.get("n", 0))} for r in dow_rows]
+
+                # --- NIBRS framing ---
+                ca_rows = client.client.get(
+                    dataset_id,
+                    select="nibrs_crimeagainst, count(1) as n",
+                    where=where + " AND nibrs_crimeagainst IS NOT NULL",
+                    group="nibrs_crimeagainst",
+                    order="n DESC",
+                    limit=50,
+                )
+                crimeagainst = [{"name": r.get("nibrs_crimeagainst"), "count": int(r.get("n", 0))} for r in ca_rows]
+
+                type_rows = client.client.get(
+                    dataset_id,
+                    select="nibrs_type, count(1) as n",
+                    where=where + " AND nibrs_type IS NOT NULL",
+                    group="nibrs_type",
+                    order="n DESC",
+                    limit=50,
+                )
+                nibrs_type = [{"name": r.get("nibrs_type"), "count": int(r.get("n", 0))} for r in type_rows]
+
+                group_rows = client.client.get(
+                    dataset_id,
+                    select="nibrs_group, count(1) as n",
+                    where=where + " AND nibrs_group IS NOT NULL",
+                    group="nibrs_group",
+                    order="n DESC",
+                    limit=50,
+                )
+                nibrs_group = [{"name": r.get("nibrs_group"), "count": int(r.get("n", 0))} for r in group_rows]
+
+                # --- Bullets + narrative text ---
+                bullets: List[str] = []
+
                 top_off1 = top_offenses[0] if top_offenses else None
                 if top_off1:
-                    bullets.append(f"Top offense: {top_off1['offincident']} ({top_off1['count']})")
+                    bullets.append(f"Top offense driver: {top_off1['offincident']} ({top_off1['count']})")
 
-                # ZIP concentration
-                if top_zips:
-                    z0 = top_zips[0]
-                    if z0.get('pct') is not None:
-                        bullets.append(f"ZIP concentration: {z0['zip']} accounts for ~{z0['pct']}% of incidents")
+                if prev_total:
+                    direction = "up" if delta > 0 else "down" if delta < 0 else "flat"
+                    if pct is None:
+                        bullets.append(f"Versus prior 90d: {direction} by {abs(delta)} incidents")
+                    else:
+                        bullets.append(f"Versus prior 90d: {direction} by {abs(delta)} incidents ({pct:+}%)")
+                else:
+                    bullets.append("No prior-window baseline available (previous period returned 0)")
 
-                # Pace vs baseline (90d) if available later
-                headline = f"Beat {beat}: {total} incidents in the last {days} days"
+                bullets.append(f"Pace: {rate} incidents/day (prev {prev_rate}/day)")
 
-                # Simple interpretation hints
-                if total / max(days, 1) >= 2:
-                    bullets.append("Higher activity: averaging 2+ incidents/day")
-                elif total / max(days, 1) <= 0.25:
-                    bullets.append("Low activity: averaging ≤1 incident every ~4 days")
+                if spike_details:
+                    bullets.append(
+                        "Spike days: " + ", ".join([f"{s['day']} ({s['count']})" for s in spike_details])
+                    )
 
-                # Build paragraph
-                off_mix = ", ".join([f"{x['offincident']} ({x['count']})" for x in top_offenses[:3]]) if top_offenses else "—"
-                zip_mix = ", ".join([f"{x['zip']} ({x['pct']}%)" for x in top_zips[:3]]) if top_zips else "—"
+                # Mix shift: highlight top 2 movers
+                if top_mix_shift:
+                    m = top_mix_shift[0]
+                    bullets.append(f"Largest mix shift: {m['offincident']} ({m['share_pp']} pp)")
 
-                text = (
-                    f"In the last {days} days, beat {beat} recorded {total} incidents. "
-                    f"The most common reported offense types were: {off_mix}.\n\n"
-                    f"Incidents in this beat were most frequently associated with these ZIP codes: {zip_mix}. "
-                    f"This is a heuristic (beats and ZIP boundaries overlap), but it helps localize where activity clusters.\n\n"
-                    "Possible drivers to consider: routine patrol focus, nearby commercial corridors/apartments, "
-                    "and short-term spikes around weekends/holidays. Treat this as a working narrative, not a causal claim."
+                # Compose paragraph
+                mix3 = ", ".join([f"{x['offincident']} ({x['count']})" for x in top_offenses[:3]]) if top_offenses else "—"
+                time1 = watch_counts[0]["watch"] if watch_counts else None
+                dow1 = dow_counts[0]["day"] if dow_counts else None
+
+                baseline_line = (
+                    f"Compared with the prior 90-day window, activity is {'higher' if delta>0 else 'lower' if delta<0 else 'about the same'} "
+                    f"({delta:+} incidents" + (f", {pct:+}%" if pct is not None else "") + ")."
                 )
 
-                return {"headline": headline, "text": text, "bullets": bullets}
+                spike_line = ""
+                if spike_details:
+                    drivers = []
+                    for s in spike_details[:2]:
+                        if s.get('top_offenses'):
+                            d0 = s['top_offenses'][0]
+                            drivers.append(f"{s['day']} was led by {d0['offincident']} ({d0['count']})")
+                    if drivers:
+                        spike_line = " Spike attribution: " + "; ".join(drivers) + "."
+
+                time_line = ""
+                if time1 or dow1:
+                    parts = []
+                    if time1:
+                        parts.append(f"most common watch: {time1}")
+                    if dow1:
+                        parts.append(f"most common weekday label: {dow1}")
+                    time_line = " Time pattern: " + ", ".join(parts) + "."
+
+                nibrs_line = ""
+                if crimeagainst:
+                    ca0 = crimeagainst[0]
+                    nibrs_line = f" NIBRS framing: mostly {ca0['name']} ({ca0['count']})."
+
+                text = (
+                    f"Beat {beat} logged {total} incidents over the last 90 days ({rate}/day). "
+                    f"Top offense types were: {mix3}. {baseline_line}{spike_line}{time_line}{nibrs_line}"
+                )
+
+                return {
+                    "headline": f"Beat {beat} — 90-day analysis",
+                    "text": text,
+                    "bullets": bullets,
+                    "baseline": {
+                        "current_total": total,
+                        "previous_total": prev_total,
+                        "delta": delta,
+                        "pct": pct,
+                        "current_rate_per_day": rate,
+                        "previous_rate_per_day": prev_rate,
+                    },
+                    "spikes": spike_details,
+                    "mix_shift": top_mix_shift,
+                    "time_patterns": {"watch": watch_counts, "day_of_week": dow_counts},
+                    "nibrs": {"crimeagainst": crimeagainst, "type": nibrs_type, "group": nibrs_group},
+                }
+
+            narrative = build_narrative_90d()
 
             out["windows"][str(days)] = {
                 "days": days,
@@ -525,7 +723,7 @@ def main() -> None:
                 "top_offenses": top_offenses,
                 "top_zips": top_zips,
                 "daily_counts": daily_counts,
-                "narrative": synthesize_narrative(),
+                "narrative": narrative,
             }
 
         return out

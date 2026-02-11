@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at": "2026-02-11T13:39:57+00:00",
+    "generated_at": "2026-02-11T14:00:25+00:00",
     "dataset": "police_incidents",
     "dataset_id": "qv6i-rri7",
     "beat": "254",
@@ -36,15 +36,7 @@
           "count": 1
         }
       ],
-      "narrative": {
-        "headline": "Beat 254: 1 incidents in the last 7 days",
-        "text": "In the last 7 days, beat 254 recorded 1 incidents. The most common reported offense types were: THEFT OF PROP <$100 - OTHER THAN SHOPLIFT (1).\n\nIncidents in this beat were most frequently associated with these ZIP codes: 75243 (100.0%). This is a heuristic (beats and ZIP boundaries overlap), but it helps localize where activity clusters.\n\nPossible drivers to consider: routine patrol focus, nearby commercial corridors/apartments, and short-term spikes around weekends/holidays. Treat this as a working narrative, not a causal claim.",
-        "bullets": [
-          "Top offense: THEFT OF PROP <$100 - OTHER THAN SHOPLIFT (1)",
-          "ZIP concentration: 75243 accounts for ~100.0% of incidents",
-          "Low activity: averaging \u22641 incident every ~4 days"
-        ]
-      }
+      "narrative": null
     },
     "30": {
       "days": 30,
@@ -162,14 +154,7 @@
           "count": 1
         }
       ],
-      "narrative": {
-        "headline": "Beat 254: 19 incidents in the last 30 days",
-        "text": "In the last 30 days, beat 254 recorded 19 incidents. The most common reported offense types were: MOTOR VEHICLE THEFT - ATTEMPT (4), ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE (2), UNLAWFUL RESTRAINT (2).\n\nIncidents in this beat were most frequently associated with these ZIP codes: 75243 (100.0%). This is a heuristic (beats and ZIP boundaries overlap), but it helps localize where activity clusters.\n\nPossible drivers to consider: routine patrol focus, nearby commercial corridors/apartments, and short-term spikes around weekends/holidays. Treat this as a working narrative, not a causal claim.",
-        "bullets": [
-          "Top offense: MOTOR VEHICLE THEFT - ATTEMPT (4)",
-          "ZIP concentration: 75243 accounts for ~100.0% of incidents"
-        ]
-      }
+      "narrative": null
     },
     "90": {
       "days": 90,
@@ -393,12 +378,235 @@
         }
       ],
       "narrative": {
-        "headline": "Beat 254: 56 incidents in the last 90 days",
-        "text": "In the last 90 days, beat 254 recorded 56 incidents. The most common reported offense types were: MOTOR VEHICLE THEFT - ATTEMPT (8), MOTOR VEHICLE THEFT (4), ASSAULT -BODILY INJURY ONLY (3).\n\nIncidents in this beat were most frequently associated with these ZIP codes: 75243 (98.2%), 75238 (1.8%). This is a heuristic (beats and ZIP boundaries overlap), but it helps localize where activity clusters.\n\nPossible drivers to consider: routine patrol focus, nearby commercial corridors/apartments, and short-term spikes around weekends/holidays. Treat this as a working narrative, not a causal claim.",
+        "headline": "Beat 254 \u2014 90-day analysis",
+        "text": "Beat 254 logged 56 incidents over the last 90 days (0.62/day). Top offense types were: MOTOR VEHICLE THEFT - ATTEMPT (8), MOTOR VEHICLE THEFT (4), ASSAULT -BODILY INJURY ONLY (3). Compared with the prior 90-day window, activity is lower (-13 incidents, -18.8%). Spike attribution: 2026-01-09 00:00:00.0000000 was led by MOTOR VEHICLE THEFT (2); 2026-01-14 00:00:00.0000000 was led by MOTOR VEHICLE THEFT (2). Time pattern: most common watch: 3, most common weekday label: Fri. NIBRS framing: mostly PROPERTY (29).",
         "bullets": [
-          "Top offense: MOTOR VEHICLE THEFT - ATTEMPT (8)",
-          "ZIP concentration: 75243 accounts for ~98.2% of incidents"
-        ]
+          "Top offense driver: MOTOR VEHICLE THEFT - ATTEMPT (8)",
+          "Versus prior 90d: down by 13 incidents (-18.8%)",
+          "Pace: 0.62 incidents/day (prev 0.77/day)",
+          "Spike days: 2026-01-09 00:00:00.0000000 (6), 2026-01-14 00:00:00.0000000 (4), 2025-11-30 00:00:00.0000000 (3)",
+          "Largest mix shift: MOTOR VEHICLE THEFT - ATTEMPT (11.39 pp)"
+        ],
+        "baseline": {
+          "current_total": 56,
+          "previous_total": 69,
+          "delta": -13,
+          "pct": -18.8,
+          "current_rate_per_day": 0.62,
+          "previous_rate_per_day": 0.77
+        },
+        "spikes": [
+          {
+            "day": "2026-01-09 00:00:00.0000000",
+            "count": 6,
+            "top_offenses": [
+              {
+                "offincident": "MOTOR VEHICLE THEFT",
+                "count": 2
+              },
+              {
+                "offincident": "BMV",
+                "count": 1
+              },
+              {
+                "offincident": "HARASSMENT-REPEATED ELECTRONIC COMM - THREAT",
+                "count": 1
+              },
+              {
+                "offincident": "THEFT BY DECEPTION (FRAUD) >OR EQUAL $2500 <$30K",
+                "count": 1
+              },
+              {
+                "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "day": "2026-01-14 00:00:00.0000000",
+            "count": 4,
+            "top_offenses": [
+              {
+                "offincident": "MOTOR VEHICLE THEFT",
+                "count": 2
+              },
+              {
+                "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "day": "2025-11-30 00:00:00.0000000",
+            "count": 3,
+            "top_offenses": [
+              {
+                "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+                "count": 2
+              },
+              {
+                "offincident": "THEFT OF PROP (AUTO ACC) <$100 - (NOT EMP)",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "mix_shift": [
+          {
+            "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+            "cur": 8,
+            "prev": 2,
+            "share_pp": 11.39
+          },
+          {
+            "offincident": "BMV",
+            "cur": 1,
+            "prev": 8,
+            "share_pp": -9.81
+          },
+          {
+            "offincident": "NATURAL DEATH (NO OFFENSE)",
+            "cur": 0,
+            "prev": 4,
+            "share_pp": -5.8
+          },
+          {
+            "offincident": "THEFT OF PROP > OR EQUAL $100 <$750 (NOT SHOPLIFT) PC31.03(e2A)",
+            "cur": 0,
+            "prev": 4,
+            "share_pp": -5.8
+          },
+          {
+            "offincident": "ASSAULT -BODILY INJURY ONLY",
+            "cur": 3,
+            "prev": 0,
+            "share_pp": 5.36
+          },
+          {
+            "offincident": "LOST PROPERTY (NO OFFENSE)",
+            "cur": 3,
+            "prev": 0,
+            "share_pp": 5.36
+          },
+          {
+            "offincident": "BURGLARY OF BUILDING - FORCED ENTRY",
+            "cur": 0,
+            "prev": 3,
+            "share_pp": -4.35
+          },
+          {
+            "offincident": "THEFT OF PROP > OR EQUAL $750 <$2,500 (NOT SHOPLIFT) PC31.03(e3)",
+            "cur": 0,
+            "prev": 3,
+            "share_pp": -4.35
+          }
+        ],
+        "time_patterns": {
+          "watch": [
+            {
+              "watch": "3",
+              "count": 24
+            },
+            {
+              "watch": "2",
+              "count": 18
+            },
+            {
+              "watch": "1",
+              "count": 14
+            }
+          ],
+          "day_of_week": [
+            {
+              "day": "Fri",
+              "count": 13
+            },
+            {
+              "day": "Sun",
+              "count": 10
+            },
+            {
+              "day": "Wed",
+              "count": 9
+            },
+            {
+              "day": "Thu",
+              "count": 8
+            },
+            {
+              "day": "Tue",
+              "count": 7
+            },
+            {
+              "day": "Sat",
+              "count": 5
+            },
+            {
+              "day": "Mon",
+              "count": 4
+            }
+          ]
+        },
+        "nibrs": {
+          "crimeagainst": [
+            {
+              "name": "PROPERTY",
+              "count": 29
+            },
+            {
+              "name": "MISCELLANEOUS",
+              "count": 12
+            },
+            {
+              "name": "PERSON",
+              "count": 9
+            },
+            {
+              "name": "PERSON, PROPERTY, OR SOCIETY",
+              "count": 4
+            },
+            {
+              "name": "SOCIETY",
+              "count": 2
+            }
+          ],
+          "type": [
+            {
+              "name": "Coded",
+              "count": 33
+            },
+            {
+              "name": "999 - No Coded",
+              "count": 13
+            },
+            {
+              "name": "Not Coded",
+              "count": 6
+            },
+            {
+              "name": "90Z - No Coded",
+              "count": 3
+            },
+            {
+              "name": "No Coded",
+              "count": 1
+            }
+          ],
+          "group": [
+            {
+              "name": "A",
+              "count": 40
+            },
+            {
+              "name": "C",
+              "count": 13
+            },
+            {
+              "name": "B",
+              "count": 3
+            }
+          ]
+        }
       }
     }
   }

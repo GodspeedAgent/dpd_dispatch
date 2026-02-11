@@ -53,7 +53,6 @@ function qs(name){
 }
 
 async function loadBeatProfile(beat, days){
-  // Convention: docs/data/beats/<beat>.json
   const path = `./data/beats/${beat}.json`;
   const obj = await fetchJson(path);
   const key = String(days);
@@ -99,22 +98,28 @@ async function loadBeatProfile(beat, days){
         const nt = document.getElementById('narrativeText');
         const nb = document.getElementById('narrativeBullets');
 
-        const narrative = snap?.narrative;
-        if(nm) nm.textContent = narrative?.headline ?? '—';
-        if(nt) nt.textContent = narrative?.text ?? '';
-        if(nb){
-          nb.innerHTML = '';
-          const bullets = narrative?.bullets ?? [];
-          if(bullets.length){
-            const ul = document.createElement('ul');
-            ul.style.margin = '10px 0 0 18px';
-            ul.style.color = 'var(--muted)';
-            for(const b of bullets){
-              const li = document.createElement('li');
-              li.textContent = b;
-              ul.appendChild(li);
+        const narrative = (days === 90) ? snap?.narrative : null;
+        if(days !== 90){
+          if(nm) nm.textContent = 'Narrative analysis is shown for the 90-day window only.';
+          if(nt) nt.textContent = '';
+          if(nb) nb.innerHTML = '';
+        }else{
+          if(nm) nm.textContent = narrative?.headline ?? '—';
+          if(nt) nt.textContent = narrative?.text ?? '';
+          if(nb){
+            nb.innerHTML = '';
+            const bullets = narrative?.bullets ?? [];
+            if(bullets.length){
+              const ul = document.createElement('ul');
+              ul.style.margin = '10px 0 0 18px';
+              ul.style.color = 'var(--muted)';
+              for(const b of bullets){
+                const li = document.createElement('li');
+                li.textContent = b;
+                ul.appendChild(li);
+              }
+              nb.appendChild(ul);
             }
-            nb.appendChild(ul);
           }
         }
 
