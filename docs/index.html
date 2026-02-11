@@ -33,10 +33,10 @@
         </div>
       </section>
 
-      <section class="card">
-        <h2>By Beat</h2>
+      <details class="card" open>
+        <summary><h2>By Beat</h2></summary>
         <div id="byRegionBeat" class="table"></div>
-      </section>
+      </details>
 
       <section class="card">
         <h2>Active Calls — Filters</h2>
@@ -63,10 +63,10 @@
         <p class="muted" id="activeFilterSummary">—</p>
       </section>
 
-      <section class="card">
-        <h2>Raw Calls</h2>
+      <details class="card" open>
+        <summary><h2>Raw Calls</h2></summary>
         <div id="rawCalls" class="table"></div>
-      </section>
+      </details>
 
       <section class="card">
         <h2 id="histTitle">Historical Snapshot</h2>
@@ -111,20 +111,20 @@
         <p class="muted" id="histFilterSummary">—</p>
       </section>
 
-      <section class="card">
-        <h2>Historical — Top Beats</h2>
+      <details class="card">
+        <summary><h2>Historical — Top Beats</h2></summary>
         <div id="histTopBeats" class="table"></div>
-      </section>
+      </details>
 
-      <section class="card">
-        <h2>Historical — Top Offenses</h2>
+      <details class="card">
+        <summary><h2>Historical — Top Offenses</h2></summary>
         <div id="histTopOffenses" class="table"></div>
-      </section>
+      </details>
 
-      <section class="card">
-        <h2>Historical — Incidents (first 200)</h2>
+      <details class="card">
+        <summary><h2>Historical — Incidents (first 200)</h2></summary>
         <div id="histRows" class="table"></div>
-      </section>
+      </details>
     </main>
 
     <script src="./js/app.js"></script>
