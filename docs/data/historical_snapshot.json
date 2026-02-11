@@ -1,12 +1,12 @@
 {
   "summary": {
-    "generated_at": "2026-02-11T03:32:27+00:00",
+    "generated_at": "2026-02-11T03:36:15+00:00",
     "dataset": "police_incidents",
     "dataset_id": "qv6i-rri7",
-    "title": "Beat 254 \u2014 last 14 days (all incidents)",
-    "days": 14,
-    "beat": "254",
-    "total_incidents": 2,
+    "title": "All beats \u2014 last 7 days (all incidents)",
+    "days": 7,
+    "beat": null,
+    "total_incidents": 1122,
     "query": {
       "offense_keyword": null,
       "offense_category": null,
@@ -16,42 +16,2608 @@
   },
   "top_beats": [
     {
-      "beat": "254",
-      "count": 2
+      "beat": "153",
+      "count": 33
+    },
+    {
+      "beat": "434",
+      "count": 17
+    },
+    {
+      "beat": "413",
+      "count": 16
+    },
+    {
+      "beat": "241",
+      "count": 15
+    },
+    {
+      "beat": "126",
+      "count": 13
+    },
+    {
+      "beat": "154",
+      "count": 13
+    },
+    {
+      "beat": "224",
+      "count": 13
+    },
+    {
+      "beat": "256",
+      "count": 13
+    },
+    {
+      "beat": "144",
+      "count": 12
+    },
+    {
+      "beat": "238",
+      "count": 12
+    },
+    {
+      "beat": "252",
+      "count": 12
+    },
+    {
+      "beat": "534",
+      "count": 12
+    },
+    {
+      "beat": "654",
+      "count": 12
+    },
+    {
+      "beat": "751",
+      "count": 12
+    },
+    {
+      "beat": "121",
+      "count": 11
+    },
+    {
+      "beat": "145",
+      "count": 11
+    },
+    {
+      "beat": "151",
+      "count": 11
+    },
+    {
+      "beat": "521",
+      "count": 11
+    },
+    {
+      "beat": "614",
+      "count": 11
+    },
+    {
+      "beat": "312",
+      "count": 10
+    },
+    {
+      "beat": "523",
+      "count": 10
+    },
+    {
+      "beat": "625",
+      "count": 10
+    },
+    {
+      "beat": "333",
+      "count": 9
+    },
+    {
+      "beat": "354",
+      "count": 9
+    },
+    {
+      "beat": "416",
+      "count": 9
+    },
+    {
+      "beat": "424",
+      "count": 9
+    },
+    {
+      "beat": "444",
+      "count": 9
+    },
+    {
+      "beat": "623",
+      "count": 9
+    },
+    {
+      "beat": "642",
+      "count": 9
+    },
+    {
+      "beat": "717",
+      "count": 9
+    },
+    {
+      "beat": "734",
+      "count": 9
+    },
+    {
+      "beat": "113",
+      "count": 8
+    },
+    {
+      "beat": "141",
+      "count": 8
+    },
+    {
+      "beat": "157",
+      "count": 8
+    },
+    {
+      "beat": "226",
+      "count": 8
+    },
+    {
+      "beat": "233",
+      "count": 8
+    },
+    {
+      "beat": "323",
+      "count": 8
+    },
+    {
+      "beat": "355",
+      "count": 8
+    },
+    {
+      "beat": "426",
+      "count": 8
+    },
+    {
+      "beat": "431",
+      "count": 8
+    },
+    {
+      "beat": "445",
+      "count": 8
+    },
+    {
+      "beat": "635",
+      "count": 8
+    },
+    {
+      "beat": "737",
+      "count": 8
+    },
+    {
+      "beat": "111",
+      "count": 7
+    },
+    {
+      "beat": "146",
+      "count": 7
+    },
+    {
+      "beat": "152",
+      "count": 7
+    },
+    {
+      "beat": "211",
+      "count": 7
+    },
+    {
+      "beat": "234",
+      "count": 7
+    },
+    {
+      "beat": "335",
+      "count": 7
+    },
+    {
+      "beat": "338",
+      "count": 7
     }
   ],
   "top_offenses": [
     {
-      "offincident": "ASSAULT -VERBAL THREAT",
-      "count": 1
+      "offincident": "MOTOR VEHICLE THEFT",
+      "count": 177
     },
     {
-      "offincident": "THEFT - PRELIMINARY INVESTIGATION",
-      "count": 1
+      "offincident": "BMV",
+      "count": 78
+    },
+    {
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "count": 51
+    },
+    {
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "count": 26
+    },
+    {
+      "offincident": "RECKLESS DAMAGE",
+      "count": 26
+    },
+    {
+      "offincident": "POSS MARIJUANA <2OZ",
+      "count": 24
+    },
+    {
+      "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+      "count": 23
+    },
+    {
+      "offincident": "BURGLARY OF BUILDING - FORCED ENTRY",
+      "count": 22
+    },
+    {
+      "offincident": "COLLISION INV DAMAGE TO VEHICLE > OR EQUAL $200",
+      "count": 21
+    },
+    {
+      "offincident": "PUBLIC INTOXICATION",
+      "count": 20
+    },
+    {
+      "offincident": "CRIM MISCHIEF >OR EQUAL $750 < $2,500",
+      "count": 19
+    },
+    {
+      "offincident": "POSSESSION OF DRUG PARAPHERNALIA",
+      "count": 19
+    },
+    {
+      "offincident": "THEFT OF PROP > OR EQUAL $100 <$750 (SHOPLIFT-NOT EMP) PC31.03(e2A)",
+      "count": 18
+    },
+    {
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "count": 17
+    },
+    {
+      "offincident": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
+      "count": 16
+    },
+    {
+      "offincident": "CRIMINAL TRESPASS",
+      "count": 15
+    },
+    {
+      "offincident": "DWI",
+      "count": 15
+    },
+    {
+      "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+      "count": 15
+    },
+    {
+      "offincident": "FOUND PROPERTY (NO OFFENSE)",
+      "count": 14
+    },
+    {
+      "offincident": "RECOVERED OUT OF TOWN STOLEN VEHICLE (NO OFFENSE)",
+      "count": 14
+    },
+    {
+      "offincident": "TRAF VIO -DUTY ON STRIKE FIX/HWY LANDSCAPE > OR EQUAL $200 TC 550.025(b)2",
+      "count": 14
+    },
+    {
+      "offincident": "CRIM MISCHIEF > OR EQUAL $100 < $750",
+      "count": 13
+    },
+    {
+      "offincident": "POSS CONT SUB PEN GRP 1/1-B < 1G",
+      "count": 13
+    },
+    {
+      "offincident": "ASSAULT (AGG) -DEADLY WEAPON",
+      "count": 12
+    },
+    {
+      "offincident": "ROBBERY OF INDIVIDUAL (AGG)",
+      "count": 12
+    },
+    {
+      "offincident": "THEFT OF PROP (AUTO ACC) <$100 - (NOT EMP)",
+      "count": 12
+    },
+    {
+      "offincident": "ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+      "count": 11
+    },
+    {
+      "offincident": "BURGLARY OF HABITATION -NO FORCED ENTRY",
+      "count": 11
+    },
+    {
+      "offincident": "NATURAL DEATH (NO OFFENSE)",
+      "count": 11
+    },
+    {
+      "offincident": "TRAF VIO -DUTY ON STRIKE UNATTENDED VEH > OR EQUAL $200",
+      "count": 11
+    },
+    {
+      "offincident": "UNEXPLAINED DEATH (NO OFFENSE)",
+      "count": 11
+    },
+    {
+      "offincident": "ASSAULT -VERBAL THREAT",
+      "count": 10
+    },
+    {
+      "offincident": "EVADING ARREST DETENTION",
+      "count": 9
+    },
+    {
+      "offincident": "THEFT OF PROP > OR EQUAL $100 <$750 (NOT SHOPLIFT) PC31.03(e2A)",
+      "count": 9
+    },
+    {
+      "offincident": "THEFT OF PROP > OR EQUAL $750 <$2,500 (NOT SHOPLIFT) PC31.03(e3)",
+      "count": 9
+    },
+    {
+      "offincident": "CRIMINAL TRESPASS AFFIDAVIT",
+      "count": 8
+    },
+    {
+      "offincident": "MISSING PERSON (NO OFFENSE)",
+      "count": 8
+    },
+    {
+      "offincident": "OPEN BUILDING (NO OFFENSE)",
+      "count": 8
+    },
+    {
+      "offincident": "TRAF VIO -DRIV W/OUT LIC INV W/PREV CONV/SUSP/W/O FIN RES",
+      "count": 8
+    },
+    {
+      "offincident": "ABANDONED PROPERTY (NO OFFENSE)",
+      "count": 7
+    },
+    {
+      "offincident": "DISORDERLY CONDUCT",
+      "count": 7
+    },
+    {
+      "offincident": "THEFT OF PROP <$100 -SHOPLIFTING - (NOT BY EMPLOYEE)",
+      "count": 7
+    },
+    {
+      "offincident": "ASSAULT (AGG) - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+      "count": 6
+    },
+    {
+      "offincident": "BURGLARY OF HABITATION - FORCED ENTRY",
+      "count": 6
+    },
+    {
+      "offincident": "EVADING ARREST DETENTION W/VEHICLE PC38.04(b)(2)(A)",
+      "count": 6
+    },
+    {
+      "offincident": "OTHER OFFENSE - MISDEMEANOR",
+      "count": 6
+    },
+    {
+      "offincident": "THEFT FROM PERSON",
+      "count": 6
+    },
+    {
+      "offincident": "ASSAULT (AGG) -DISCH FIREARM  OCC BLDG/HOUSE/VEH (AGG)",
+      "count": 5
+    },
+    {
+      "offincident": "DEADLY CONDUCT DISCHARGE FIREARM (DAMAGE)",
+      "count": 5
+    },
+    {
+      "offincident": "INJURED PERSON- PUBLIC PROPERTY (OTHER THAN FIREARM) (NO OFFENSE)",
+      "count": 5
     }
   ],
   "incidents": [
     {
-      "date1": "2026-02-01 00:00:00.0000000",
-      "incidentnum": "015149-2026",
-      "offincident": "THEFT - PRELIMINARY INVESTIGATION",
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018697-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "134",
+      "division": "CENTRAL",
+      "incident_address": "1800 MAIN ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018863-2026",
+      "offincident": "CRIMINAL TRESPASS",
+      "ucr_offense": null,
+      "nibrs_code": "90J",
+      "nibrs_crime": "TRESPASS OF REAL PROPERTY",
+      "beat": "537",
+      "division": "NORTHWEST",
+      "incident_address": "3535 WEBB CHAPEL EXT"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018748-2026",
+      "offincident": "CRIM MISCHIEF <$100",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "237",
+      "division": "NORTHEAST",
+      "incident_address": "2515 EL CERRITO DR"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018571-2026",
+      "offincident": "PUBLIC INTOXICATION",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "PUBLIC INTOXICATION",
+      "beat": "153",
+      "division": "CENTRAL",
+      "incident_address": "2700 ELM ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018964-2026",
+      "offincident": "ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
       "ucr_offense": null,
       "nibrs_code": "999",
       "nibrs_crime": "MISCELLANEOUS",
-      "beat": "254",
-      "division": "NORTHEAST",
-      "incident_address": "9696 WALNUT ST"
+      "beat": "145",
+      "division": "CENTRAL",
+      "incident_address": "5334 ROSS AVE"
     },
     {
-      "date1": "2026-01-30 00:00:00.0000000",
-      "incidentnum": "013921-2026",
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018588-2026",
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "ucr_offense": null,
+      "nibrs_code": null,
+      "nibrs_crime": null,
+      "beat": "153",
+      "division": "CENTRAL",
+      "incident_address": "2800 ELM ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018715-2026",
+      "offincident": "COLLISION INV DAMAGE TO VEHICLE <$200",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "142",
+      "division": "CENTRAL",
+      "incident_address": "6100 E MOCKINGBIRD LN"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018586-2026",
+      "offincident": "FAIL TO ID -FUGITIVE INTENT GIVE FALSE INFO",
+      "ucr_offense": null,
+      "nibrs_code": "26A",
+      "nibrs_crime": "FALSE PRETENSES/ SWINDLE/ CONFIDENCE GAME",
+      "beat": "157",
+      "division": "CENTRAL",
+      "incident_address": "600 S RIVERFRONT BLVD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018555-2026",
+      "offincident": "ASSAULT (AGG) -DISCH FIREARM  OCC BLDG/HOUSE/VEH (AGG)",
+      "ucr_offense": null,
+      "nibrs_code": "13A",
+      "nibrs_crime": "AGG ASSAULT - NFV",
+      "beat": "121",
+      "division": "CENTRAL",
+      "incident_address": "2714 MCKINNEY AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018861-2026",
+      "offincident": "RECOVERED OUT OF TOWN STOLEN VEHICLE (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "741",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "4300 ARCHBROOK DR"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018903-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "154",
+      "division": "CENTRAL",
+      "incident_address": "611 N HAWKINS ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018743-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "125",
+      "division": "CENTRAL",
+      "incident_address": "4826 COLE AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018792-2026",
+      "offincident": "CRIM MISCHIEF > OR EQUAL $100 < $750",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "224",
+      "division": "NORTHEAST",
+      "incident_address": "8525 FREEPORT DR"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018643-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "431",
+      "division": "SOUTHWEST",
+      "incident_address": "315 N MOROCCO AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018544-2026",
+      "offincident": "DWI",
+      "ucr_offense": null,
+      "nibrs_code": "90D",
+      "nibrs_crime": "DUI",
+      "beat": "415",
+      "division": "SOUTHWEST",
+      "incident_address": "900 N HAMPTON RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018845-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "253",
+      "division": "NORTHEAST",
+      "incident_address": "9259 L B J FWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018791-2026",
+      "offincident": "CRIMINAL TRESPASS",
+      "ucr_offense": null,
+      "nibrs_code": "90J",
+      "nibrs_crime": "TRESPASS OF REAL PROPERTY",
+      "beat": "346",
+      "division": "SOUTHEAST",
+      "incident_address": "3135 MCDERMOTT AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018897-2026",
       "offincident": "ASSAULT -VERBAL THREAT",
       "ucr_offense": null,
       "nibrs_code": "13C",
       "nibrs_crime": "INTIMIDATION",
-      "beat": "254",
+      "beat": "642",
+      "division": "NORTH CENTRAL",
+      "incident_address": "8100 L B J FWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018642-2026",
+      "offincident": "ROBBERY OF INDIVIDUAL - PRELIMINARY INVESTIGATION",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "152",
+      "division": "CENTRAL",
+      "incident_address": "2000 CORINTH ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018583-2026",
+      "offincident": "DISORDERLY CONDUCT",
+      "ucr_offense": null,
+      "nibrs_code": "90C",
+      "nibrs_crime": "DISORDERLY CONDUCT",
+      "beat": "121",
+      "division": "CENTRAL",
+      "incident_address": "2714 MCKINNEY AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018769-2026",
+      "offincident": "ASSAULT (AGG) -DEADLY WEAPON",
+      "ucr_offense": null,
+      "nibrs_code": "13A",
+      "nibrs_crime": "AGG ASSAULT - NFV",
+      "beat": "747",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "7107 S R L THORNTON FWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018680-2026",
+      "offincident": "CRIM MISCHIEF >OR EQUAL $750 < $2,500",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "534",
+      "division": "NORTHWEST",
+      "incident_address": "2464 ROYAL LN"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018618-2026",
+      "offincident": "ROBBERY OF INDIVIDUAL - PRELIMINARY INVESTIGATION",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "545",
+      "division": "NORTHWEST",
+      "incident_address": "3921 CEDAR SPRINGS RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018801-2026",
+      "offincident": "RECOVERED OUT OF TOWN STOLEN PROPERTY (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "741",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "1111 W LEDBETTER DR"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018675-2026",
+      "offincident": "HARASSMENT-REPEATED ELECTRONIC COMM - NON-THREATENING",
+      "ucr_offense": null,
+      "nibrs_code": "90C",
+      "nibrs_crime": "DISORDERLY CONDUCT",
+      "beat": "132",
+      "division": "CENTRAL",
+      "incident_address": "400 N GRIFFIN ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018765-2026",
+      "offincident": "UNEXPLAINED DEATH (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "124",
+      "division": "CENTRAL",
+      "incident_address": "3260 N HALL ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018954-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "219",
       "division": "NORTHEAST",
-      "incident_address": "9837 WALNUT ST"
+      "incident_address": "6465 E MOCKINGBIRD LN"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018555-2026",
+      "offincident": "ASSAULT (AGG) -DISCH FIREARM  OCC BLDG/HOUSE/VEH (AGG)",
+      "ucr_offense": null,
+      "nibrs_code": "13A",
+      "nibrs_crime": "AGG ASSAULT - NFV",
+      "beat": "121",
+      "division": "CENTRAL",
+      "incident_address": "2714 MCKINNEY AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018894-2026",
+      "offincident": "DISORDERLY CONDUCT",
+      "ucr_offense": null,
+      "nibrs_code": "90C",
+      "nibrs_crime": "DISORDERLY CONDUCT",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "309 S MARSALIS AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018758-2026",
+      "offincident": "CRIM MISCHIEF >OR EQUAL $750 < $2,500",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "426",
+      "division": "SOUTHWEST",
+      "incident_address": "3600 PUEBLO ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018606-2026",
+      "offincident": "PUBLIC INTOXICATION",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "PUBLIC INTOXICATION",
+      "beat": "544",
+      "division": "NORTHWEST",
+      "incident_address": "4207 LEMMON AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018615-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "153",
+      "division": "CENTRAL",
+      "incident_address": "2901 COMMERCE ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018604-2026",
+      "offincident": "TRAF VIO -DUTY ON STRIKE UNATTENDED VEH > OR EQUAL $200",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "312",
+      "division": "SOUTHEAST",
+      "incident_address": "4000 SCYENE RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018726-2026",
+      "offincident": "FAIL TO ID -REFUSES TO PROVIDE INFO",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "717",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "7000 JULIUS SCHEPPS FWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018825-2026",
+      "offincident": "CRIM MISCHIEF > OR EQUAL $100 < $750",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "219",
+      "division": "NORTHEAST",
+      "incident_address": "5855 MILTON ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018596-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "312 W DAVIS ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018586-2026",
+      "offincident": "POSS MARIJUANA <2OZ",
+      "ucr_offense": null,
+      "nibrs_code": "35A",
+      "nibrs_crime": "DRUG/ NARCOTIC VIOLATIONS",
+      "beat": "157",
+      "division": "CENTRAL",
+      "incident_address": "600 S RIVERFRONT BLVD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018797-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "132",
+      "division": "CENTRAL",
+      "incident_address": "1800 N FIELD ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018701-2026",
+      "offincident": "OPEN BUILDING (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "652",
+      "division": "NORTH CENTRAL",
+      "incident_address": "9909 PRESTON RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018600-2026",
+      "offincident": "ASSAULT (AGG) -DEADLY WEAPON",
+      "ucr_offense": null,
+      "nibrs_code": "13A",
+      "nibrs_crime": "AGG ASSAULT - NFV",
+      "beat": "228",
+      "division": "NORTHEAST",
+      "incident_address": "11760 FERGUSON RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018922-2026",
+      "offincident": "BURGLARY - PRELIMINARY INVESTIGATION",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "631",
+      "division": "NORTH CENTRAL",
+      "incident_address": "5383 SOUTHERN BLVD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018853-2026",
+      "offincident": "CRIMINAL TRESPASS",
+      "ucr_offense": null,
+      "nibrs_code": "90J",
+      "nibrs_crime": "TRESPASS OF REAL PROPERTY",
+      "beat": "652",
+      "division": "NORTH CENTRAL",
+      "incident_address": "5147 KELSEY RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018643-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "431",
+      "division": "SOUTHWEST",
+      "incident_address": "315 N MOROCCO AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018831-2026",
+      "offincident": "THEFT BY DECEPTION (FRAUD) >OR EQUAL $2500 <$30K",
+      "ucr_offense": null,
+      "nibrs_code": "26A",
+      "nibrs_crime": "FALSE PRETENSES/ SWINDLE/ CONFIDENCE GAME",
+      "beat": "248",
+      "division": "NORTHEAST",
+      "incident_address": "9915 E NORTHWEST HWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018773-2026",
+      "offincident": "CRIM MISCHIEF > OR EQUAL $750 < $30K DESTROY SCHOOL",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "122",
+      "division": "CENTRAL",
+      "incident_address": "2626 HOWELL ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018633-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "420 W DAVIS ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018743-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "125",
+      "division": "CENTRAL",
+      "incident_address": "4826 COLE AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018540-2026",
+      "offincident": "PUBLIC INTOXICATION",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "PUBLIC INTOXICATION",
+      "beat": "154",
+      "division": "CENTRAL",
+      "incident_address": "2625 FLOYD ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018911-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "535",
+      "division": "NORTHWEST",
+      "incident_address": "2967 CARRIZO LN"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018698-2026",
+      "offincident": "CRIM MISCHIEF > OR EQUAL $100 < $750",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "742",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "2204 REYNOLDSTON LN"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018649-2026",
+      "offincident": "NATURAL DEATH (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "314",
+      "division": "SOUTHEAST",
+      "incident_address": "3010 KINMORE ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018611-2026",
+      "offincident": "CRIM MISCHIEF > OR EQUAL $100 < $750",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "225",
+      "division": "NORTHEAST",
+      "incident_address": "3122 GUS THOMASSON RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018586-2026",
+      "offincident": "POSSESSION OF DRUG PARAPHERNALIA",
+      "ucr_offense": null,
+      "nibrs_code": "35B",
+      "nibrs_crime": "DRUG EQUIPMENT VIOLATIONS",
+      "beat": "157",
+      "division": "CENTRAL",
+      "incident_address": "600 S RIVERFRONT BLVD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018591-2026",
+      "offincident": "DWI",
+      "ucr_offense": null,
+      "nibrs_code": "90D",
+      "nibrs_crime": "DUI",
+      "beat": "516",
+      "division": "NORTHWEST",
+      "incident_address": "1200 N RIVERFRONT BLVD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018728-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "256",
+      "division": "NORTHEAST",
+      "incident_address": "9670 FOREST LN"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018661-2026",
+      "offincident": "ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "346",
+      "division": "SOUTHEAST",
+      "incident_address": "3201 HAMILTON AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018619-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "625",
+      "division": "NORTH CENTRAL",
+      "incident_address": "5201 BELT LINE RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018693-2026",
+      "offincident": "NATURAL DEATH (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "754",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "3524 SILVERHILL DR"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018834-2026",
+      "offincident": "ASSAULT (AGG) -SERIOUS BODILY INJURY",
+      "ucr_offense": null,
+      "nibrs_code": "13A",
+      "nibrs_crime": "AGG ASSAULT - NFV",
+      "beat": "152",
+      "division": "CENTRAL",
+      "incident_address": "2111 S CESAR CHAVEZ BLVD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018686-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "542",
+      "division": "NORTHWEST",
+      "incident_address": "3333 INWOOD RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018696-2026",
+      "offincident": "NATURAL DEATH (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "338",
+      "division": "SOUTHEAST",
+      "incident_address": "9814 SCHOONER CT"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018572-2026",
+      "offincident": "DWI",
+      "ucr_offense": null,
+      "nibrs_code": "90D",
+      "nibrs_crime": "DUI",
+      "beat": "532",
+      "division": "NORTHWEST",
+      "incident_address": "11051 N STEMMONS TEXPRESS"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018596-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "312 W DAVIS ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018974-2026",
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "ucr_offense": null,
+      "nibrs_code": null,
+      "nibrs_crime": null,
+      "beat": "444",
+      "division": "SOUTHWEST",
+      "incident_address": "1600 BURLINGTON BLVD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018732-2026",
+      "offincident": "BURGLARY OF HABITATION - FORCED ENTRY",
+      "ucr_offense": null,
+      "nibrs_code": "220",
+      "nibrs_crime": "BURGLARY-RESIDENCE",
+      "beat": "313",
+      "division": "SOUTHEAST",
+      "incident_address": "4722 MEADOW ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018797-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "132",
+      "division": "CENTRAL",
+      "incident_address": "1800 N FIELD ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018570-2026",
+      "offincident": "EVADING ARREST DETENTION W/VEHICLE PC38.04(b)(2)(A)",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "414",
+      "division": "SOUTHWEST",
+      "incident_address": "900 CHURCH ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018584-2026",
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "ucr_offense": null,
+      "nibrs_code": null,
+      "nibrs_crime": null,
+      "beat": "121",
+      "division": "CENTRAL",
+      "incident_address": "2714 MCKINNEY AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018885-2026",
+      "offincident": "RECOVERED OUT OF TOWN STOLEN VEHICLE (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "426",
+      "division": "SOUTHWEST",
+      "incident_address": "1955 VILBIG RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018583-2026",
+      "offincident": "PUBLIC INTOXICATION",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "PUBLIC INTOXICATION",
+      "beat": "121",
+      "division": "CENTRAL",
+      "incident_address": "2714 MCKINNEY AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018717-2026",
+      "offincident": "ASSAULT (AGG) -SERIOUS BODILY INJURY",
+      "ucr_offense": null,
+      "nibrs_code": "13A",
+      "nibrs_crime": "AGG ASSAULT - NFV",
+      "beat": "754",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "3444 PACESETTER DR"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018539-2026",
+      "offincident": "UNEXPLAINED DEATH (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "623",
+      "division": "NORTH CENTRAL",
+      "incident_address": "18016 CARROLLWOOD DR"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018659-2026",
+      "offincident": "CRIMINAL TRESPASS AFFIDAVIT",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "756",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "7750 BONNIE VIEW RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018977-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "144",
+      "division": "CENTRAL",
+      "incident_address": "1827 GREENVILLE AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018727-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "256",
+      "division": "NORTHEAST",
+      "incident_address": "9670 FOREST LN"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018576-2026",
+      "offincident": "PUBLIC INTOXICATION",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "PUBLIC INTOXICATION",
+      "beat": "614",
+      "division": "NORTH CENTRAL",
+      "incident_address": "18918 MIDWAY RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018681-2026",
+      "offincident": "DEADLY CONDUCT",
+      "ucr_offense": null,
+      "nibrs_code": "13A",
+      "nibrs_crime": "AGG ASSAULT - NFV",
+      "beat": "238",
+      "division": "NORTHEAST",
+      "incident_address": "8559 E R L THORNTON FWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018959-2026",
+      "offincident": "RESIST ARREST SEARCH OR TRANSPORT",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "712",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "1300 BADEN ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018682-2026",
+      "offincident": "TERRORISTIC THREAT -PRELIMINARY INVESTIGATION",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "341",
+      "division": "SOUTHEAST",
+      "incident_address": "1519 MARTIN LUTHER KING JR BLVD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018685-2026",
+      "offincident": "SEIZED PROPERTY (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "523",
+      "division": "NORTHWEST",
+      "incident_address": "7201 LEMMON AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018778-2026",
+      "offincident": "NATURAL DEATH (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "753",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "6307 CONCERTO LN"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018758-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "426",
+      "division": "SOUTHWEST",
+      "incident_address": "3600 PUEBLO ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018959-2026",
+      "offincident": "POSS MARIJUANA <2OZ",
+      "ucr_offense": null,
+      "nibrs_code": "35A",
+      "nibrs_crime": "DRUG/ NARCOTIC VIOLATIONS",
+      "beat": "712",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "1300 BADEN ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018655-2026",
+      "offincident": "BURGLARY OF BUILDING - FORCED ENTRY",
+      "ucr_offense": null,
+      "nibrs_code": "220",
+      "nibrs_crime": "BURGLARY-BUSINESS",
+      "beat": "653",
+      "division": "NORTH CENTRAL",
+      "incident_address": "10233 N CENTRAL EXPY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018754-2026",
+      "offincident": "MISSING PERSON (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "153",
+      "division": "CENTRAL",
+      "incident_address": "334 S HALL ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018745-2026",
+      "offincident": "POSS MARIJUANA <2OZ *DRUG FREE ZONE*",
+      "ucr_offense": null,
+      "nibrs_code": "35A",
+      "nibrs_crime": "DRUG/ NARCOTIC VIOLATIONS",
+      "beat": "131",
+      "division": "CENTRAL",
+      "incident_address": "900 PACIFIC AVE"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018724-2026",
+      "offincident": "ASSAULT -OF SECURITY OFFICER - BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "133",
+      "division": "CENTRAL",
+      "incident_address": "1295 COMMERCE ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018849-2026",
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "ucr_offense": null,
+      "nibrs_code": null,
+      "nibrs_crime": null,
+      "beat": "752",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "6300 S R L THORNTON FWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018821-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "344",
+      "division": "SOUTHEAST",
+      "incident_address": "1715 DRISKELL ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018646-2026",
+      "offincident": "TRAF VIO -DUTY ON STRIKE FIX/HWY LANDSCAPE > OR EQUAL $200 TC 550.025(b)2",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "TRAFFIC VIOLATION - HAZARDOUS",
+      "beat": "711",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "300 S R L THORNTON FWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018627-2026",
+      "offincident": "BURGLARY OF HABITATION -NO FORCED ENTRY",
+      "ucr_offense": null,
+      "nibrs_code": "220",
+      "nibrs_crime": "BURGLARY-RESIDENCE",
+      "beat": "345",
+      "division": "SOUTHEAST",
+      "incident_address": "3741 GUARANTY ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018715-2026",
+      "offincident": "COLLISION INV DAMAGE TO VEHICLE <$200",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "142",
+      "division": "CENTRAL",
+      "incident_address": "6100 E MOCKINGBIRD LN"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018536-2026",
+      "offincident": "POSSESSION OF DRUG PARAPHERNALIA",
+      "ucr_offense": null,
+      "nibrs_code": "35B",
+      "nibrs_crime": "DRUG EQUIPMENT VIOLATIONS",
+      "beat": "348",
+      "division": "SOUTHEAST",
+      "incident_address": "2924 ELSIE FAYE HEGGINS ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018582-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "253",
+      "division": "NORTHEAST",
+      "incident_address": "9323 AMBERTON PKWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018726-2026",
+      "offincident": "INTERFERE W/ PUBLIC DUTIES",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "717",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "7000 JULIUS SCHEPPS FWY"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018548-2026",
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "ucr_offense": null,
+      "nibrs_code": null,
+      "nibrs_crime": null,
+      "beat": "153",
+      "division": "CENTRAL",
+      "incident_address": "2814 ELM ST"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018573-2026",
+      "offincident": "TRAF VIO -DUTY ON STRIKE FIX/HWY LANDSCAPE > OR EQUAL $200 TC 550.025(b)2",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "TRAFFIC VIOLATION - HAZARDOUS",
+      "beat": "443",
+      "division": "SOUTHWEST",
+      "incident_address": "2300 S HAMPTON RD"
+    },
+    {
+      "date1": "2026-02-09 00:00:00.0000000",
+      "incidentnum": "018586-2026",
+      "offincident": "RESIST ARREST SEARCH OR TRANSPORT",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "157",
+      "division": "CENTRAL",
+      "incident_address": "600 S RIVERFRONT BLVD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018447-2026",
+      "offincident": "NATURAL DEATH (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "222",
+      "division": "NORTHEAST",
+      "incident_address": "1826 JOHN WEST RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018256-2026",
+      "offincident": "CRIM MISCHIEF > OR EQUAL $100 < $750",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "333",
+      "division": "SOUTHEAST",
+      "incident_address": "1310 S BUCKNER BLVD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018702-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "398 W NEELY ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018283-2026",
+      "offincident": "NATURAL DEATH (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "434",
+      "division": "SOUTHWEST",
+      "incident_address": "3823 KIESTMEADOW DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018459-2026",
+      "offincident": "UNLAWFUL CARRYING WEAPON",
+      "ucr_offense": null,
+      "nibrs_code": "520",
+      "nibrs_crime": "WEAPON LAW VIOLATIONS",
+      "beat": "157",
+      "division": "CENTRAL",
+      "incident_address": "801 S RIVERFRONT BLVD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018597-2026",
+      "offincident": "ASSAULT (AGG) - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "153",
+      "division": "CENTRAL",
+      "incident_address": "2901 COMMERCE ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018377-2026",
+      "offincident": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
+      "ucr_offense": null,
+      "nibrs_code": "520",
+      "nibrs_crime": "WEAPON LAW VIOLATIONS",
+      "beat": "353",
+      "division": "SOUTHEAST",
+      "incident_address": "8015 C F HAWN SERV EB"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018535-2026",
+      "offincident": "TAMPER FABRICATE PHYSICAL EVID WITH INTENT TO IMPAIR",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "311",
+      "division": "SOUTHEAST",
+      "incident_address": "3700 PENELOPE ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018491-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "355",
+      "division": "SOUTHEAST",
+      "incident_address": "12953 WEAVER ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018475-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "224",
+      "division": "NORTHEAST",
+      "incident_address": "2880 PEAVY RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018284-2026",
+      "offincident": "ABANDONED PROPERTY (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "654",
+      "division": "NORTH CENTRAL",
+      "incident_address": "7800 CARUTH CT"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018116-2026",
+      "offincident": "INTOXICATION ASSAULT W/VEH SERIOUS BODILY INJURY",
+      "ucr_offense": null,
+      "nibrs_code": "90D",
+      "nibrs_crime": "DUI",
+      "beat": "412",
+      "division": "SOUTHWEST",
+      "incident_address": "1200 CEDAR HILL AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018530-2026",
+      "offincident": "ABUSIVE/SILENT CALL/ELECTR COMM TO 911 SERVICE  PC 42.061(d)",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "535",
+      "division": "NORTHWEST",
+      "incident_address": "2967 CARRIZO LN"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018466-2026",
+      "offincident": "COLLISION INV DAMAGE TO VEHICLE > OR EQUAL $200",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "342",
+      "division": "SOUTHEAST",
+      "incident_address": "2310 MARTIN LUTHER KING JR BLVD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018508-2026",
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "ucr_offense": null,
+      "nibrs_code": null,
+      "nibrs_crime": null,
+      "beat": "424",
+      "division": "SOUTHWEST",
+      "incident_address": "140 W COMMERCE ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018126-2026",
+      "offincident": "EVADING ARREST DETENTION",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "344",
+      "division": "SOUTHEAST",
+      "incident_address": "4707 S M WRIGHT"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018535-2026",
+      "offincident": "POSS CONT SUB PEN GRP 2-A < OR EQUAL 2 OZ",
+      "ucr_offense": null,
+      "nibrs_code": "35A",
+      "nibrs_crime": "DRUG/ NARCOTIC VIOLATIONS",
+      "beat": "311",
+      "division": "SOUTHEAST",
+      "incident_address": "3700 PENELOPE ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018702-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "398 W NEELY ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018356-2026",
+      "offincident": "THEFT OF PROP <$100 -SHOPLIFTING - (NOT BY EMPLOYEE)",
+      "ucr_offense": null,
+      "nibrs_code": "23C",
+      "nibrs_crime": "SHOPLIFTING",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "108 W DAVIS ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018689-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "153",
+      "division": "CENTRAL",
+      "incident_address": "2800 TAYLOR ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018653-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "154",
+      "division": "CENTRAL",
+      "incident_address": "2439 SWISS AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018201-2026",
+      "offincident": "THEFT OF PROP > OR EQUAL $100 <$750 (NOT SHOPLIFT) PC31.03(e2A)",
+      "ucr_offense": null,
+      "nibrs_code": "23H",
+      "nibrs_crime": "ALL OTHER LARCENY",
+      "beat": "842",
+      "division": "CBD",
+      "incident_address": "1600 PACIFIC AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018468-2026",
+      "offincident": "CRIM MISCHIEF <$100",
+      "ucr_offense": null,
+      "nibrs_code": "290",
+      "nibrs_crime": "DESTRUCTION/ DAMAGE/ VANDALISM OF PROPERTY",
+      "beat": "323",
+      "division": "SOUTHEAST",
+      "incident_address": "9901 SCYENE RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018378-2026",
+      "offincident": "CRIMINAL TRESPASS",
+      "ucr_offense": null,
+      "nibrs_code": "90J",
+      "nibrs_crime": "TRESPASS OF REAL PROPERTY",
+      "beat": "611",
+      "division": "NORTH CENTRAL",
+      "incident_address": "18121 MARSH LN"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018294-2026",
+      "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "321",
+      "division": "SOUTHEAST",
+      "incident_address": "8008 MILITARY PKWY"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018295-2026",
+      "offincident": "RECOVERED OUT OF TOWN STOLEN VEHICLE (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "244",
+      "division": "NORTHEAST",
+      "incident_address": "8110 SKILLMAN ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018695-2026",
+      "offincident": "TERRORISTIC THREAT INTERRUPT PUBLIC PLACE",
+      "ucr_offense": null,
+      "nibrs_code": "13C",
+      "nibrs_crime": "INTIMIDATION",
+      "beat": "723",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "300 W KIEST BLVD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018366-2026",
+      "offincident": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
+      "ucr_offense": null,
+      "nibrs_code": "520",
+      "nibrs_crime": "WEAPON LAW VIOLATIONS",
+      "beat": "356",
+      "division": "SOUTHEAST",
+      "incident_address": "14550 KLEBERG RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018421-2026",
+      "offincident": "CRIMINAL TRESPASS",
+      "ucr_offense": null,
+      "nibrs_code": "90J",
+      "nibrs_crime": "TRESPASS OF REAL PROPERTY",
+      "beat": "156",
+      "division": "CENTRAL",
+      "incident_address": "4509 LIVE OAK ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018854-2026",
+      "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "724",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "220 E OVERTON RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018180-2026",
+      "offincident": "DWI",
+      "ucr_offense": null,
+      "nibrs_code": "90D",
+      "nibrs_crime": "DUI",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "100 MELBA ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "802701-2026",
+      "offincident": "RECKLESS DAMAGE",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "142",
+      "division": "CENTRAL",
+      "incident_address": "6300 E MOCKINGBIRD LN"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018335-2026",
+      "offincident": "DISORDERLY CONDUCT DISCHARGE/DISPLAY FIREARM (NO ASSAULT)",
+      "ucr_offense": null,
+      "nibrs_code": "520",
+      "nibrs_crime": "WEAPON LAW VIOLATIONS",
+      "beat": "238",
+      "division": "NORTHEAST",
+      "incident_address": "2630 HIGHLAND RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018485-2026",
+      "offincident": "INJURED PERSON- PUBLIC PROPERTY (OTHER THAN FIREARM) (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "424",
+      "division": "SOUTHWEST",
+      "incident_address": "1800 SYLVAN AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018473-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "422",
+      "division": "SOUTHWEST",
+      "incident_address": "3900 N HAMPTON RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018435-2026",
+      "offincident": "BURGLARY OF BUILDING - FORCED ENTRY",
+      "ucr_offense": null,
+      "nibrs_code": "220",
+      "nibrs_crime": "BURGLARY-BUSINESS",
+      "beat": "226",
+      "division": "NORTHEAST",
+      "incident_address": "10315 FERGUSON RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "802697-2026",
+      "offincident": "THEFT OF PROP > OR EQUAL $750 <$2,500 (NOT SHOPLIFT) PC31.03(e3)",
+      "ucr_offense": null,
+      "nibrs_code": "23H",
+      "nibrs_crime": "ALL OTHER LARCENY",
+      "beat": "425",
+      "division": "SOUTHWEST",
+      "incident_address": "5880 BERNAL DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018541-2026",
+      "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+      "ucr_offense": null,
+      "nibrs_code": "23H",
+      "nibrs_crime": "ALL OTHER LARCENY",
+      "beat": "613",
+      "division": "NORTH CENTRAL",
+      "incident_address": "3839 BRIARGROVE LN"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018815-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "151",
+      "division": "CENTRAL",
+      "incident_address": "1919 S RIVERFRONT BLVD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018466-2026",
+      "offincident": "THEFT FROM PERSON",
+      "ucr_offense": null,
+      "nibrs_code": "23H",
+      "nibrs_crime": "ALL OTHER LARCENY",
+      "beat": "342",
+      "division": "SOUTHEAST",
+      "incident_address": "2310 MARTIN LUTHER KING JR BLVD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018336-2026",
+      "offincident": "COLLISION INV DAMAGE TO VEHICLE > OR EQUAL $200",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "228",
+      "division": "NORTHEAST",
+      "incident_address": "11770 FERGUSON RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018402-2026",
+      "offincident": "POSSESSION OF DRUG PARAPHERNALIA",
+      "ucr_offense": null,
+      "nibrs_code": "35B",
+      "nibrs_crime": "DRUG EQUIPMENT VIOLATIONS",
+      "beat": "238",
+      "division": "NORTHEAST",
+      "incident_address": "3300 HIGHLAND RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018713-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "241",
+      "division": "NORTHEAST",
+      "incident_address": "11100 N CENTRAL EXPY"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018329-2026",
+      "offincident": "RECOVERED OUT OF TOWN STOLEN VEHICLE (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "421",
+      "division": "SOUTHWEST",
+      "incident_address": "2777 NORWICH ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018865-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "123",
+      "division": "CENTRAL",
+      "incident_address": "2217 IVAN ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018425-2026",
+      "offincident": "FOUND PROPERTY (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "641",
+      "division": "NORTH CENTRAL",
+      "incident_address": "5400 L B J FWY"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018498-2026",
+      "offincident": "TRAF VIO -DUTY ON STRIKE FIX/HWY LANDSCAPE > OR EQUAL $200 TC 550.025(b)2",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "TRAFFIC VIOLATION - HAZARDOUS",
+      "beat": "424",
+      "division": "SOUTHWEST",
+      "incident_address": "2400 N BECKLEY AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018211-2026",
+      "offincident": "FOUND PROPERTY (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "312",
+      "division": "SOUTHEAST",
+      "incident_address": "4300 MONTIE ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "802685-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "517",
+      "division": "NORTHWEST",
+      "incident_address": "1313 SLOCUM ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018126-2026",
+      "offincident": "ROBBERY OF INDIVIDUAL (AGG)",
+      "ucr_offense": null,
+      "nibrs_code": "120",
+      "nibrs_crime": "ROBBERY-INDIVIDUAL",
+      "beat": "344",
+      "division": "SOUTHEAST",
+      "incident_address": "4707 S M WRIGHT"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018530-2026",
+      "offincident": "ASSAULT -VERBAL THREAT",
+      "ucr_offense": null,
+      "nibrs_code": "13C",
+      "nibrs_crime": "INTIMIDATION",
+      "beat": "535",
+      "division": "NORTHWEST",
+      "incident_address": "2967 CARRIZO LN"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "802712-2026",
+      "offincident": "RECKLESS DAMAGE",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "441",
+      "division": "SOUTHWEST",
+      "incident_address": "2933 CLARENDON DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018360-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "862",
+      "division": "CBD",
+      "incident_address": "200 LANE ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018563-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "234",
+      "division": "NORTHEAST",
+      "incident_address": "3862 W LAWTHER DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018575-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "234",
+      "division": "NORTHEAST",
+      "incident_address": "3862 W LAWTHER DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018535-2026",
+      "offincident": "POSS MARIJUANA >2OZ< OR EQUAL 4OZ",
+      "ucr_offense": null,
+      "nibrs_code": "35A",
+      "nibrs_crime": "DRUG/ NARCOTIC VIOLATIONS",
+      "beat": "311",
+      "division": "SOUTHEAST",
+      "incident_address": "3700 PENELOPE ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018395-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "717",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "4222 BATEMAN AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "802694-2026",
+      "offincident": "RECKLESS DAMAGE",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "446",
+      "division": "SOUTHWEST",
+      "incident_address": "610 WYNNEWOOD DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018703-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "544",
+      "division": "NORTHWEST",
+      "incident_address": "4432 BOWSER AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018381-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "233",
+      "division": "NORTHEAST",
+      "incident_address": "12615 EXECUTIVE DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018477-2026",
+      "offincident": "POSS MARIJUANA <2OZ",
+      "ucr_offense": null,
+      "nibrs_code": "35A",
+      "nibrs_crime": "DRUG/ NARCOTIC VIOLATIONS",
+      "beat": "342",
+      "division": "SOUTHEAST",
+      "incident_address": "2501 MARTIN LUTHER KING JR BLVD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "802690-2026",
+      "offincident": "RECKLESS DAMAGE",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "212",
+      "division": "NORTHEAST",
+      "incident_address": "7104 GREENVILLE AVE AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018395-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "717",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "4222 BATEMAN AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018746-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "724",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "3880 S BECKLEY AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018340-2026",
+      "offincident": "ASSAULT -VERBAL THREAT",
+      "ucr_offense": null,
+      "nibrs_code": "13C",
+      "nibrs_crime": "INTIMIDATION",
+      "beat": "874",
+      "division": "CBD",
+      "incident_address": "800 YOUNG ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018381-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "233",
+      "division": "NORTHEAST",
+      "incident_address": "12615 EXECUTIVE DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018294-2026",
+      "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "321",
+      "division": "SOUTHEAST",
+      "incident_address": "8008 MILITARY PKWY"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018207-2026",
+      "offincident": "TRAF VIO -DUTY ON STRIKE FIX/HWY LANDSCAPE > OR EQUAL $200 TC 550.025(b)2",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "TRAFFIC VIOLATION - HAZARDOUS",
+      "beat": "425",
+      "division": "SOUTHWEST",
+      "incident_address": "3103 BILL HARROD ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018126-2026",
+      "offincident": "ROBBERY OF INDIVIDUAL (AGG)",
+      "ucr_offense": null,
+      "nibrs_code": "120",
+      "nibrs_crime": "ROBBERY-INDIVIDUAL",
+      "beat": "344",
+      "division": "SOUTHEAST",
+      "incident_address": "4707 S M WRIGHT"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018666-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "332",
+      "division": "SOUTHEAST",
+      "incident_address": "1820 JOAN DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018358-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "654",
+      "division": "NORTH CENTRAL",
+      "incident_address": "8687 N CENTRAL SERV SB"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018402-2026",
+      "offincident": "FRAUD USE/POSS IDENTIFYING INFO # ITEMS 10<50",
+      "ucr_offense": null,
+      "nibrs_code": "26F",
+      "nibrs_crime": "IDENTITY THEFT",
+      "beat": "238",
+      "division": "NORTHEAST",
+      "incident_address": "3300 HIGHLAND RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018441-2026",
+      "offincident": "HOMICIDE (POLICE SHOOTING)",
+      "ucr_offense": null,
+      "nibrs_code": "09C",
+      "nibrs_crime": "JUSTIFIABLE HOMICIDE",
+      "beat": "523",
+      "division": "NORTHWEST",
+      "incident_address": "5150 LEMMON AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018673-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "154",
+      "division": "CENTRAL",
+      "incident_address": "2449 SWISS AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018386-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "535",
+      "division": "NORTHWEST",
+      "incident_address": "2967 CARRIZO LN"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018787-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "237",
+      "division": "NORTHEAST",
+      "incident_address": "7229 FERGUSON RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018568-2026",
+      "offincident": "PUBLIC INTOXICATION",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "PUBLIC INTOXICATION",
+      "beat": "737",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "6271 HIGHLAND HILLS DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018373-2026",
+      "offincident": "ASSAULT -VERBAL THREAT",
+      "ucr_offense": null,
+      "nibrs_code": "13C",
+      "nibrs_crime": "INTIMIDATION",
+      "beat": "213",
+      "division": "NORTHEAST",
+      "incident_address": "7522 HOLLY HILL DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018652-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "134",
+      "division": "CENTRAL",
+      "incident_address": "1700 COMMERCE ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018396-2026",
+      "offincident": "POSSESSION OF DRUG PARAPHERNALIA",
+      "ucr_offense": null,
+      "nibrs_code": "35B",
+      "nibrs_crime": "DRUG EQUIPMENT VIOLATIONS",
+      "beat": "716",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "2906 BONNIE VIEW RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018249-2026",
+      "offincident": "COLLISION INV DAMAGE TO VEHICLE > OR EQUAL $200",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "728",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "2522 E ILLINOIS AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018822-2026",
+      "offincident": "MISSING PERSON (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "423",
+      "division": "SOUTHWEST",
+      "incident_address": "1414 PUEBLO ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018128-2026",
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "ucr_offense": null,
+      "nibrs_code": null,
+      "nibrs_crime": null,
+      "beat": "154",
+      "division": "CENTRAL",
+      "incident_address": "402 N GOOD LATIMER EXPY"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018235-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "145",
+      "division": "CENTRAL",
+      "incident_address": "5334 ROSS AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018188-2026",
+      "offincident": "ASSAULT -BODILY INJURY ONLY",
+      "ucr_offense": null,
+      "nibrs_code": "13B",
+      "nibrs_crime": "SIMPLE ASSAULT",
+      "beat": "644",
+      "division": "NORTH CENTRAL",
+      "incident_address": "13636 GOLDMARK DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018752-2026",
+      "offincident": "BURGLARY OF BUILDING - FORCED ENTRY",
+      "ucr_offense": null,
+      "nibrs_code": "220",
+      "nibrs_crime": "BURGLARY-BUSINESS",
+      "beat": "432",
+      "division": "SOUTHWEST",
+      "incident_address": "4323 W ILLINOIS AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018512-2026",
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "ucr_offense": null,
+      "nibrs_code": null,
+      "nibrs_crime": null,
+      "beat": "153",
+      "division": "CENTRAL",
+      "incident_address": "2700 INDIANA ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018383-2026",
+      "offincident": "THEFT - PRELIMINARY INVESTIGATION",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "153",
+      "division": "CENTRAL",
+      "incident_address": "2816 MAIN ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018605-2026",
+      "offincident": "DIVERSION PUBLIC INTOX",
+      "ucr_offense": null,
+      "nibrs_code": null,
+      "nibrs_crime": null,
+      "beat": "737",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "6271 HIGHLAND HILLS DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018219-2026",
+      "offincident": "TRAF VIO -DUTY ON STRIKE FIX/HWY LANDSCAPE > OR EQUAL $200 TC 550.025(b)2",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "TRAFFIC VIOLATION - HAZARDOUS",
+      "beat": "333",
+      "division": "SOUTHEAST",
+      "incident_address": "8308 WATERWOOD LN"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018356-2026",
+      "offincident": "POSS CONT SUB PEN GRP 1 <1G DFZ",
+      "ucr_offense": null,
+      "nibrs_code": "35A",
+      "nibrs_crime": "DRUG/ NARCOTIC VIOLATIONS",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "108 W DAVIS ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018299-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "312",
+      "division": "SOUTHEAST",
+      "incident_address": "2811 FRAZIER ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018480-2026",
+      "offincident": "UNEXPLAINED DEATH (NO OFFENSE)",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "113",
+      "division": "CENTRAL",
+      "incident_address": "4621 WILLOW ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018491-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "355",
+      "division": "SOUTHEAST",
+      "incident_address": "12953 WEAVER ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018130-2026",
+      "offincident": "PUBLIC INTOXICATION",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "PUBLIC INTOXICATION",
+      "beat": "154",
+      "division": "CENTRAL",
+      "incident_address": "2625 FLOYD ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018421-2026",
+      "offincident": "FRAUD USE/POSS IDENTIFYING INFO # ITEMS < 5",
+      "ucr_offense": null,
+      "nibrs_code": "26F",
+      "nibrs_crime": "IDENTITY THEFT",
+      "beat": "156",
+      "division": "CENTRAL",
+      "incident_address": "4509 LIVE OAK ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018654-2026",
+      "offincident": "MOTOR VEHICLE THEFT",
+      "ucr_offense": null,
+      "nibrs_code": "240",
+      "nibrs_crime": "UUMV",
+      "beat": "513",
+      "division": "NORTHWEST",
+      "incident_address": "8150 N STEMMONS FWY"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018545-2026",
+      "offincident": "BMV",
+      "ucr_offense": null,
+      "nibrs_code": "23F",
+      "nibrs_crime": "THEFT FROM MOTOR VEHICLE",
+      "beat": "755",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "7425 BONNIE VIEW RD"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018290-2026",
+      "offincident": "CRIMINAL TRESPASS WARNING",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "155",
+      "division": "CENTRAL",
+      "incident_address": "2405 N HASKELL AVE"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018488-2026",
+      "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+      "ucr_offense": null,
+      "nibrs_code": "23H",
+      "nibrs_crime": "ALL OTHER LARCENY",
+      "beat": "741",
+      "division": "SOUTH CENTRAL",
+      "incident_address": "753 BOW AND ARROW DR"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018356-2026",
+      "offincident": "EVADING ARREST DETENTION",
+      "ucr_offense": null,
+      "nibrs_code": "90Z",
+      "nibrs_crime": "ALL OTHER OFFENSES",
+      "beat": "413",
+      "division": "SOUTHWEST",
+      "incident_address": "108 W DAVIS ST"
+    },
+    {
+      "date1": "2026-02-08 00:00:00.0000000",
+      "incidentnum": "018133-2026",
+      "offincident": "ASSAULT (AGG) - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+      "ucr_offense": null,
+      "nibrs_code": "999",
+      "nibrs_crime": "MISCELLANEOUS",
+      "beat": "355",
+      "division": "SOUTHEAST",
+      "incident_address": "10420 C F HAWN SERV EB"
     }
   ]
 }

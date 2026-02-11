@@ -1,7 +1,7 @@
 {
   "summary": {
-    "generated_at": "2026-02-11T03:32:26+00:00",
-    "total_calls": 46,
+    "generated_at": "2026-02-11T03:36:14+00:00",
+    "total_calls": 49,
     "dataset": "active_calls_all",
     "dataset_id": "9fxf-t2tr",
     "note": "Active Calls dataset does not include timestamps; generated_at is when the snapshot was built."
@@ -15,7 +15,7 @@
     {
       "region": null,
       "beat": "446",
-      "count": 5
+      "count": 4
     },
     {
       "region": null,
@@ -39,8 +39,23 @@
     },
     {
       "region": null,
+      "beat": "252",
+      "count": 2
+    },
+    {
+      "region": null,
+      "beat": "331",
+      "count": 2
+    },
+    {
+      "region": null,
       "beat": "724",
       "count": 2
+    },
+    {
+      "region": null,
+      "beat": "122",
+      "count": 1
     },
     {
       "region": null,
@@ -70,11 +85,6 @@
     {
       "region": null,
       "beat": "216",
-      "count": 1
-    },
-    {
-      "region": null,
-      "beat": "252",
       "count": 1
     },
     {
@@ -134,17 +144,17 @@
     },
     {
       "region": null,
+      "beat": "747",
+      "count": 1
+    },
+    {
+      "region": null,
       "beat": "751",
       "count": 1
     },
     {
       "region": null,
       "beat": "754",
-      "count": 1
-    },
-    {
-      "region": null,
-      "beat": "831",
       "count": 1
     },
     {
@@ -199,12 +209,12 @@
       "nature_of_call": "7X - Major Accident"
     },
     {
-      "call_number": "T115",
+      "call_number": "F450",
       "nature": "19 - Shooting",
       "beat": "446",
       "address": "2200 S ZANG BLVD",
       "time": null,
-      "unit_number": "T115",
+      "unit_number": "F450",
       "block": "2200",
       "location": "S ZANG BLVD",
       "nature_of_call": "19 - Shooting"
@@ -221,23 +231,12 @@
       "nature_of_call": "19 - Shooting"
     },
     {
-      "call_number": "F424",
+      "call_number": "T115",
       "nature": "19 - Shooting",
       "beat": "446",
       "address": "2200 S ZANG BLVD",
       "time": null,
-      "unit_number": "F424",
-      "block": "2200",
-      "location": "S ZANG BLVD",
-      "nature_of_call": "19 - Shooting"
-    },
-    {
-      "call_number": "F450",
-      "nature": "19 - Shooting",
-      "beat": "446",
-      "address": "2200 S ZANG BLVD",
-      "time": null,
-      "unit_number": "F450",
+      "unit_number": "T115",
       "block": "2200",
       "location": "S ZANG BLVD",
       "nature_of_call": "19 - Shooting"
@@ -265,6 +264,17 @@
       "nature_of_call": "DAEF-Dist Armed Encounter Foot"
     },
     {
+      "call_number": "F624",
+      "nature": "7X - Major Accident",
+      "beat": "653",
+      "address": "Meadow Rd / Hillcrest Rd",
+      "time": null,
+      "unit_number": "F624",
+      "block": null,
+      "location": "Meadow Rd / Hillcrest Rd",
+      "nature_of_call": "7X - Major Accident"
+    },
+    {
       "call_number": "C623",
       "nature": "7X - Major Accident",
       "beat": "653",
@@ -282,17 +292,6 @@
       "address": "Meadow Rd / Hillcrest Rd",
       "time": null,
       "unit_number": "F620",
-      "block": null,
-      "location": "Meadow Rd / Hillcrest Rd",
-      "nature_of_call": "7X - Major Accident"
-    },
-    {
-      "call_number": "F624",
-      "nature": "7X - Major Accident",
-      "beat": "653",
-      "address": "Meadow Rd / Hillcrest Rd",
-      "time": null,
-      "unit_number": "F624",
       "block": null,
       "location": "Meadow Rd / Hillcrest Rd",
       "nature_of_call": "7X - Major Accident"
@@ -386,45 +385,12 @@
       "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "F614",
-      "nature": "46A - CIT w/Ambulance",
-      "beat": "653",
-      "address": "10500 Ravenscroft Dr",
-      "time": null,
-      "unit_number": "F614",
-      "block": "10500",
-      "location": "Ravenscroft Dr",
-      "nature_of_call": "46A - CIT w/Ambulance"
-    },
-    {
-      "call_number": "F623",
-      "nature": "46A - CIT w/Ambulance",
-      "beat": "653",
-      "address": "10500 Ravenscroft Dr",
-      "time": null,
-      "unit_number": "F623",
-      "block": "10500",
-      "location": "Ravenscroft Dr",
-      "nature_of_call": "46A - CIT w/Ambulance"
-    },
-    {
       "call_number": "F616",
       "nature": "46A - CIT w/Ambulance",
       "beat": "653",
       "address": "10500 Ravenscroft Dr",
       "time": null,
       "unit_number": "F616",
-      "block": "10500",
-      "location": "Ravenscroft Dr",
-      "nature_of_call": "46A - CIT w/Ambulance"
-    },
-    {
-      "call_number": "RC136",
-      "nature": "46A - CIT w/Ambulance",
-      "beat": "653",
-      "address": "10500 Ravenscroft Dr",
-      "time": null,
-      "unit_number": "RC136",
       "block": "10500",
       "location": "Ravenscroft Dr",
       "nature_of_call": "46A - CIT w/Ambulance"
@@ -447,6 +413,39 @@
       "address": "10500 Ravenscroft Dr",
       "time": null,
       "unit_number": "STAR603",
+      "block": "10500",
+      "location": "Ravenscroft Dr",
+      "nature_of_call": "46A - CIT w/Ambulance"
+    },
+    {
+      "call_number": "F614",
+      "nature": "46A - CIT w/Ambulance",
+      "beat": "653",
+      "address": "10500 Ravenscroft Dr",
+      "time": null,
+      "unit_number": "F614",
+      "block": "10500",
+      "location": "Ravenscroft Dr",
+      "nature_of_call": "46A - CIT w/Ambulance"
+    },
+    {
+      "call_number": "F623",
+      "nature": "46A - CIT w/Ambulance",
+      "beat": "653",
+      "address": "10500 Ravenscroft Dr",
+      "time": null,
+      "unit_number": "F623",
+      "block": "10500",
+      "location": "Ravenscroft Dr",
+      "nature_of_call": "46A - CIT w/Ambulance"
+    },
+    {
+      "call_number": "RC136",
+      "nature": "46A - CIT w/Ambulance",
+      "beat": "653",
+      "address": "10500 Ravenscroft Dr",
+      "time": null,
+      "unit_number": "RC136",
       "block": "10500",
       "location": "Ravenscroft Dr",
       "nature_of_call": "46A - CIT w/Ambulance"
@@ -485,23 +484,23 @@
       "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "E123",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "125",
-      "address": "2900 Blackburn St",
-      "time": null,
-      "unit_number": "E123",
-      "block": "2900",
-      "location": "Blackburn St",
-      "nature_of_call": "6X - Major Dist (Violence)"
-    },
-    {
       "call_number": "E141",
       "nature": "6X - Major Dist (Violence)",
       "beat": "125",
       "address": "2900 Blackburn St",
       "time": null,
       "unit_number": "E141",
+      "block": "2900",
+      "location": "Blackburn St",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "E123",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "125",
+      "address": "2900 Blackburn St",
+      "time": null,
+      "unit_number": "E123",
       "block": "2900",
       "location": "Blackburn St",
       "nature_of_call": "6X - Major Dist (Violence)"
@@ -573,23 +572,23 @@
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "E155",
-      "nature": "37F - Freeway Blockage",
-      "beat": "143",
-      "address": "N Central Expy Nb / N Henderson Ave",
-      "time": null,
-      "unit_number": "E155",
-      "block": null,
-      "location": "N Central Expy Nb / N Henderson Ave",
-      "nature_of_call": "37F - Freeway Blockage"
-    },
-    {
       "call_number": "E142",
       "nature": "37F - Freeway Blockage",
       "beat": "143",
       "address": "N Central Expy Nb / N Henderson Ave",
       "time": null,
       "unit_number": "E142",
+      "block": null,
+      "location": "N Central Expy Nb / N Henderson Ave",
+      "nature_of_call": "37F - Freeway Blockage"
+    },
+    {
+      "call_number": "E155",
+      "nature": "37F - Freeway Blockage",
+      "beat": "143",
+      "address": "N Central Expy Nb / N Henderson Ave",
+      "time": null,
+      "unit_number": "E155",
       "block": null,
       "location": "N Central Expy Nb / N Henderson Ave",
       "nature_of_call": "37F - Freeway Blockage"
@@ -617,15 +616,15 @@
       "nature_of_call": "7X - Major Accident"
     },
     {
-      "call_number": "F757",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "724",
-      "address": "3300 Utah Ave",
+      "call_number": "OT203",
+      "nature": "7X - Major Accident",
+      "beat": "252",
+      "address": "Markville Dr / Greenville Ave",
       "time": null,
-      "unit_number": "F757",
-      "block": "3300",
-      "location": "Utah Ave",
-      "nature_of_call": "6X - Major Dist (Violence)"
+      "unit_number": "OT203",
+      "block": null,
+      "location": "Markville Dr / Greenville Ave",
+      "nature_of_call": "7X - Major Accident"
     },
     {
       "call_number": "F755",
@@ -634,6 +633,17 @@
       "address": "3300 Utah Ave",
       "time": null,
       "unit_number": "F755",
+      "block": "3300",
+      "location": "Utah Ave",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "F757",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "724",
+      "address": "3300 Utah Ave",
+      "time": null,
+      "unit_number": "F757",
       "block": "3300",
       "location": "Utah Ave",
       "nature_of_call": "6X - Major Dist (Violence)"
@@ -650,15 +660,48 @@
       "nature_of_call": "32 - Suspicious Person"
     },
     {
-      "call_number": "L333",
+      "call_number": "C392",
       "nature": "6X - Major Dist (Violence)",
-      "beat": "831",
-      "address": "1000 Ross Ave",
+      "beat": "331",
+      "address": "6800 Lake June Rd",
       "time": null,
-      "unit_number": "L333",
-      "block": "1000",
-      "location": "Ross Ave",
+      "unit_number": "C392",
+      "block": "6800",
+      "location": "Lake June Rd",
       "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "F341",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "331",
+      "address": "6800 Lake June Rd",
+      "time": null,
+      "unit_number": "F341",
+      "block": "6800",
+      "location": "Lake June Rd",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "F731",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "747",
+      "address": "7200 Woodspan Dr",
+      "time": null,
+      "unit_number": "F731",
+      "block": "7200",
+      "location": "Woodspan Dr",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "C122",
+      "nature": "32 - Suspicious Person",
+      "beat": "122",
+      "address": "2800 Laclede St",
+      "time": null,
+      "unit_number": "C122",
+      "block": "2800",
+      "location": "Laclede St",
+      "nature_of_call": "32 - Suspicious Person"
     }
   ]
 }
