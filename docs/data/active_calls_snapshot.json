@@ -1,7 +1,7 @@
 {
   "summary": {
-    "generated_at": "2026-02-11T00:42:37+00:00",
-    "total_calls": 54,
+    "generated_at": "2026-02-11T01:56:08+00:00",
+    "total_calls": 62,
     "dataset": "active_calls_all",
     "dataset_id": "9fxf-t2tr",
     "note": "Active Calls dataset does not include timestamps; generated_at is when the snapshot was built."
@@ -9,47 +9,42 @@
   "by_region_beat": [
     {
       "region": null,
-      "beat": "632",
+      "beat": "154",
       "count": 7
     },
     {
       "region": null,
-      "beat": "154",
-      "count": 6
-    },
-    {
-      "region": null,
-      "beat": "326",
+      "beat": "632",
       "count": 5
     },
     {
       "region": null,
-      "beat": "451",
+      "beat": "121",
       "count": 4
     },
     {
       "region": null,
-      "beat": "125",
+      "beat": "334",
+      "count": 4
+    },
+    {
+      "region": null,
+      "beat": "446",
+      "count": 3
+    },
+    {
+      "region": null,
+      "beat": "522",
+      "count": 3
+    },
+    {
+      "region": null,
+      "beat": "326",
       "count": 2
     },
     {
       "region": null,
-      "beat": "224",
-      "count": 2
-    },
-    {
-      "region": null,
-      "beat": "241",
-      "count": 2
-    },
-    {
-      "region": null,
-      "beat": "415",
-      "count": 2
-    },
-    {
-      "region": null,
-      "beat": "434",
+      "beat": "451",
       "count": 2
     },
     {
@@ -59,18 +54,33 @@
     },
     {
       "region": null,
-      "beat": "713",
+      "beat": "555",
       "count": 2
     },
     {
       "region": null,
-      "beat": "861",
+      "beat": "613",
       "count": 2
     },
     {
       "region": null,
-      "beat": "113",
-      "count": 1
+      "beat": "712",
+      "count": 2
+    },
+    {
+      "region": null,
+      "beat": "746",
+      "count": 2
+    },
+    {
+      "region": null,
+      "beat": "841",
+      "count": 2
+    },
+    {
+      "region": null,
+      "beat": "856",
+      "count": 2
     },
     {
       "region": null,
@@ -84,17 +94,32 @@
     },
     {
       "region": null,
-      "beat": "331",
+      "beat": "214",
       "count": 1
     },
     {
       "region": null,
-      "beat": "336",
+      "beat": "224",
       "count": 1
     },
     {
       "region": null,
-      "beat": "346",
+      "beat": "245",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "246",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "315",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "323",
       "count": 1
     },
     {
@@ -104,12 +129,32 @@
     },
     {
       "region": null,
-      "beat": "553",
+      "beat": "512",
       "count": 1
     },
     {
       "region": null,
       "beat": "556",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "635",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "711",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "713",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "736",
       "count": 1
     },
     {
@@ -124,27 +169,7 @@
     },
     {
       "region": null,
-      "beat": "744",
-      "count": 1
-    },
-    {
-      "region": null,
-      "beat": "746",
-      "count": 1
-    },
-    {
-      "region": null,
-      "beat": "755",
-      "count": 1
-    },
-    {
-      "region": null,
-      "beat": "841",
-      "count": 1
-    },
-    {
-      "region": null,
-      "beat": "842",
+      "beat": "757",
       "count": 1
     }
   ],
@@ -172,45 +197,12 @@
       "nature_of_call": "7CE - City Equipment Accident"
     },
     {
-      "call_number": "F731",
-      "nature": "40/01 - Other",
-      "beat": "755",
-      "address": "3100 Palo Alto Dr",
-      "time": null,
-      "unit_number": "F731",
-      "block": "3100",
-      "location": "Palo Alto Dr",
-      "nature_of_call": "40/01 - Other"
-    },
-    {
-      "call_number": "D334",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "331",
-      "address": "6800 Lake June Rd",
-      "time": null,
-      "unit_number": "D334",
-      "block": "6800",
-      "location": "Lake June Rd",
-      "nature_of_call": "6X - Major Dist (Violence)"
-    },
-    {
-      "call_number": "F454",
+      "call_number": "F450",
       "nature": "19 - Shooting",
       "beat": "451",
       "address": "8000 Marvin D Love Serv Sb",
       "time": null,
-      "unit_number": "F454",
-      "block": "8000",
-      "location": "Marvin D Love Serv Sb",
-      "nature_of_call": "19 - Shooting"
-    },
-    {
-      "call_number": "C454",
-      "nature": "19 - Shooting",
-      "beat": "451",
-      "address": "8000 Marvin D Love Serv Sb",
-      "time": null,
-      "unit_number": "C454",
+      "unit_number": "F450",
       "block": "8000",
       "location": "Marvin D Love Serv Sb",
       "nature_of_call": "19 - Shooting"
@@ -222,17 +214,6 @@
       "address": "8000 Marvin D Love Serv Sb",
       "time": null,
       "unit_number": "C411",
-      "block": "8000",
-      "location": "Marvin D Love Serv Sb",
-      "nature_of_call": "19 - Shooting"
-    },
-    {
-      "call_number": "F450",
-      "nature": "19 - Shooting",
-      "beat": "451",
-      "address": "8000 Marvin D Love Serv Sb",
-      "time": null,
-      "unit_number": "F450",
       "block": "8000",
       "location": "Marvin D Love Serv Sb",
       "nature_of_call": "19 - Shooting"
@@ -260,17 +241,6 @@
       "nature_of_call": "6XEA - Disturbance Emerg Amb"
     },
     {
-      "call_number": "Y131",
-      "nature": "6XEA - Disturbance Emerg Amb",
-      "beat": "632",
-      "address": "5800 Preston Oaks Rd",
-      "time": null,
-      "unit_number": "Y131",
-      "block": "5800",
-      "location": "Preston Oaks Rd",
-      "nature_of_call": "6XEA - Disturbance Emerg Amb"
-    },
-    {
       "call_number": "F616",
       "nature": "6XEA - Disturbance Emerg Amb",
       "beat": "632",
@@ -282,12 +252,12 @@
       "nature_of_call": "6XEA - Disturbance Emerg Amb"
     },
     {
-      "call_number": "F625",
+      "call_number": "Y131",
       "nature": "6XEA - Disturbance Emerg Amb",
       "beat": "632",
       "address": "5800 Preston Oaks Rd",
       "time": null,
-      "unit_number": "F625",
+      "unit_number": "Y131",
       "block": "5800",
       "location": "Preston Oaks Rd",
       "nature_of_call": "6XEA - Disturbance Emerg Amb"
@@ -304,70 +274,26 @@
       "nature_of_call": "6XEA - Disturbance Emerg Amb"
     },
     {
-      "call_number": "C612",
+      "call_number": "F625",
       "nature": "6XEA - Disturbance Emerg Amb",
       "beat": "632",
       "address": "5800 Preston Oaks Rd",
       "time": null,
-      "unit_number": "C612",
+      "unit_number": "F625",
       "block": "5800",
       "location": "Preston Oaks Rd",
       "nature_of_call": "6XEA - Disturbance Emerg Amb"
     },
     {
-      "call_number": "OT606",
-      "nature": "6XEA - Disturbance Emerg Amb",
-      "beat": "632",
-      "address": "5800 Preston Oaks Rd",
+      "call_number": "OT202",
+      "nature": "20 - Robbery",
+      "beat": "245",
+      "address": "9200 Church Rd",
       "time": null,
-      "unit_number": "OT606",
-      "block": "5800",
-      "location": "Preston Oaks Rd",
-      "nature_of_call": "6XEA - Disturbance Emerg Amb"
-    },
-    {
-      "call_number": "F243",
-      "nature": "26/01- Missing Person-Critical",
-      "beat": "241",
-      "address": "8100 Meadow Rd",
-      "time": null,
-      "unit_number": "F243",
-      "block": "8100",
-      "location": "Meadow Rd",
-      "nature_of_call": "26/01- Missing Person-Critical"
-    },
-    {
-      "call_number": "OT203",
-      "nature": "26/01- Missing Person-Critical",
-      "beat": "241",
-      "address": "8100 Meadow Rd",
-      "time": null,
-      "unit_number": "OT203",
-      "block": "8100",
-      "location": "Meadow Rd",
-      "nature_of_call": "26/01- Missing Person-Critical"
-    },
-    {
-      "call_number": "T132",
-      "nature": "7X - Major Accident",
-      "beat": "125",
-      "address": "Cole Ave",
-      "time": null,
-      "unit_number": "T132",
-      "block": null,
-      "location": "Cole Ave",
-      "nature_of_call": "7X - Major Accident"
-    },
-    {
-      "call_number": "T133",
-      "nature": "7X - Major Accident",
-      "beat": "125",
-      "address": "Cole Ave",
-      "time": null,
-      "unit_number": "T133",
-      "block": null,
-      "location": "Cole Ave",
-      "nature_of_call": "7X - Major Accident"
+      "unit_number": "OT202",
+      "block": "9200",
+      "location": "Church Rd",
+      "nature_of_call": "20 - Robbery"
     },
     {
       "call_number": "F276",
@@ -379,72 +305,6 @@
       "block": "8700",
       "location": "La Prada Dr",
       "nature_of_call": "46A - CIT w/Ambulance"
-    },
-    {
-      "call_number": "RC131",
-      "nature": "46A - CIT w/Ambulance",
-      "beat": "224",
-      "address": "8700 La Prada Dr",
-      "time": null,
-      "unit_number": "RC131",
-      "block": "8700",
-      "location": "La Prada Dr",
-      "nature_of_call": "46A - CIT w/Ambulance"
-    },
-    {
-      "call_number": "F455",
-      "nature": "15 - Assist Officer",
-      "beat": "415",
-      "address": "2500 FORT WORTH AVE",
-      "time": null,
-      "unit_number": "F455",
-      "block": "2500",
-      "location": "FORT WORTH AVE",
-      "nature_of_call": "15 - Assist Officer"
-    },
-    {
-      "call_number": "F445",
-      "nature": "15 - Assist Officer",
-      "beat": "415",
-      "address": "2500 FORT WORTH AVE",
-      "time": null,
-      "unit_number": "F445",
-      "block": "2500",
-      "location": "FORT WORTH AVE",
-      "nature_of_call": "15 - Assist Officer"
-    },
-    {
-      "call_number": "L333",
-      "nature": "40 - Other",
-      "beat": "842",
-      "address": "1500 Elm St",
-      "time": null,
-      "unit_number": "L333",
-      "block": "1500",
-      "location": "Elm St",
-      "nature_of_call": "40 - Other"
-    },
-    {
-      "call_number": "F341",
-      "nature": "40/01 - Other",
-      "beat": "326",
-      "address": "Bruton Rd / N St Augustine Dr",
-      "time": null,
-      "unit_number": "F341",
-      "block": null,
-      "location": "Bruton Rd / N St Augustine Dr",
-      "nature_of_call": "40/01 - Other"
-    },
-    {
-      "call_number": "C332",
-      "nature": "40/01 - Other",
-      "beat": "326",
-      "address": "Bruton Rd / N St Augustine Dr",
-      "time": null,
-      "unit_number": "C332",
-      "block": null,
-      "location": "Bruton Rd / N St Augustine Dr",
-      "nature_of_call": "40/01 - Other"
     },
     {
       "call_number": "C320",
@@ -469,70 +329,15 @@
       "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "F542",
-      "nature": "**PD Requested by Fire",
-      "beat": "556",
-      "address": "L B J FWY EB",
-      "time": null,
-      "unit_number": "F542",
-      "block": null,
-      "location": "L B J FWY EB",
-      "nature_of_call": "**PD Requested by Fire"
-    },
-    {
-      "call_number": "L397",
+      "call_number": "OT700",
       "nature": "40 - Other",
-      "beat": "841",
-      "address": "1000 Main St",
+      "beat": "711",
+      "address": "1100 E Clarendon Dr",
       "time": null,
-      "unit_number": "L397",
-      "block": "1000",
-      "location": "Main St",
+      "unit_number": "OT700",
+      "block": "1100",
+      "location": "E Clarendon Dr",
       "nature_of_call": "40 - Other"
-    },
-    {
-      "call_number": "C146",
-      "nature": "46 - CIT",
-      "beat": "113",
-      "address": "Columbia Ave / N Carroll Ave",
-      "time": null,
-      "unit_number": "C146",
-      "block": null,
-      "location": "Columbia Ave / N Carroll Ave",
-      "nature_of_call": "46 - CIT"
-    },
-    {
-      "call_number": "F424",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "434",
-      "address": "2700 S Cockrell Hill Rd",
-      "time": null,
-      "unit_number": "F424",
-      "block": "2700",
-      "location": "S Cockrell Hill Rd",
-      "nature_of_call": "6X - Major Dist (Violence)"
-    },
-    {
-      "call_number": "F433",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "434",
-      "address": "2700 S Cockrell Hill Rd",
-      "time": null,
-      "unit_number": "F433",
-      "block": "2700",
-      "location": "S Cockrell Hill Rd",
-      "nature_of_call": "6X - Major Dist (Violence)"
-    },
-    {
-      "call_number": "C556",
-      "nature": "40/01 - Other",
-      "beat": "553",
-      "address": "3600 Forest Ln",
-      "time": null,
-      "unit_number": "C556",
-      "block": "3600",
-      "location": "Forest Ln",
-      "nature_of_call": "40/01 - Other"
     },
     {
       "call_number": "CE724",
@@ -546,23 +351,12 @@
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "EXP13",
-      "nature": "26/01- Missing Person-Critical",
-      "beat": "326",
-      "address": "2200 N St Augustine Dr",
-      "time": null,
-      "unit_number": "EXP13",
-      "block": "2200",
-      "location": "N St Augustine Dr",
-      "nature_of_call": "26/01- Missing Person-Critical"
-    },
-    {
-      "call_number": "C153",
+      "call_number": "C130",
       "nature": "**PD Requested by Fire",
       "beat": "154",
       "address": "Apple St / San Jacinto St",
       "time": null,
-      "unit_number": "C153",
+      "unit_number": "C130",
       "block": null,
       "location": "Apple St / San Jacinto St",
       "nature_of_call": "**PD Requested by Fire"
@@ -612,26 +406,15 @@
       "nature_of_call": "**PD Requested by Fire"
     },
     {
-      "call_number": "C130",
+      "call_number": "C153",
       "nature": "**PD Requested by Fire",
       "beat": "154",
       "address": "Apple St / San Jacinto St",
       "time": null,
-      "unit_number": "C130",
+      "unit_number": "C153",
       "block": null,
       "location": "Apple St / San Jacinto St",
       "nature_of_call": "**PD Requested by Fire"
-    },
-    {
-      "call_number": "C521",
-      "nature": "40/01 - Other",
-      "beat": "523",
-      "address": "5000 Bowser Ave",
-      "time": null,
-      "unit_number": "C521",
-      "block": "5000",
-      "location": "Bowser Ave",
-      "nature_of_call": "40/01 - Other"
     },
     {
       "call_number": "C522",
@@ -645,26 +428,15 @@
       "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "L372",
-      "nature": "40 - Other",
-      "beat": "861",
-      "address": "1200 Commerce St",
+      "call_number": "C521",
+      "nature": "40/01 - Other",
+      "beat": "523",
+      "address": "5000 Bowser Ave",
       "time": null,
-      "unit_number": "L372",
-      "block": "1200",
-      "location": "Commerce St",
-      "nature_of_call": "40 - Other"
-    },
-    {
-      "call_number": "L323",
-      "nature": "40 - Other",
-      "beat": "861",
-      "address": "1200 Commerce St",
-      "time": null,
-      "unit_number": "L323",
-      "block": "1200",
-      "location": "Commerce St",
-      "nature_of_call": "40 - Other"
+      "unit_number": "C521",
+      "block": "5000",
+      "location": "Bowser Ave",
+      "nature_of_call": "40/01 - Other"
     },
     {
       "call_number": "F422",
@@ -689,28 +461,6 @@
       "nature_of_call": "16 - Injured Person"
     },
     {
-      "call_number": "OT310",
-      "nature": "6M - Loud Music Disturbance",
-      "beat": "346",
-      "address": "4200 2nd Ave",
-      "time": null,
-      "unit_number": "OT310",
-      "block": "4200",
-      "location": "2nd Ave",
-      "nature_of_call": "6M - Loud Music Disturbance"
-    },
-    {
-      "call_number": "RC138",
-      "nature": "46 - CIT",
-      "beat": "713",
-      "address": "1200 Arizona Ave",
-      "time": null,
-      "unit_number": "RC138",
-      "block": "1200",
-      "location": "Arizona Ave",
-      "nature_of_call": "46 - CIT"
-    },
-    {
       "call_number": "RC137",
       "nature": "46 - CIT",
       "beat": "713",
@@ -722,26 +472,389 @@
       "nature_of_call": "46 - CIT"
     },
     {
-      "call_number": "OT306",
-      "nature": "40/01 - Other",
-      "beat": "336",
-      "address": "N Jim Miller Rd / C F Hawn Serv Wb",
+      "call_number": "F153",
+      "nature": "7XF - Major Accident Freeway",
+      "beat": "154",
+      "address": "2300 N Central Expy Nb",
       "time": null,
-      "unit_number": "OT306",
+      "unit_number": "F153",
+      "block": "2300",
+      "location": "N Central Expy Nb",
+      "nature_of_call": "7XF - Major Accident Freeway"
+    },
+    {
+      "call_number": "X9770",
+      "nature": "7X - Major Accident",
+      "beat": "635",
+      "address": "Alpha Rd / Hillcrest Rd",
+      "time": null,
+      "unit_number": "X9770",
       "block": null,
-      "location": "N Jim Miller Rd / C F Hawn Serv Wb",
-      "nature_of_call": "40/01 - Other"
+      "location": "Alpha Rd / Hillcrest Rd",
+      "nature_of_call": "7X - Major Accident"
+    },
+    {
+      "call_number": "F236",
+      "nature": "09/01 - Theft",
+      "beat": "214",
+      "address": "8000 Park Ln",
+      "time": null,
+      "unit_number": "F236",
+      "block": "8000",
+      "location": "Park Ln",
+      "nature_of_call": "09/01 - Theft"
+    },
+    {
+      "call_number": "C309",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "323",
+      "address": "9500 Military Pkwy",
+      "time": null,
+      "unit_number": "C309",
+      "block": "9500",
+      "location": "Military Pkwy",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "C146",
+      "nature": "32 - Suspicious Person",
+      "beat": "121",
+      "address": "2800 Allen St",
+      "time": null,
+      "unit_number": "C146",
+      "block": "2800",
+      "location": "Allen St",
+      "nature_of_call": "32 - Suspicious Person"
+    },
+    {
+      "call_number": "C121",
+      "nature": "32 - Suspicious Person",
+      "beat": "121",
+      "address": "2800 Allen St",
+      "time": null,
+      "unit_number": "C121",
+      "block": "2800",
+      "location": "Allen St",
+      "nature_of_call": "32 - Suspicious Person"
+    },
+    {
+      "call_number": "C132",
+      "nature": "32 - Suspicious Person",
+      "beat": "121",
+      "address": "2800 Allen St",
+      "time": null,
+      "unit_number": "C132",
+      "block": "2800",
+      "location": "Allen St",
+      "nature_of_call": "32 - Suspicious Person"
+    },
+    {
+      "call_number": "REACT1",
+      "nature": "32 - Suspicious Person",
+      "beat": "121",
+      "address": "2800 Allen St",
+      "time": null,
+      "unit_number": "REACT1",
+      "block": "2800",
+      "location": "Allen St",
+      "nature_of_call": "32 - Suspicious Person"
+    },
+    {
+      "call_number": "C375",
+      "nature": "26 - Missing Person",
+      "beat": "315",
+      "address": "6100 Belgrade Ave",
+      "time": null,
+      "unit_number": "C375",
+      "block": "6100",
+      "location": "Belgrade Ave",
+      "nature_of_call": "26 - Missing Person"
+    },
+    {
+      "call_number": "B715",
+      "nature": "13 - Prowler",
+      "beat": "736",
+      "address": "4800 Cedardale Dr",
+      "time": null,
+      "unit_number": "B715",
+      "block": "4800",
+      "location": "Cedardale Dr",
+      "nature_of_call": "13 - Prowler"
+    },
+    {
+      "call_number": "L321",
+      "nature": "7X - Major Accident",
+      "beat": "841",
+      "address": "1400 Elm St",
+      "time": null,
+      "unit_number": "L321",
+      "block": "1400",
+      "location": "Elm St",
+      "nature_of_call": "7X - Major Accident"
+    },
+    {
+      "call_number": "L362",
+      "nature": "7X - Major Accident",
+      "beat": "841",
+      "address": "1400 Elm St",
+      "time": null,
+      "unit_number": "L362",
+      "block": "1400",
+      "location": "Elm St",
+      "nature_of_call": "7X - Major Accident"
+    },
+    {
+      "call_number": "OT606",
+      "nature": "7X - Major Accident",
+      "beat": "613",
+      "address": "18000 MIDWAY RD",
+      "time": null,
+      "unit_number": "OT606",
+      "block": "18000",
+      "location": "MIDWAY RD",
+      "nature_of_call": "7X - Major Accident"
+    },
+    {
+      "call_number": "F650",
+      "nature": "7X - Major Accident",
+      "beat": "613",
+      "address": "18000 MIDWAY RD",
+      "time": null,
+      "unit_number": "F650",
+      "block": "18000",
+      "location": "MIDWAY RD",
+      "nature_of_call": "7X - Major Accident"
+    },
+    {
+      "call_number": "E513",
+      "nature": "7X - Major Accident",
+      "beat": "555",
+      "address": "MIDWAY RD / L B J SERV WB",
+      "time": null,
+      "unit_number": "E513",
+      "block": null,
+      "location": "MIDWAY RD / L B J SERV WB",
+      "nature_of_call": "7X - Major Accident"
+    },
+    {
+      "call_number": "BLOCK5",
+      "nature": "7X - Major Accident",
+      "beat": "555",
+      "address": "MIDWAY RD / L B J SERV WB",
+      "time": null,
+      "unit_number": "BLOCK5",
+      "block": null,
+      "location": "MIDWAY RD / L B J SERV WB",
+      "nature_of_call": "7X - Major Accident"
     },
     {
       "call_number": "F757",
-      "nature": "40/01 - Other",
-      "beat": "744",
-      "address": "7500 Chaucer Pl",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "334",
+      "address": "9400 Bruton Rd",
       "time": null,
       "unit_number": "F757",
-      "block": "7500",
-      "location": "Chaucer Pl",
-      "nature_of_call": "40/01 - Other"
+      "block": "9400",
+      "location": "Bruton Rd",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "F755",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "334",
+      "address": "9400 Bruton Rd",
+      "time": null,
+      "unit_number": "F755",
+      "block": "9400",
+      "location": "Bruton Rd",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "F340",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "334",
+      "address": "9400 Bruton Rd",
+      "time": null,
+      "unit_number": "F340",
+      "block": "9400",
+      "location": "Bruton Rd",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "F360",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "334",
+      "address": "9400 Bruton Rd",
+      "time": null,
+      "unit_number": "F360",
+      "block": "9400",
+      "location": "Bruton Rd",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "L322",
+      "nature": "40 - Other",
+      "beat": "856",
+      "address": "1800 Corsicana St",
+      "time": null,
+      "unit_number": "L322",
+      "block": "1800",
+      "location": "Corsicana St",
+      "nature_of_call": "40 - Other"
+    },
+    {
+      "call_number": "L372",
+      "nature": "40 - Other",
+      "beat": "856",
+      "address": "1800 Corsicana St",
+      "time": null,
+      "unit_number": "L372",
+      "block": "1800",
+      "location": "Corsicana St",
+      "nature_of_call": "40 - Other"
+    },
+    {
+      "call_number": "RC138",
+      "nature": "46 - CIT",
+      "beat": "746",
+      "address": "8100 S Hampton Rd",
+      "time": null,
+      "unit_number": "RC138",
+      "block": "8100",
+      "location": "S Hampton Rd",
+      "nature_of_call": "46 - CIT"
+    },
+    {
+      "call_number": "F762",
+      "nature": "40 - Other",
+      "beat": "712",
+      "address": "2900 E 11th St",
+      "time": null,
+      "unit_number": "F762",
+      "block": "2900",
+      "location": "E 11th St",
+      "nature_of_call": "40 - Other"
+    },
+    {
+      "call_number": "F715",
+      "nature": "40 - Other",
+      "beat": "712",
+      "address": "2900 E 11th St",
+      "time": null,
+      "unit_number": "F715",
+      "block": "2900",
+      "location": "E 11th St",
+      "nature_of_call": "40 - Other"
+    },
+    {
+      "call_number": "C551",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "522",
+      "address": "8300 Harry Hines Blvd",
+      "time": null,
+      "unit_number": "C551",
+      "block": "8300",
+      "location": "Harry Hines Blvd",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "F542",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "522",
+      "address": "8300 Harry Hines Blvd",
+      "time": null,
+      "unit_number": "F542",
+      "block": "8300",
+      "location": "Harry Hines Blvd",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "call_number": "F220",
+      "nature": "37F - Freeway Blockage",
+      "beat": "246",
+      "address": "L B J FWY EB / AUDELIA RD",
+      "time": null,
+      "unit_number": "F220",
+      "block": null,
+      "location": "L B J FWY EB / AUDELIA RD",
+      "nature_of_call": "37F - Freeway Blockage"
+    },
+    {
+      "call_number": "C721",
+      "nature": "DASF-Dist Active Shooter Foot",
+      "beat": "757",
+      "address": "5800 Bonnie View Rd",
+      "time": null,
+      "unit_number": "C721",
+      "block": "5800",
+      "location": "Bonnie View Rd",
+      "nature_of_call": "DASF-Dist Active Shooter Foot"
+    },
+    {
+      "call_number": "OT510",
+      "nature": "37 - Street Blockage",
+      "beat": "522",
+      "address": "3500 W Northwest Hwy",
+      "time": null,
+      "unit_number": "OT510",
+      "block": "3500",
+      "location": "W Northwest Hwy",
+      "nature_of_call": "37 - Street Blockage"
+    },
+    {
+      "call_number": "C553",
+      "nature": "11B - Burg of Bus",
+      "beat": "512",
+      "address": "1200 Majesty Dr",
+      "time": null,
+      "unit_number": "C553",
+      "block": "1200",
+      "location": "Majesty Dr",
+      "nature_of_call": "11B - Burg of Bus"
+    },
+    {
+      "call_number": "F424",
+      "nature": "19 - Shooting",
+      "beat": "446",
+      "address": "400 W Louisiana Ave",
+      "time": null,
+      "unit_number": "F424",
+      "block": "400",
+      "location": "W Louisiana Ave",
+      "nature_of_call": "19 - Shooting"
+    },
+    {
+      "call_number": "F433",
+      "nature": "19 - Shooting",
+      "beat": "446",
+      "address": "400 W Louisiana Ave",
+      "time": null,
+      "unit_number": "F433",
+      "block": "400",
+      "location": "W Louisiana Ave",
+      "nature_of_call": "19 - Shooting"
+    },
+    {
+      "call_number": "C421",
+      "nature": "19 - Shooting",
+      "beat": "446",
+      "address": "400 W Louisiana Ave",
+      "time": null,
+      "unit_number": "C421",
+      "block": "400",
+      "location": "W Louisiana Ave",
+      "nature_of_call": "19 - Shooting"
+    },
+    {
+      "call_number": "C556",
+      "nature": "6X - Major Dist (Violence)",
+      "beat": "556",
+      "address": "L B J Serv Eb / Midway Rd",
+      "time": null,
+      "unit_number": "C556",
+      "block": null,
+      "location": "L B J Serv Eb / Midway Rd",
+      "nature_of_call": "6X - Major Dist (Violence)"
     }
   ]
 }

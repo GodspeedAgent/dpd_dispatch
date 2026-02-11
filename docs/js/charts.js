@@ -53,8 +53,8 @@ function mkBar(ctx, labels, data, label){
 
       // Render charts ONLY if scoped:
       // - beat is specified OR
-      // - days is reasonably short (<= 14)
-      const scoped = Boolean((beat && String(beat).trim() !== '') || (typeof days === 'number' && days <= 14));
+      // - days is reasonably short (<= 30)
+      const scoped = Boolean((beat && String(beat).trim() !== '') || (typeof days === 'number' && days <= 30));
 
       if(!scoped){
         if(gate){
