@@ -1,7 +1,7 @@
 {
   "summary": {
-    "generated_at": "2026-02-11T14:09:58+00:00",
-    "total_calls": 58,
+    "generated_at": "2026-02-11T14:22:50+00:00",
+    "total_calls": 62,
     "dataset": "active_calls_all",
     "dataset_id": "9fxf-t2tr",
     "note": "Active Calls dataset does not include timestamps; generated_at is when the snapshot was built."
@@ -10,7 +10,7 @@
     {
       "region": null,
       "beat": "231",
-      "count": 5
+      "count": 4
     },
     {
       "region": null,
@@ -19,12 +19,12 @@
     },
     {
       "region": null,
-      "beat": "251",
-      "count": 2
+      "beat": "633",
+      "count": 3
     },
     {
       "region": null,
-      "beat": "322",
+      "beat": "337",
       "count": 2
     },
     {
@@ -34,17 +34,7 @@
     },
     {
       "region": null,
-      "beat": "351",
-      "count": 2
-    },
-    {
-      "region": null,
-      "beat": "355",
-      "count": 2
-    },
-    {
-      "region": null,
-      "beat": "421",
+      "beat": "357",
       "count": 2
     },
     {
@@ -54,12 +44,17 @@
     },
     {
       "region": null,
+      "beat": "454",
+      "count": 2
+    },
+    {
+      "region": null,
       "beat": "513",
       "count": 2
     },
     {
       "region": null,
-      "beat": "633",
+      "beat": "514",
       "count": 2
     },
     {
@@ -74,18 +69,13 @@
     },
     {
       "region": null,
-      "beat": "728",
-      "count": 2
-    },
-    {
-      "region": null,
       "beat": "734",
       "count": 2
     },
     {
       "region": null,
-      "beat": "146",
-      "count": 1
+      "beat": "757",
+      "count": 2
     },
     {
       "region": null,
@@ -99,12 +89,12 @@
     },
     {
       "region": null,
-      "beat": "224",
+      "beat": "225",
       "count": 1
     },
     {
       "region": null,
-      "beat": "225",
+      "beat": "227",
       "count": 1
     },
     {
@@ -114,17 +104,37 @@
     },
     {
       "region": null,
+      "beat": "245",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "251",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "322",
+      "count": 1
+    },
+    {
+      "region": null,
       "beat": "327",
       "count": 1
     },
     {
       "region": null,
-      "beat": "337",
+      "beat": "351",
       "count": 1
     },
     {
       "region": null,
-      "beat": "411",
+      "beat": "355",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "421",
       "count": 1
     },
     {
@@ -139,6 +149,11 @@
     },
     {
       "region": null,
+      "beat": "424",
+      "count": 1
+    },
+    {
+      "region": null,
       "beat": "425",
       "count": 1
     },
@@ -149,17 +164,17 @@
     },
     {
       "region": null,
+      "beat": "437",
+      "count": 1
+    },
+    {
+      "region": null,
       "beat": "441",
       "count": 1
     },
     {
       "region": null,
-      "beat": "454",
-      "count": 1
-    },
-    {
-      "region": null,
-      "beat": "514",
+      "beat": "452",
       "count": 1
     },
     {
@@ -179,7 +194,17 @@
     },
     {
       "region": null,
-      "beat": "614",
+      "beat": "552",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "713",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "733",
       "count": 1
     },
     {
@@ -189,7 +214,7 @@
     },
     {
       "region": null,
-      "beat": "757",
+      "beat": "745",
       "count": 1
     },
     {
@@ -200,638 +225,744 @@
   ],
   "calls": [
     {
-      "call_number": "B424",
+      "unit": "B424",
       "nature": "40 - Other",
+      "nature_code": "40",
+      "nature_desc": "Other",
       "beat": "425",
       "address": "5800 Bernal Dr",
-      "time": null,
       "unit_number": "B424",
       "block": "5800",
       "location": "Bernal Dr",
       "nature_of_call": "40 - Other"
     },
     {
-      "call_number": "D236",
-      "nature": "**PD Requested by Fire",
-      "beat": "231",
-      "address": "13000 Jupiter Rd",
-      "time": null,
-      "unit_number": "D236",
-      "block": "13000",
-      "location": "Jupiter Rd",
-      "nature_of_call": "**PD Requested by Fire"
+      "unit": "B425",
+      "nature": "40 - Other",
+      "nature_code": "40",
+      "nature_desc": "Other",
+      "beat": "424",
+      "address": "Amonette St / Singleton Blvd",
+      "unit_number": "B425",
+      "block": null,
+      "location": "Amonette St / Singleton Blvd",
+      "nature_of_call": "40 - Other"
     },
     {
-      "call_number": "B221",
+      "unit": "B221",
       "nature": "**PD Requested by Fire",
+      "nature_code": null,
+      "nature_desc": null,
       "beat": "231",
       "address": "13000 Jupiter Rd",
-      "time": null,
       "unit_number": "B221",
       "block": "13000",
       "location": "Jupiter Rd",
       "nature_of_call": "**PD Requested by Fire"
     },
     {
-      "call_number": "D260",
+      "unit": "D241",
       "nature": "**PD Requested by Fire",
+      "nature_code": null,
+      "nature_desc": null,
       "beat": "231",
       "address": "13000 Jupiter Rd",
-      "time": null,
-      "unit_number": "D260",
-      "block": "13000",
-      "location": "Jupiter Rd",
-      "nature_of_call": "**PD Requested by Fire"
-    },
-    {
-      "call_number": "D241",
-      "nature": "**PD Requested by Fire",
-      "beat": "231",
-      "address": "13000 Jupiter Rd",
-      "time": null,
       "unit_number": "D241",
       "block": "13000",
       "location": "Jupiter Rd",
       "nature_of_call": "**PD Requested by Fire"
     },
     {
-      "call_number": "B213",
+      "unit": "B213",
       "nature": "**PD Requested by Fire",
+      "nature_code": null,
+      "nature_desc": null,
       "beat": "231",
       "address": "13000 Jupiter Rd",
-      "time": null,
       "unit_number": "B213",
       "block": "13000",
       "location": "Jupiter Rd",
       "nature_of_call": "**PD Requested by Fire"
     },
     {
-      "call_number": "B433",
+      "unit": "D236",
+      "nature": "**PD Requested by Fire",
+      "nature_code": null,
+      "nature_desc": null,
+      "beat": "231",
+      "address": "13000 Jupiter Rd",
+      "unit_number": "D236",
+      "block": "13000",
+      "location": "Jupiter Rd",
+      "nature_of_call": "**PD Requested by Fire"
+    },
+    {
+      "unit": "B433",
       "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
       "beat": "441",
       "address": "3800 Meredith Ave",
-      "time": null,
       "unit_number": "B433",
       "block": "3800",
       "location": "Meredith Ave",
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "B302",
+      "unit": "D331",
       "nature": "**PD Requested by Fire",
+      "nature_code": null,
+      "nature_desc": null,
       "beat": "334",
       "address": "700 Southgate Ln",
-      "time": null,
-      "unit_number": "B302",
-      "block": "700",
-      "location": "Southgate Ln",
-      "nature_of_call": "**PD Requested by Fire"
-    },
-    {
-      "call_number": "B330",
-      "nature": "**PD Requested by Fire",
-      "beat": "334",
-      "address": "700 Southgate Ln",
-      "time": null,
-      "unit_number": "B330",
-      "block": "700",
-      "location": "Southgate Ln",
-      "nature_of_call": "**PD Requested by Fire"
-    },
-    {
-      "call_number": "B323",
-      "nature": "**PD Requested by Fire",
-      "beat": "334",
-      "address": "700 Southgate Ln",
-      "time": null,
-      "unit_number": "B323",
-      "block": "700",
-      "location": "Southgate Ln",
-      "nature_of_call": "**PD Requested by Fire"
-    },
-    {
-      "call_number": "D331",
-      "nature": "**PD Requested by Fire",
-      "beat": "334",
-      "address": "700 Southgate Ln",
-      "time": null,
       "unit_number": "D331",
       "block": "700",
       "location": "Southgate Ln",
       "nature_of_call": "**PD Requested by Fire"
     },
     {
-      "call_number": "B111",
-      "nature": "40/01 - Other",
-      "beat": "146",
-      "address": "4600 Ross Ave",
-      "time": null,
-      "unit_number": "B111",
-      "block": "4600",
-      "location": "Ross Ave",
-      "nature_of_call": "40/01 - Other"
+      "unit": "B302",
+      "nature": "**PD Requested by Fire",
+      "nature_code": null,
+      "nature_desc": null,
+      "beat": "334",
+      "address": "700 Southgate Ln",
+      "unit_number": "B302",
+      "block": "700",
+      "location": "Southgate Ln",
+      "nature_of_call": "**PD Requested by Fire"
     },
     {
-      "call_number": "D733",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "728",
-      "address": "2700 E Illinois Ave",
-      "time": null,
-      "unit_number": "D733",
-      "block": "2700",
-      "location": "E Illinois Ave",
-      "nature_of_call": "6X - Major Dist (Violence)"
+      "unit": "B323",
+      "nature": "**PD Requested by Fire",
+      "nature_code": null,
+      "nature_desc": null,
+      "beat": "334",
+      "address": "700 Southgate Ln",
+      "unit_number": "B323",
+      "block": "700",
+      "location": "Southgate Ln",
+      "nature_of_call": "**PD Requested by Fire"
     },
     {
-      "call_number": "BLOCK2",
+      "unit": "B330",
+      "nature": "**PD Requested by Fire",
+      "nature_code": null,
+      "nature_desc": null,
+      "beat": "334",
+      "address": "700 Southgate Ln",
+      "unit_number": "B330",
+      "block": "700",
+      "location": "Southgate Ln",
+      "nature_of_call": "**PD Requested by Fire"
+    },
+    {
+      "unit": "D234",
       "nature": "7XF - Major Accident Freeway",
+      "nature_code": "7XF",
+      "nature_desc": "Major Accident Freeway",
       "beat": "251",
       "address": "L B J Fwy Wb / N Central Expy Nb",
-      "time": null,
-      "unit_number": "BLOCK2",
-      "block": null,
-      "location": "L B J Fwy Wb / N Central Expy Nb",
-      "nature_of_call": "7XF - Major Accident Freeway"
-    },
-    {
-      "call_number": "D234",
-      "nature": "7XF - Major Accident Freeway",
-      "beat": "251",
-      "address": "L B J Fwy Wb / N Central Expy Nb",
-      "time": null,
       "unit_number": "D234",
       "block": null,
       "location": "L B J Fwy Wb / N Central Expy Nb",
       "nature_of_call": "7XF - Major Accident Freeway"
     },
     {
-      "call_number": "B233",
+      "unit": "B233",
       "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
       "beat": "235",
       "address": "1000 Peavy Rd",
-      "time": null,
       "unit_number": "B233",
       "block": "1000",
       "location": "Peavy Rd",
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "B434",
+      "unit": "B434",
       "nature": "12B - Business Alarm",
+      "nature_code": "12B",
+      "nature_desc": "Business Alarm",
       "beat": "445",
       "address": "3100 S Westmoreland Rd",
-      "time": null,
       "unit_number": "B434",
       "block": "3100",
       "location": "S Westmoreland Rd",
       "nature_of_call": "12B - Business Alarm"
     },
     {
-      "call_number": "CE413",
+      "unit": "CE413",
       "nature": "12B - Business Alarm",
+      "nature_code": "12B",
+      "nature_desc": "Business Alarm",
       "beat": "445",
       "address": "3100 S Westmoreland Rd",
-      "time": null,
       "unit_number": "CE413",
       "block": "3100",
       "location": "S Westmoreland Rd",
       "nature_of_call": "12B - Business Alarm"
     },
     {
-      "call_number": "RC127",
+      "unit": "D722",
       "nature": "DAEF-Dist Armed Encounter Foot",
+      "nature_code": null,
+      "nature_desc": null,
       "beat": "757",
       "address": "3200 Simpson Stuart Rd",
-      "time": null,
-      "unit_number": "RC127",
+      "unit_number": "D722",
       "block": "3200",
       "location": "Simpson Stuart Rd",
       "nature_of_call": "DAEF-Dist Armed Encounter Foot"
     },
     {
-      "call_number": "B226",
+      "unit": "D740",
+      "nature": "DAEF-Dist Armed Encounter Foot",
+      "nature_code": null,
+      "nature_desc": null,
+      "beat": "757",
+      "address": "3200 Simpson Stuart Rd",
+      "unit_number": "D740",
+      "block": "3200",
+      "location": "Simpson Stuart Rd",
+      "nature_of_call": "DAEF-Dist Armed Encounter Foot"
+    },
+    {
+      "unit": "B226",
       "nature": "13 - Prowler",
+      "nature_code": "13",
+      "nature_desc": "Prowler",
       "beat": "214",
       "address": "5800 Blackwell St",
-      "time": null,
       "unit_number": "B226",
       "block": "5800",
       "location": "Blackwell St",
       "nature_of_call": "13 - Prowler"
     },
     {
-      "call_number": "B516",
+      "unit": "B516",
       "nature": "26/01- Missing Person-Critical",
+      "nature_code": null,
+      "nature_desc": null,
       "beat": "543",
       "address": "2900 Kings Rd",
-      "time": null,
       "unit_number": "B516",
       "block": "2900",
       "location": "Kings Rd",
       "nature_of_call": "26/01- Missing Person-Critical"
     },
     {
-      "call_number": "D512",
+      "unit": "D512",
       "nature": "40/01 - Other",
+      "nature_code": "40/01",
+      "nature_desc": "Other",
       "beat": "514",
       "address": "1900 Medical District Dr",
-      "time": null,
       "unit_number": "D512",
       "block": "1900",
       "location": "Medical District Dr",
       "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "D322",
-      "nature": "32 - Suspicious Person",
-      "beat": "347",
-      "address": "2400 Starks Ave",
-      "time": null,
-      "unit_number": "D322",
-      "block": "2400",
-      "location": "Starks Ave",
-      "nature_of_call": "32 - Suspicious Person"
+      "unit": "D540",
+      "nature": "40/01 - Other",
+      "nature_code": "40/01",
+      "nature_desc": "Other",
+      "beat": "514",
+      "address": "1900 Medical District Dr",
+      "unit_number": "D540",
+      "block": "1900",
+      "location": "Medical District Dr",
+      "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "D326",
+      "unit": "D326",
       "nature": "32 - Suspicious Person",
+      "nature_code": "32",
+      "nature_desc": "Suspicious Person",
       "beat": "347",
       "address": "2400 Starks Ave",
-      "time": null,
       "unit_number": "D326",
       "block": "2400",
       "location": "Starks Ave",
       "nature_of_call": "32 - Suspicious Person"
     },
     {
-      "call_number": "D522",
+      "unit": "D322",
+      "nature": "32 - Suspicious Person",
+      "nature_code": "32",
+      "nature_desc": "Suspicious Person",
+      "beat": "347",
+      "address": "2400 Starks Ave",
+      "unit_number": "D322",
+      "block": "2400",
+      "location": "Starks Ave",
+      "nature_of_call": "32 - Suspicious Person"
+    },
+    {
+      "unit": "D522",
       "nature": "12B - Business Alarm",
+      "nature_code": "12B",
+      "nature_desc": "Business Alarm",
       "beat": "546",
       "address": "3300 Oak Lawn Ave",
-      "time": null,
       "unit_number": "D522",
       "block": "3300",
       "location": "Oak Lawn Ave",
       "nature_of_call": "12B - Business Alarm"
     },
     {
-      "call_number": "D421",
+      "unit": "D433",
       "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
       "beat": "421",
       "address": "4100 Furey St",
-      "time": null,
-      "unit_number": "D421",
-      "block": "4100",
-      "location": "Furey St",
-      "nature_of_call": "6X - Major Dist (Violence)"
-    },
-    {
-      "call_number": "D433",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "421",
-      "address": "4100 Furey St",
-      "time": null,
       "unit_number": "D433",
       "block": "4100",
       "location": "Furey St",
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "B712",
+      "unit": "B532",
+      "nature": "11R - Burg of Res",
+      "nature_code": "11R",
+      "nature_desc": "Burg of Res",
+      "beat": "552",
+      "address": "2800 Royal Ln",
+      "unit_number": "B532",
+      "block": "2800",
+      "location": "Royal Ln",
+      "nature_of_call": "11R - Burg of Res"
+    },
+    {
+      "unit": "B734",
+      "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
+      "beat": "745",
+      "address": "3800 W Wheatland Rd",
+      "unit_number": "B734",
+      "block": "3800",
+      "location": "W Wheatland Rd",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "unit": "B712",
       "nature": "40/01 - Other",
+      "nature_code": "40/01",
+      "nature_desc": "Other",
       "beat": "734",
       "address": "2200 52ND ST",
-      "time": null,
       "unit_number": "B712",
       "block": "2200",
       "location": "52ND ST",
       "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "D732",
+      "unit": "D732",
       "nature": "40/01 - Other",
+      "nature_code": "40/01",
+      "nature_desc": "Other",
       "beat": "734",
       "address": "2200 52ND ST",
-      "time": null,
       "unit_number": "D732",
       "block": "2200",
       "location": "52ND ST",
       "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "D622",
+      "unit": "B611",
       "nature": "40/01 - Other",
+      "nature_code": "40/01",
+      "nature_desc": "Other",
       "beat": "642",
       "address": "Coit Rd / L B J Serv Eb",
-      "time": null,
-      "unit_number": "D622",
-      "block": null,
-      "location": "Coit Rd / L B J Serv Eb",
-      "nature_of_call": "40/01 - Other"
-    },
-    {
-      "call_number": "B611",
-      "nature": "40/01 - Other",
-      "beat": "642",
-      "address": "Coit Rd / L B J Serv Eb",
-      "time": null,
       "unit_number": "B611",
       "block": null,
       "location": "Coit Rd / L B J Serv Eb",
       "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "D442",
+      "unit": "D622",
+      "nature": "40/01 - Other",
+      "nature_code": "40/01",
+      "nature_desc": "Other",
+      "beat": "642",
+      "address": "Coit Rd / L B J Serv Eb",
+      "unit_number": "D622",
+      "block": null,
+      "location": "Coit Rd / L B J Serv Eb",
+      "nature_of_call": "40/01 - Other"
+    },
+    {
+      "unit": "D442",
       "nature": "32 - Suspicious Person",
+      "nature_code": "32",
+      "nature_desc": "Suspicious Person",
       "beat": "432",
       "address": "2000 S Cockrell Hill Rd",
-      "time": null,
       "unit_number": "D442",
       "block": "2000",
       "location": "S Cockrell Hill Rd",
       "nature_of_call": "32 - Suspicious Person"
     },
     {
-      "call_number": "B614",
+      "unit": "B613",
       "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
       "beat": "633",
       "address": "5400 Peterson Ln",
-      "time": null,
-      "unit_number": "B614",
-      "block": "5400",
-      "location": "Peterson Ln",
-      "nature_of_call": "6X - Major Dist (Violence)"
-    },
-    {
-      "call_number": "B613",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "633",
-      "address": "5400 Peterson Ln",
-      "time": null,
       "unit_number": "B613",
       "block": "5400",
       "location": "Peterson Ln",
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "B232",
-      "nature": "46A - CIT w/Ambulance",
-      "beat": "224",
-      "address": "2600 John West Rd",
-      "time": null,
-      "unit_number": "B232",
-      "block": "2600",
-      "location": "John West Rd",
-      "nature_of_call": "46A - CIT w/Ambulance"
+      "unit": "B625",
+      "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
+      "beat": "633",
+      "address": "5400 Peterson Ln",
+      "unit_number": "B625",
+      "block": "5400",
+      "location": "Peterson Ln",
+      "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "RC123",
+      "unit": "B614",
+      "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
+      "beat": "633",
+      "address": "5400 Peterson Ln",
+      "unit_number": "B614",
+      "block": "5400",
+      "location": "Peterson Ln",
+      "nature_of_call": "6X - Major Dist (Violence)"
+    },
+    {
+      "unit": "RC123",
       "nature": "46 - CIT",
+      "nature_code": "46",
+      "nature_desc": "CIT",
       "beat": "337",
       "address": "8300 Elam Rd",
-      "time": null,
       "unit_number": "RC123",
       "block": "8300",
       "location": "Elam Rd",
       "nature_of_call": "46 - CIT"
     },
     {
-      "call_number": "CE414",
+      "unit": "D543",
       "nature": "6X - Major Dist (Violence)",
-      "beat": "411",
-      "address": "200 E Colorado Blvd",
-      "time": null,
-      "unit_number": "CE414",
-      "block": "200",
-      "location": "E Colorado Blvd",
-      "nature_of_call": "6X - Major Dist (Violence)"
-    },
-    {
-      "call_number": "D624",
-      "nature": "07 - Minor Accident",
-      "beat": "614",
-      "address": "Pear Ridge Dr / Gramercy Oaks Dr",
-      "time": null,
-      "unit_number": "D624",
-      "block": null,
-      "location": "Pear Ridge Dr / Gramercy Oaks Dr",
-      "nature_of_call": "07 - Minor Accident"
-    },
-    {
-      "call_number": "D543",
-      "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
       "beat": "513",
       "address": "1800 W Mockingbird Ln",
-      "time": null,
       "unit_number": "D543",
       "block": "1800",
       "location": "W Mockingbird Ln",
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "D515",
+      "unit": "D515",
       "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
       "beat": "513",
       "address": "1800 W Mockingbird Ln",
-      "time": null,
       "unit_number": "D515",
       "block": "1800",
       "location": "W Mockingbird Ln",
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "B333",
+      "unit": "B331",
       "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
       "beat": "322",
       "address": "4100 Delafield Ln",
-      "time": null,
-      "unit_number": "B333",
-      "block": "4100",
-      "location": "Delafield Ln",
-      "nature_of_call": "6X - Major Dist (Violence)"
-    },
-    {
-      "call_number": "B331",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "322",
-      "address": "4100 Delafield Ln",
-      "time": null,
       "unit_number": "B331",
       "block": "4100",
       "location": "Delafield Ln",
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "B392",
+      "unit": "B392",
       "nature": "24 - Abandoned Property",
+      "nature_code": "24",
+      "nature_desc": "Abandoned Property",
       "beat": "327",
       "address": "Catskill St / Friendship Dr",
-      "time": null,
       "unit_number": "B392",
       "block": null,
       "location": "Catskill St / Friendship Dr",
       "nature_of_call": "24 - Abandoned Property"
     },
     {
-      "call_number": "D341",
-      "nature": "13 - Prowler",
-      "beat": "355",
-      "address": "9600 Woodway Dr",
-      "time": null,
-      "unit_number": "D341",
-      "block": "9600",
-      "location": "Woodway Dr",
-      "nature_of_call": "13 - Prowler"
-    },
-    {
-      "call_number": "D343",
-      "nature": "13 - Prowler",
-      "beat": "355",
-      "address": "9600 Woodway Dr",
-      "time": null,
-      "unit_number": "D343",
-      "block": "9600",
-      "location": "Woodway Dr",
-      "nature_of_call": "13 - Prowler"
-    },
-    {
-      "call_number": "B223",
+      "unit": "B223",
       "nature": "32 - Suspicious Person",
+      "nature_code": "32",
+      "nature_desc": "Suspicious Person",
       "beat": "225",
       "address": "10200 San Juan Ave",
-      "time": null,
       "unit_number": "B223",
       "block": "10200",
       "location": "San Juan Ave",
       "nature_of_call": "32 - Suspicious Person"
     },
     {
-      "call_number": "B436",
+      "unit": "B436",
       "nature": "11B/01 - Burg of Bus",
+      "nature_code": "11B/01",
+      "nature_desc": "Burg of Bus",
       "beat": "422",
       "address": "3900 N Hampton Rd",
-      "time": null,
       "unit_number": "B436",
       "block": "3900",
       "location": "N Hampton Rd",
       "nature_of_call": "11B/01 - Burg of Bus"
     },
     {
-      "call_number": "D432",
+      "unit": "RC124",
       "nature": "46 - CIT",
+      "nature_code": "46",
+      "nature_desc": "CIT",
       "beat": "454",
       "address": "5300 S Hampton Rd",
-      "time": null,
+      "unit_number": "RC124",
+      "block": "5300",
+      "location": "S Hampton Rd",
+      "nature_of_call": "46 - CIT"
+    },
+    {
+      "unit": "D432",
+      "nature": "46 - CIT",
+      "nature_code": "46",
+      "nature_desc": "CIT",
+      "beat": "454",
+      "address": "5300 S Hampton Rd",
       "unit_number": "D432",
       "block": "5300",
       "location": "S Hampton Rd",
       "nature_of_call": "46 - CIT"
     },
     {
-      "call_number": "UAS32",
+      "unit": "UAS32",
       "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
       "beat": "351",
       "address": "6500 Railway St",
-      "time": null,
       "unit_number": "UAS32",
       "block": "6500",
       "location": "Railway St",
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "call_number": "D324",
-      "nature": "6X - Major Dist (Violence)",
-      "beat": "351",
-      "address": "6500 Railway St",
-      "time": null,
-      "unit_number": "D324",
-      "block": "6500",
-      "location": "Railway St",
-      "nature_of_call": "6X - Major Dist (Violence)"
-    },
-    {
-      "call_number": "D431",
+      "unit": "L212",
       "nature": "40/01 - Other",
-      "beat": "423",
-      "address": "Nomas St / N Winnetka Ave",
-      "time": null,
-      "unit_number": "D431",
-      "block": null,
-      "location": "Nomas St / N Winnetka Ave",
-      "nature_of_call": "40/01 - Other"
-    },
-    {
-      "call_number": "L212",
-      "nature": "40/01 - Other",
+      "nature_code": "40/01",
+      "nature_desc": "Other",
       "beat": "862",
       "address": "Wood St / S Ervay St",
-      "time": null,
       "unit_number": "L212",
       "block": null,
       "location": "Wood St / S Ervay St",
       "nature_of_call": "40/01 - Other"
     },
     {
-      "call_number": "BLOCK5",
+      "unit": "BLOCK5",
       "nature": "07 - Minor Accident",
+      "nature_code": "07",
+      "nature_desc": "Minor Accident",
       "beat": "534",
       "address": "Manana Dr / N Stemmons Serv Nb",
-      "time": null,
       "unit_number": "BLOCK5",
       "block": null,
       "location": "Manana Dr / N Stemmons Serv Nb",
       "nature_of_call": "07 - Minor Accident"
     },
     {
-      "call_number": "B715",
+      "unit": "D735",
       "nature": "04 - 911 Hang Up",
+      "nature_code": "04",
+      "nature_desc": "911 Hang Up",
       "beat": "724",
       "address": "300 E Overton Rd",
-      "time": null,
-      "unit_number": "B715",
-      "block": "300",
-      "location": "E Overton Rd",
-      "nature_of_call": "04 - 911 Hang Up"
-    },
-    {
-      "call_number": "D735",
-      "nature": "04 - 911 Hang Up",
-      "beat": "724",
-      "address": "300 E Overton Rd",
-      "time": null,
       "unit_number": "D735",
       "block": "300",
       "location": "E Overton Rd",
       "nature_of_call": "04 - 911 Hang Up"
     },
     {
-      "call_number": "B121",
+      "unit": "B715",
+      "nature": "04 - 911 Hang Up",
+      "nature_code": "04",
+      "nature_desc": "911 Hang Up",
+      "beat": "724",
+      "address": "300 E Overton Rd",
+      "unit_number": "B715",
+      "block": "300",
+      "location": "E Overton Rd",
+      "nature_of_call": "04 - 911 Hang Up"
+    },
+    {
+      "unit": "B121",
       "nature": "PH - Panhandler",
+      "nature_code": "PH",
+      "nature_desc": "Panhandler",
       "beat": "154",
       "address": "2500 Lemmon Ave",
-      "time": null,
       "unit_number": "B121",
       "block": "2500",
       "location": "Lemmon Ave",
       "nature_of_call": "PH - Panhandler"
     },
     {
-      "call_number": "D720",
-      "nature": "31 - Criminal Mischief",
-      "beat": "728",
-      "address": "2800 E Overton Rd",
-      "time": null,
-      "unit_number": "D720",
-      "block": "2800",
-      "location": "E Overton Rd",
-      "nature_of_call": "31 - Criminal Mischief"
+      "unit": "D243",
+      "nature": "11R - Burg of Res",
+      "nature_code": "11R",
+      "nature_desc": "Burg of Res",
+      "beat": "245",
+      "address": "9300 Faircrest Dr",
+      "unit_number": "D243",
+      "block": "9300",
+      "location": "Faircrest Dr",
+      "nature_of_call": "11R - Burg of Res"
     },
     {
-      "call_number": "S816",
+      "unit": "CE411",
+      "nature": "6G - Random Gun Fire",
+      "nature_code": "6G",
+      "nature_desc": "Random Gun Fire",
+      "beat": "437",
+      "address": "S Cockrell Hill Rd / W Red Bird Ln",
+      "unit_number": "CE411",
+      "block": null,
+      "location": "S Cockrell Hill Rd / W Red Bird Ln",
+      "nature_of_call": "6G - Random Gun Fire"
+    },
+    {
+      "unit": "B311",
       "nature": "40 - Other",
+      "nature_code": "40",
+      "nature_desc": "Other",
+      "beat": "337",
+      "address": "300 Pleasant Dr",
+      "unit_number": "B311",
+      "block": "300",
+      "location": "Pleasant Dr",
+      "nature_of_call": "40 - Other"
+    },
+    {
+      "unit": "EXP34",
+      "nature": "40 - Other",
+      "nature_code": "40",
+      "nature_desc": "Other",
+      "beat": "452",
+      "address": "4300 W Camp Wisdom Rd",
+      "unit_number": "EXP34",
+      "block": "4300",
+      "location": "W Camp Wisdom Rd",
+      "nature_of_call": "40 - Other"
+    },
+    {
+      "unit": "T123",
+      "nature": "07 - Minor Accident",
+      "nature_code": "07",
+      "nature_desc": "Minor Accident",
+      "beat": "227",
+      "address": "Shiloh Rd / Perimeter Dr",
+      "unit_number": "T123",
+      "block": null,
+      "location": "Shiloh Rd / Perimeter Dr",
+      "nature_of_call": "07 - Minor Accident"
+    },
+    {
+      "unit": "B713",
+      "nature": "11V/01 - Burg Motor Veh",
+      "nature_code": "11V/01",
+      "nature_desc": "Burg Motor Veh",
+      "beat": "713",
+      "address": "1300 Cedar Oaks Blvd",
+      "unit_number": "B713",
+      "block": "1300",
+      "location": "Cedar Oaks Blvd",
+      "nature_of_call": "11V/01 - Burg Motor Veh"
+    },
+    {
+      "unit": "D720",
+      "nature": "40 - Other",
+      "nature_code": "40",
+      "nature_desc": "Other",
+      "beat": "733",
+      "address": "2900 Cummings St",
+      "unit_number": "D720",
+      "block": "2900",
+      "location": "Cummings St",
+      "nature_of_call": "40 - Other"
+    },
+    {
+      "unit": "B332",
+      "nature": "12B - Business Alarm",
+      "nature_code": "12B",
+      "nature_desc": "Business Alarm",
+      "beat": "355",
+      "address": "13200 Elmspring Rd",
+      "unit_number": "B332",
+      "block": "13200",
+      "location": "Elmspring Rd",
+      "nature_of_call": "12B - Business Alarm"
+    },
+    {
+      "unit": "D342",
+      "nature": "22A - Animal Attack",
+      "nature_code": "22A",
+      "nature_desc": "Animal Attack",
+      "beat": "357",
+      "address": "1300 Leafwood Dr",
+      "unit_number": "D342",
+      "block": "1300",
+      "location": "Leafwood Dr",
+      "nature_of_call": "22A - Animal Attack"
+    },
+    {
+      "unit": "B312",
+      "nature": "22A - Animal Attack",
+      "nature_code": "22A",
+      "nature_desc": "Animal Attack",
+      "beat": "357",
+      "address": "1300 Leafwood Dr",
+      "unit_number": "B312",
+      "block": "1300",
+      "location": "Leafwood Dr",
+      "nature_of_call": "22A - Animal Attack"
+    },
+    {
+      "unit": "D421",
+      "nature": "24 - Abandoned Property",
+      "nature_code": "24",
+      "nature_desc": "Abandoned Property",
+      "beat": "423",
+      "address": "1700 Life Ave",
+      "unit_number": "D421",
+      "block": "1700",
+      "location": "Life Ave",
+      "nature_of_call": "24 - Abandoned Property"
+    },
+    {
+      "unit": "S816",
+      "nature": "40 - Other",
+      "nature_code": "40",
+      "nature_desc": "Other",
       "beat": "741",
       "address": "4300 - 4466 MARVIN D LOVE SERV NB",
-      "time": null,
       "unit_number": "S816",
       "block": "4300",
       "location": "- 4466 MARVIN D LOVE SERV NB",

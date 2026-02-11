@@ -104,7 +104,7 @@ function wireInput(id, fn){
         rows = rows.filter(r => normalize(r.beat) === beat);
       }
       if(nature){
-        rows = rows.filter(r => normalize(r.nature).includes(nature));
+        rows = rows.filter(r => normalize((r.nature_desc ?? r.nature ?? '')).includes(nature) || normalize((r.nature_code ?? '')).includes(nature));
       }
 
       const summary = document.getElementById('activeFilterSummary');
@@ -116,11 +116,11 @@ function wireInput(id, fn){
       }
 
       renderTable('rawCalls', rows.slice(0, limit), [
-        { key:'call_number', label:'Call #' },
-        { key:'nature', label:'Nature' },
+        { key:'unit', label:'Unit', get: r => r.unit ?? r.unit_number ?? '—' },
+        { key:'nature_code', label:'Code' },
+        { key:'nature_desc', label:'Description', get: r => r.nature_desc ?? r.nature ?? '—' },
         { key:'beat', label:'Beat' },
         { key:'address', label:'Address' },
-        { key:'time', label:'Time' },
       ]);
     }
 
@@ -141,7 +141,7 @@ function wireInput(id, fn){
       const hist = await fetchJson('./data/historical_snapshot.json');
       document.getElementById('histTitle').textContent = `Historical (last ${hist?.summary?.days ?? '—'} days): ${hist?.summary?.title ?? ''}`;
       document.getElementById('histTotal').textContent = hist?.summary?.total_incidents ?? '—';
-      document.getElementById('histGenerated').textContent = hist?.summary?.generated_at ?? '—';
+      document.getElementById('histGenerated').textContent = fmtChicago(hist?.summary?.generated_at);
 
       const allHist = hist.incidents ?? [];
 

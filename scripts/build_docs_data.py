@@ -72,16 +72,25 @@ def build_active_calls_snapshot(limit: int = 500) -> Dict[str, Any]:
 
         address = " ".join([p for p in [str(block).strip() if block else None, str(location).strip() if location else None] if p])
 
+        nature_str = str(nature) if nature is not None else ""
+        nature_code = None
+        nature_desc = None
+        if " - " in nature_str:
+            a, b = nature_str.split(" - ", 1)
+            nature_code = a.strip() or None
+            nature_desc = b.strip() or None
+
         calls.append(
             {
-                # Frontend expects these keys
-                "call_number": unit,  # dataset does not expose call #; unit is the best available identifier
+                # Active calls dataset does not expose call #; unit is the best available identifier
+                "unit": unit,
                 "nature": nature,
+                "nature_code": nature_code,
+                "nature_desc": nature_desc,
                 "beat": beat or None,
                 "address": address or None,
-                "time": None,  # active calls dataset lacks timestamps
 
-                # Keep raw-ish fields for debugging
+                # Raw fields
                 "unit_number": unit,
                 "block": block,
                 "location": location,
