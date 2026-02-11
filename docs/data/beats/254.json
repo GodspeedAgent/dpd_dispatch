@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at": "2026-02-11T13:28:48+00:00",
+    "generated_at": "2026-02-11T13:37:18+00:00",
     "dataset": "police_incidents",
     "dataset_id": "qv6i-rri7",
     "beat": "254",
@@ -35,7 +35,16 @@
           "day": "2026-02-05 00:00:00.0000000",
           "count": 1
         }
-      ]
+      ],
+      "narrative": {
+        "headline": "Beat 254: 1 incidents in the last 7 days",
+        "text": "In the last 7 days, beat 254 recorded 1 incidents. The most common reported offense types were: THEFT OF PROP <$100 - OTHER THAN SHOPLIFT (1).\n\nIncidents in this beat were most frequently associated with these ZIP codes: 75243 (100.0%). This is a heuristic (beats and ZIP boundaries overlap), but it helps localize where activity clusters.\n\nPossible drivers to consider: routine patrol focus, nearby commercial corridors/apartments, and short-term spikes around weekends/holidays. Treat this as a working narrative, not a causal claim.",
+        "bullets": [
+          "Top offense: THEFT OF PROP <$100 - OTHER THAN SHOPLIFT (1)",
+          "ZIP concentration: 75243 accounts for ~100.0% of incidents",
+          "Low activity: averaging \u22641 incident every ~4 days"
+        ]
+      }
     },
     "30": {
       "days": 30,
@@ -152,7 +161,15 @@
           "day": "2026-02-05 00:00:00.0000000",
           "count": 1
         }
-      ]
+      ],
+      "narrative": {
+        "headline": "Beat 254: 19 incidents in the last 30 days",
+        "text": "In the last 30 days, beat 254 recorded 19 incidents. The most common reported offense types were: MOTOR VEHICLE THEFT - ATTEMPT (4), ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE (2), UNLAWFUL RESTRAINT (2).\n\nIncidents in this beat were most frequently associated with these ZIP codes: 75243 (100.0%). This is a heuristic (beats and ZIP boundaries overlap), but it helps localize where activity clusters.\n\nPossible drivers to consider: routine patrol focus, nearby commercial corridors/apartments, and short-term spikes around weekends/holidays. Treat this as a working narrative, not a causal claim.",
+        "bullets": [
+          "Top offense: MOTOR VEHICLE THEFT - ATTEMPT (4)",
+          "ZIP concentration: 75243 accounts for ~100.0% of incidents"
+        ]
+      }
     },
     "90": {
       "days": 90,
@@ -374,7 +391,15 @@
           "day": "2026-02-05 00:00:00.0000000",
           "count": 1
         }
-      ]
+      ],
+      "narrative": {
+        "headline": "Beat 254: 56 incidents in the last 90 days",
+        "text": "In the last 90 days, beat 254 recorded 56 incidents. The most common reported offense types were: MOTOR VEHICLE THEFT - ATTEMPT (8), MOTOR VEHICLE THEFT (4), ASSAULT -BODILY INJURY ONLY (3).\n\nIncidents in this beat were most frequently associated with these ZIP codes: 75243 (98.2%), 75238 (1.8%). This is a heuristic (beats and ZIP boundaries overlap), but it helps localize where activity clusters.\n\nPossible drivers to consider: routine patrol focus, nearby commercial corridors/apartments, and short-term spikes around weekends/holidays. Treat this as a working narrative, not a causal claim.",
+        "bullets": [
+          "Top offense: MOTOR VEHICLE THEFT - ATTEMPT (8)",
+          "ZIP concentration: 75243 accounts for ~98.2% of incidents"
+        ]
+      }
     }
   }
 }

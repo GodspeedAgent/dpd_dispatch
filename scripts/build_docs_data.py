@@ -472,6 +472,51 @@ def main() -> None:
             )
             daily_counts = [{"day": r.get("date1"), "count": int(r.get("n", 0))} for r in daily]
 
+            def synthesize_narrative() -> Dict[str, Any]:
+                # Basic synthesis from the aggregates (no external calls)
+                bullets = []
+
+                if total == 0:
+                    return {
+                        "headline": f"Quiet period: 0 incidents in the last {days} days",
+                        "text": "No incidents were returned for this window.",
+                        "bullets": [],
+                    }
+
+                top_off1 = top_offenses[0] if top_offenses else None
+                if top_off1:
+                    bullets.append(f"Top offense: {top_off1['offincident']} ({top_off1['count']})")
+
+                # ZIP concentration
+                if top_zips:
+                    z0 = top_zips[0]
+                    if z0.get('pct') is not None:
+                        bullets.append(f"ZIP concentration: {z0['zip']} accounts for ~{z0['pct']}% of incidents")
+
+                # Pace vs baseline (90d) if available later
+                headline = f"Beat {beat}: {total} incidents in the last {days} days"
+
+                # Simple interpretation hints
+                if total / max(days, 1) >= 2:
+                    bullets.append("Higher activity: averaging 2+ incidents/day")
+                elif total / max(days, 1) <= 0.25:
+                    bullets.append("Low activity: averaging ≤1 incident every ~4 days")
+
+                # Build paragraph
+                off_mix = ", ".join([f"{x['offincident']} ({x['count']})" for x in top_offenses[:3]]) if top_offenses else "—"
+                zip_mix = ", ".join([f"{x['zip']} ({x['pct']}%)" for x in top_zips[:3]]) if top_zips else "—"
+
+                text = (
+                    f"In the last {days} days, beat {beat} recorded {total} incidents. "
+                    f"The most common reported offense types were: {off_mix}.\n\n"
+                    f"Incidents in this beat were most frequently associated with these ZIP codes: {zip_mix}. "
+                    f"This is a heuristic (beats and ZIP boundaries overlap), but it helps localize where activity clusters.\n\n"
+                    "Possible drivers to consider: routine patrol focus, nearby commercial corridors/apartments, "
+                    "and short-term spikes around weekends/holidays. Treat this as a working narrative, not a causal claim."
+                )
+
+                return {"headline": headline, "text": text, "bullets": bullets}
+
             out["windows"][str(days)] = {
                 "days": days,
                 "start": start.isoformat(),
@@ -480,6 +525,7 @@ def main() -> None:
                 "top_offenses": top_offenses,
                 "top_zips": top_zips,
                 "daily_counts": daily_counts,
+                "narrative": synthesize_narrative(),
             }
 
         return out

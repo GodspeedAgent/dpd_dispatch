@@ -21,7 +21,7 @@
     <main class="container">
       <section class="card">
         <h1>Beat Profile</h1>
-        <p class="muted">This page reads pre-generated beat profile snapshots from <code>/docs/data/beats/</code>. Ask the bot to generate a beat profile (7/30/90 days) for a specific beat, then refresh.</p>
+        <p class="muted">Beat profiles are generated on request. If a beat hasn’t been generated yet, ask me to build it first, then refresh this page.</p>
       </section>
 
       <section class="card">
@@ -57,6 +57,13 @@
             <div class="value" id="generated">—</div>
           </div>
         </div>
+      </details>
+
+      <details class="card" open>
+        <summary><h2>Narrative</h2></summary>
+        <p class="muted" id="narrativeMeta">—</p>
+        <div id="narrativeText" style="white-space:pre-wrap; line-height:1.45;"></div>
+        <div id="narrativeBullets"></div>
       </details>
 
       <details class="card" open>

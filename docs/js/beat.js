@@ -94,6 +94,30 @@ async function loadBeatProfile(beat, days){
         document.getElementById('total').textContent = snap?.total_incidents ?? '—';
         document.getElementById('generated').textContent = obj?.summary?.generated_at ?? '—';
 
+        // Narrative
+        const nm = document.getElementById('narrativeMeta');
+        const nt = document.getElementById('narrativeText');
+        const nb = document.getElementById('narrativeBullets');
+
+        const narrative = snap?.narrative;
+        if(nm) nm.textContent = narrative?.headline ?? '—';
+        if(nt) nt.textContent = narrative?.text ?? '';
+        if(nb){
+          nb.innerHTML = '';
+          const bullets = narrative?.bullets ?? [];
+          if(bullets.length){
+            const ul = document.createElement('ul');
+            ul.style.margin = '10px 0 0 18px';
+            ul.style.color = 'var(--muted)';
+            for(const b of bullets){
+              const li = document.createElement('li');
+              li.textContent = b;
+              ul.appendChild(li);
+            }
+            nb.appendChild(ul);
+          }
+        }
+
         renderTable('topOffenses', snap?.top_offenses ?? [], [
           { key: 'offincident', label: 'offincident' },
           { key: 'count', label: 'Count' },
