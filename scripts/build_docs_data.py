@@ -432,6 +432,26 @@ def main() -> None:
             total_rows = client.client.get(dataset_id, select="count(1) as n", where=where, limit=1)
             total = int(total_rows[0].get("n", 0)) if total_rows else 0
 
+            def _humanize_offense(s: str | None) -> str | None:
+                if not s:
+                    return s
+                t = str(s).strip()
+                if t == "BMV":
+                    return "Burglary of Motor Vehicle"
+                t = t.replace("(ATT)", "(Attempt)")
+                t = t.replace(" - ATTEMPT", " (Attempt)")
+                t = t.replace(" - ", ": ")
+                # Title-case, but keep a few acronyms
+                keep = {"DWI", "UCR", "NIBRS", "PC"}
+                out = []
+                for w in t.split():
+                    up = w.upper()
+                    if up in keep:
+                        out.append(up)
+                    else:
+                        out.append(w[:1].upper() + w[1:].lower())
+                return " ".join(out)
+
             # Top offenses
             top_off = client.client.get(
                 dataset_id,
@@ -442,7 +462,11 @@ def main() -> None:
                 limit=top_n,
             )
             top_offenses = [
-                {"offincident": r.get("offincident"), "count": int(r.get("n", 0))}
+                {
+                    "offincident": r.get("offincident"),
+                    "offincident_label": _humanize_offense(r.get("offincident")),
+                    "count": int(r.get("n", 0)),
+                }
                 for r in top_off
             ]
 
@@ -534,10 +558,14 @@ def main() -> None:
                     )
                     spike_details.append(
                         {
-                            "day": day,
+                            "day": str(day)[:10],
                             "count": sd.get("count"),
                             "top_offenses": [
-                                {"offincident": r.get("offincident"), "count": int(r.get("n", 0))}
+                                {
+                                    "offincident": r.get("offincident"),
+                                    "offincident_label": _humanize_offense(r.get("offincident")),
+                                    "count": int(r.get("n", 0)),
+                                }
                                 for r in drivers
                             ],
                         }
@@ -633,7 +661,7 @@ def main() -> None:
 
                 top_off1 = top_offenses[0] if top_offenses else None
                 if top_off1:
-                    bullets.append(f"Top offense driver: {top_off1['offincident']} ({top_off1['count']})")
+                    bullets.append(f"Top offense driver: {top_off1.get('offincident_label') or top_off1['offincident']} ({top_off1['count']})")
 
                 if prev_total:
                     direction = "up" if delta > 0 else "down" if delta < 0 else "flat"
@@ -672,7 +700,7 @@ def main() -> None:
                     for s in spike_details[:2]:
                         if s.get('top_offenses'):
                             d0 = s['top_offenses'][0]
-                            drivers.append(f"{s['day']} was led by {d0['offincident']} ({d0['count']})")
+                            drivers.append(f"{s['day']} was led by {(d0.get('offincident_label') or d0['offincident'])} ({d0['count']})")
                     if drivers:
                         spike_line = " Spike attribution: " + "; ".join(drivers) + "."
 
@@ -741,6 +769,14 @@ def main() -> None:
         out_path = beats_dir / f"{str(beat).strip()}.json"
         out_path.write_text(json.dumps(profile, indent=2), encoding="utf-8")
         print(f"Wrote {out_path}")
+
+        # Pointer for the UI: most recently generated beat
+        cur_path = DOCS_DATA / "beat_profile_current.json"
+        cur_path.write_text(
+            json.dumps({"beat": str(beat).strip(), "generated_at": utc_now_iso()}, indent=2),
+            encoding="utf-8",
+        )
+        print(f"Wrote {cur_path}")
 
     # Historical snapshot is generated ONLY when explicitly requested.
     # Set HISTORICAL_ENABLE=1 and provide at least one of:

@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at": "2026-02-11T14:00:25+00:00",
+    "generated_at": "2026-02-11T14:09:58+00:00",
     "dataset": "police_incidents",
     "dataset_id": "qv6i-rri7",
     "beat": "254",
@@ -20,6 +20,7 @@
       "top_offenses": [
         {
           "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+          "offincident_label": "Theft Of Prop <$100: Other Than Shoplift",
           "count": 1
         }
       ],
@@ -46,54 +47,67 @@
       "top_offenses": [
         {
           "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+          "offincident_label": "Motor Vehicle Theft (attempt)",
           "count": 4
         },
         {
           "offincident": "ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+          "offincident_label": "Assault: Preliminary Investigation *non Family Violence",
           "count": 2
         },
         {
           "offincident": "UNLAWFUL RESTRAINT",
+          "offincident_label": "Unlawful Restraint",
           "count": 2
         },
         {
           "offincident": "MOTOR VEHICLE THEFT",
+          "offincident_label": "Motor Vehicle Theft",
           "count": 2
         },
         {
           "offincident": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
+          "offincident_label": "Discharge Firearm In Certain Municipalities",
           "count": 1
         },
         {
           "offincident": "LOST PROPERTY (NO OFFENSE)",
+          "offincident_label": "Lost Property (no Offense)",
           "count": 1
         },
         {
           "offincident": "ASSAULT (AGG) - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+          "offincident_label": "Assault (agg): Preliminary Investigation *non Family Violence",
           "count": 1
         },
         {
           "offincident": "ASSAULT -VERBAL THREAT",
+          "offincident_label": "Assault -verbal Threat",
           "count": 1
         },
         {
           "offincident": "OPEN BUILDING (NO OFFENSE)",
+          "offincident_label": "Open Building (no Offense)",
           "count": 1
         },
         {
           "offincident": "ROBBERY OF INDIVIDUAL",
+          "offincident_label": "Robbery Of Individual",
           "count": 1
         },
         {
           "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+          "offincident_label": "Theft Of Prop <$100: Other Than Shoplift",
           "count": 1
         },
         {
           "offincident": "THEFT - PRELIMINARY INVESTIGATION",
+          "offincident_label": "Theft: Preliminary Investigation",
           "count": 1
         },
         {
           "offincident": "CRIM MISCHIEF > OR EQUAL $2,500 < $30K",
+          "offincident_label": "Crim Mischief > Or Equal $2,500 < $30k",
           "count": 1
         }
       ],
@@ -164,62 +178,77 @@
       "top_offenses": [
         {
           "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+          "offincident_label": "Motor Vehicle Theft (attempt)",
           "count": 8
         },
         {
           "offincident": "MOTOR VEHICLE THEFT",
+          "offincident_label": "Motor Vehicle Theft",
           "count": 4
         },
         {
           "offincident": "ASSAULT -BODILY INJURY ONLY",
+          "offincident_label": "Assault -bodily Injury Only",
           "count": 3
         },
         {
           "offincident": "LOST PROPERTY (NO OFFENSE)",
+          "offincident_label": "Lost Property (no Offense)",
           "count": 3
         },
         {
           "offincident": "UNLAWFUL RESTRAINT",
+          "offincident_label": "Unlawful Restraint",
           "count": 2
         },
         {
           "offincident": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
+          "offincident_label": "Discharge Firearm In Certain Municipalities",
           "count": 2
         },
         {
           "offincident": "DEADLY CONDUCT DISCHARGE FIREARM (DAMAGE)",
+          "offincident_label": "Deadly Conduct Discharge Firearm (damage)",
           "count": 2
         },
         {
           "offincident": "RECOVERED OUT OF TOWN STOLEN PROPERTY (NO OFFENSE)",
+          "offincident_label": "Recovered Out Of Town Stolen Property (no Offense)",
           "count": 2
         },
         {
           "offincident": "ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+          "offincident_label": "Assault: Preliminary Investigation *non Family Violence",
           "count": 2
         },
         {
           "offincident": "RECKLESS DAMAGE",
+          "offincident_label": "Reckless Damage",
           "count": 2
         },
         {
           "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+          "offincident_label": "Theft Of Prop <$100: Other Than Shoplift",
           "count": 2
         },
         {
           "offincident": "DEADLY CONDUCT DISCHARGE FIREARM (ASSAULT)",
+          "offincident_label": "Deadly Conduct Discharge Firearm (assault)",
           "count": 2
         },
         {
           "offincident": "BURGLARY OF HABITATION -NO FORCED ENTRY",
+          "offincident_label": "Burglary Of Habitation -no Forced Entry",
           "count": 1
         },
         {
           "offincident": "CRIM MISCHIEF >OR EQUAL $750 < $2,500",
+          "offincident_label": "Crim Mischief >or Equal $750 < $2,500",
           "count": 1
         },
         {
           "offincident": "BMV",
+          "offincident_label": "Burglary of Motor Vehicle",
           "count": 1
         }
       ],
@@ -379,12 +408,12 @@
       ],
       "narrative": {
         "headline": "Beat 254 \u2014 90-day analysis",
-        "text": "Beat 254 logged 56 incidents over the last 90 days (0.62/day). Top offense types were: MOTOR VEHICLE THEFT - ATTEMPT (8), MOTOR VEHICLE THEFT (4), ASSAULT -BODILY INJURY ONLY (3). Compared with the prior 90-day window, activity is lower (-13 incidents, -18.8%). Spike attribution: 2026-01-09 00:00:00.0000000 was led by MOTOR VEHICLE THEFT (2); 2026-01-14 00:00:00.0000000 was led by MOTOR VEHICLE THEFT (2). Time pattern: most common watch: 3, most common weekday label: Fri. NIBRS framing: mostly PROPERTY (29).",
+        "text": "Beat 254 logged 56 incidents over the last 90 days (0.62/day). Top offense types were: MOTOR VEHICLE THEFT - ATTEMPT (8), MOTOR VEHICLE THEFT (4), ASSAULT -BODILY INJURY ONLY (3). Compared with the prior 90-day window, activity is lower (-13 incidents, -18.8%). Spike attribution: 2026-01-09 was led by Motor Vehicle Theft (2); 2026-01-14 was led by Motor Vehicle Theft (2). Time pattern: most common watch: 3, most common weekday label: Fri. NIBRS framing: mostly PROPERTY (29).",
         "bullets": [
-          "Top offense driver: MOTOR VEHICLE THEFT - ATTEMPT (8)",
+          "Top offense driver: Motor Vehicle Theft (attempt) (8)",
           "Versus prior 90d: down by 13 incidents (-18.8%)",
           "Pace: 0.62 incidents/day (prev 0.77/day)",
-          "Spike days: 2026-01-09 00:00:00.0000000 (6), 2026-01-14 00:00:00.0000000 (4), 2025-11-30 00:00:00.0000000 (3)",
+          "Spike days: 2026-01-09 (6), 2026-01-14 (4), 2025-11-30 (3)",
           "Largest mix shift: MOTOR VEHICLE THEFT - ATTEMPT (11.39 pp)"
         ],
         "baseline": {
@@ -397,55 +426,64 @@
         },
         "spikes": [
           {
-            "day": "2026-01-09 00:00:00.0000000",
+            "day": "2026-01-09",
             "count": 6,
             "top_offenses": [
               {
                 "offincident": "MOTOR VEHICLE THEFT",
+                "offincident_label": "Motor Vehicle Theft",
                 "count": 2
               },
               {
                 "offincident": "BMV",
+                "offincident_label": "Burglary of Motor Vehicle",
                 "count": 1
               },
               {
                 "offincident": "HARASSMENT-REPEATED ELECTRONIC COMM - THREAT",
+                "offincident_label": "Harassment-repeated Electronic Comm: Threat",
                 "count": 1
               },
               {
                 "offincident": "THEFT BY DECEPTION (FRAUD) >OR EQUAL $2500 <$30K",
+                "offincident_label": "Theft By Deception (fraud) >or Equal $2500 <$30k",
                 "count": 1
               },
               {
                 "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+                "offincident_label": "Theft Of Prop <$100: Other Than Shoplift",
                 "count": 1
               }
             ]
           },
           {
-            "day": "2026-01-14 00:00:00.0000000",
+            "day": "2026-01-14",
             "count": 4,
             "top_offenses": [
               {
                 "offincident": "MOTOR VEHICLE THEFT",
+                "offincident_label": "Motor Vehicle Theft",
                 "count": 2
               },
               {
                 "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+                "offincident_label": "Motor Vehicle Theft (attempt)",
                 "count": 2
               }
             ]
           },
           {
-            "day": "2025-11-30 00:00:00.0000000",
+            "day": "2025-11-30",
             "count": 3,
             "top_offenses": [
               {
                 "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+                "offincident_label": "Motor Vehicle Theft (attempt)",
                 "count": 2
               },
               {
                 "offincident": "THEFT OF PROP (AUTO ACC) <$100 - (NOT EMP)",
+                "offincident_label": "Theft Of Prop (auto Acc) <$100: (not Emp)",
                 "count": 1
               }
             ]
@@ -465,25 +503,25 @@
             "share_pp": -9.81
           },
           {
-            "offincident": "NATURAL DEATH (NO OFFENSE)",
-            "cur": 0,
-            "prev": 4,
-            "share_pp": -5.8
-          },
-          {
             "offincident": "THEFT OF PROP > OR EQUAL $100 <$750 (NOT SHOPLIFT) PC31.03(e2A)",
             "cur": 0,
             "prev": 4,
             "share_pp": -5.8
           },
           {
-            "offincident": "ASSAULT -BODILY INJURY ONLY",
+            "offincident": "NATURAL DEATH (NO OFFENSE)",
+            "cur": 0,
+            "prev": 4,
+            "share_pp": -5.8
+          },
+          {
+            "offincident": "LOST PROPERTY (NO OFFENSE)",
             "cur": 3,
             "prev": 0,
             "share_pp": 5.36
           },
           {
-            "offincident": "LOST PROPERTY (NO OFFENSE)",
+            "offincident": "ASSAULT -BODILY INJURY ONLY",
             "cur": 3,
             "prev": 0,
             "share_pp": 5.36

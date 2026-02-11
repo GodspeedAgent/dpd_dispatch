@@ -42,14 +42,51 @@ function renderTable(containerId, rows, columns){
   wrap.appendChild(table);
 }
 
+function fmtDate(s){
+  if(!s) return '—';
+  const str = String(s);
+  const iso = str.slice(0, 10);
+  if(/\d{4}-\d{2}-\d{2}/.test(iso)) return iso;
+  return str;
+}
+
+function humanizeOffense(s){
+  if(!s) return '—';
+  let t = String(s).trim();
+
+  // Expand common abbreviations
+  if(t === 'BMV') t = 'Burglary of Motor Vehicle';
+
+  t = t.replace(/\(ATT\)/g, '(Attempt)');
+  t = t.replace(/\s-\sATTEMPT\b/g, ' (Attempt)');
+  t = t.replace(/\s-\s/g, ': ');
+  t = t.replace(/\s{2,}/g, ' ');
+
+  // Title-case but keep a few acronyms
+  const keep = new Set(['DWI','UCR','NIBRS','ID','PC']);
+  t = t
+    .split(' ')
+    .map(w => {
+      const up = w.toUpperCase();
+      if(keep.has(up)) return up;
+      if(/^[A-Z0-9]{2,}$/.test(w) && /\d/.test(w)) return w;
+      return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    })
+    .join(' ');
+
+  return t;
+}
+
 function normBeat(s){
   const digits = (s ?? '').toString().match(/\d+/g);
   return digits ? digits.join('') : '';
 }
 
-function qs(name){
-  const u = new URL(window.location.href);
-  return u.searchParams.get(name);
+async function loadCurrentBeat(){
+  const cur = await fetchJson('./data/beat_profile_current.json');
+  const beat = (cur?.beat ?? '').toString().trim();
+  if(!beat) throw new Error('No current beat set');
+  return beat;
 }
 
 async function loadBeatProfile(beat, days){
@@ -57,7 +94,7 @@ async function loadBeatProfile(beat, days){
   const obj = await fetchJson(path);
   const key = String(days);
   const snap = obj?.windows?.[key];
-  if(!snap) throw new Error(`No window ${days} days in ${path}`);
+  if(!snap) throw new Error(`No ${days}-day window available for beat ${beat}`);
   return { obj, snap };
 }
 
@@ -69,18 +106,15 @@ async function loadBeatProfile(beat, days){
     const winEl = document.getElementById('window');
     const infoEl = document.getElementById('info');
 
-    const initialBeat = normBeat(qs('beat'));
-    const initialDays = qs('days');
-
-    if(initialBeat) beatEl.value = initialBeat;
-    if(initialDays && ['7','30','90'].includes(initialDays)) winEl.value = initialDays;
+    // Auto-load the most recently generated beat profile
+    beatEl.value = await loadCurrentBeat();
 
     async function render(){
       const beat = normBeat(beatEl.value);
       const days = parseInt(winEl.value, 10);
 
       if(!beat){
-        infoEl.textContent = 'Enter a beat to load a profile.';
+        infoEl.textContent = 'No beat has been generated yet.';
         return;
       }
 
@@ -89,9 +123,9 @@ async function loadBeatProfile(beat, days){
       try{
         const { obj, snap } = await loadBeatProfile(beat, days);
 
-        infoEl.textContent = `Loaded beat ${beat} | window=${days} days | dataset=${obj?.summary?.dataset_id ?? '—'}`;
+        infoEl.textContent = `Beat ${beat} | window=${days} days`;
         document.getElementById('total').textContent = snap?.total_incidents ?? '—';
-        document.getElementById('generated').textContent = obj?.summary?.generated_at ?? '—';
+        document.getElementById('generated').textContent = fmtDate(obj?.summary?.generated_at ?? '—');
 
         // Narrative
         const nm = document.getElementById('narrativeMeta');
@@ -124,7 +158,7 @@ async function loadBeatProfile(beat, days){
         }
 
         renderTable('topOffenses', snap?.top_offenses ?? [], [
-          { key: 'offincident', label: 'offincident' },
+          { key: 'offincident', label: 'Offense', get: r => (r.offincident_label ?? humanizeOffense(r.offincident)) },
           { key: 'count', label: 'Count' },
         ]);
 
@@ -135,7 +169,7 @@ async function loadBeatProfile(beat, days){
         ]);
 
         renderTable('daily', snap?.daily_counts ?? [], [
-          { key: 'day', label: 'Day' },
+          { key: 'day', label: 'Day', get: r => fmtDate(r.day) },
           { key: 'count', label: 'Incidents' },
         ]);
 
@@ -148,17 +182,9 @@ async function loadBeatProfile(beat, days){
     }
 
     document.getElementById('load').addEventListener('click', render);
-    document.getElementById('clear').addEventListener('click', () => {
-      beatEl.value = '';
-      winEl.value = '30';
-      infoEl.textContent = '—';
-      setStatus('Ready');
-    });
 
-    // Load immediately if URL params were provided
-    if(normBeat(beatEl.value)){
-      await render();
-    }
+    // Load immediately
+    await render();
 
   }catch(e){
     console.error(e);

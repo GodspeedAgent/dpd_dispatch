@@ -21,15 +21,15 @@
     <main class="container">
       <section class="card">
         <h1>Beat Profile</h1>
-        <p class="muted">Beat profiles are generated on request. If a beat hasn’t been generated yet, ask me to build it first, then refresh this page.</p>
+        <p class="muted">Beat profiles are generated on request. This page automatically loads the most recently generated beat.</p>
       </section>
 
       <section class="card">
         <h2>Controls</h2>
         <div class="controls">
           <div class="control">
-            <label for="beat">Beat</label>
-            <input id="beat" placeholder="e.g. 254" />
+            <label>Beat</label>
+            <input id="beat" readonly />
           </div>
           <div class="control">
             <label for="window">Window</label>
@@ -39,8 +39,7 @@
               <option value="90">90 days</option>
             </select>
           </div>
-          <button class="button" id="load">Load</button>
-          <button class="button" id="clear">Clear</button>
+          <button class="button" id="load">Reload</button>
         </div>
         <p class="muted" id="info">—</p>
       </section>
@@ -82,6 +81,6 @@
       </details>
     </main>
 
-    <script src="./js/beat.js?v=2"></script>
+    <script src="./js/beat.js?v=3"></script>
   </body>
 </html>
