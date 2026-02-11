@@ -10,6 +10,7 @@ Current outputs:
 - docs/data/references.json
 - docs/data/beat_zip_reference.json (only when requested via env vars)
 - docs/data/historical_snapshot.json (only when requested via env vars)
+- docs/data/historical_snapshot.geojson (only when requested via env vars)
 
 Env:
 - DALLAS_APP_TOKEN: optional Socrata app token
@@ -425,6 +426,47 @@ def main() -> None:
         hist_path = DOCS_DATA / "historical_snapshot.json"
         hist_path.write_text(json.dumps(hist, indent=2), encoding="utf-8")
         print(f"Wrote {hist_path}")
+
+        # Optional: also emit GeoJSON for mapping in the static site
+        if os.getenv("HISTORICAL_GEOJSON") == "1":
+            from dallas_incidents.models import DateRange, OutputFormat
+            from datetime import date, timedelta
+
+            app_token = os.getenv("DALLAS_APP_TOKEN")
+            client = DallasIncidentsClient(preset="police_incidents", app_token=app_token)
+
+            end = date.today()
+            start = end - timedelta(days=days)
+
+            q = IncidentQuery(
+                beats=[beat] if beat else None,
+                date_range=DateRange(start=start, end=end),
+                limit=min(5000, int(os.getenv("HISTORICAL_GEO_LIMIT", "2000"))),
+                order_by="date1 DESC",
+                format=OutputFormat.GEOJSON,
+                offense_keyword=offense_keyword,
+                offense_category=offense_category,
+                extra_where=extra_where,
+            )
+
+            geo_resp = client.get_incidents(q)
+            features = geo_resp.data
+            fc = {
+                "type": "FeatureCollection",
+                "generated_at": utc_now_iso(),
+                "title": title,
+                "days": days,
+                "beat": beat,
+                "query": {
+                    "offense_keyword": offense_keyword,
+                    "offense_category": offense_category,
+                    "extra_where": extra_where,
+                },
+                "features": features,
+            }
+            geo_path = DOCS_DATA / "historical_snapshot.geojson"
+            geo_path.write_text(json.dumps(fc, indent=2), encoding="utf-8")
+            print(f"Wrote {geo_path}")
 
 
 if __name__ == "__main__":
