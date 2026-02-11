@@ -8,6 +8,7 @@ frontend can render.
 Current outputs:
 - docs/data/active_calls_snapshot.json
 - docs/data/references.json
+- docs/data/beat_zip_reference.json (only when requested via env vars)
 - docs/data/historical_snapshot.json (only when requested via env vars)
 
 Env:
@@ -280,6 +281,97 @@ def build_historical_snapshot(
     }
 
 
+def build_beat_zip_reference(days: int = 365, top_zips_per_beat: int = 5) -> Dict[str, Any]:
+    """Infer beat → ZIP mapping from historical incident records.
+
+    Returns a per-beat list of ZIPs ranked by incident count in the window.
+    """
+
+    from datetime import date, timedelta
+
+    app_token = os.getenv("DALLAS_APP_TOKEN")
+    client = DallasIncidentsClient(preset="police_incidents", app_token=app_token)
+
+    end = date.today()
+    start = end - timedelta(days=days)
+
+    where = (
+        f"date1 >= '{start.isoformat()}T00:00:00.000' AND "
+        f"date1 <= '{end.isoformat()}T23:59:59.999' AND "
+        "beat IS NOT NULL AND zip_code IS NOT NULL"
+    )
+
+    # Pull aggregated counts (beat, zip_code). Paginate to be safe.
+    offset = 0
+    limit = 50000
+    rows: List[Dict[str, Any]] = []
+
+    while True:
+        params = {
+            "select": "beat, zip_code, count(1) as n",
+            "where": where,
+            "group": "beat, zip_code",
+            "order": "beat, n DESC",
+            "limit": limit,
+            "offset": offset,
+        }
+        batch = client.client.get(client.config.dataset_id, **params)
+        if not batch:
+            break
+        rows.extend(batch)
+        offset += limit
+        if len(batch) < limit:
+            break
+
+    # Build per-beat totals and ZIP breakdowns
+    beat_totals: Dict[str, int] = {}
+    beat_zips: Dict[str, List[Dict[str, Any]]] = {}
+
+    for r in rows:
+        beat = str(r.get("beat") or "").strip()
+        zipc = str(r.get("zip_code") or "").strip()
+        try:
+            n = int(r.get("n") or 0)
+        except Exception:
+            n = 0
+
+        if not beat or not zipc:
+            continue
+
+        beat_totals[beat] = beat_totals.get(beat, 0) + n
+        beat_zips.setdefault(beat, []).append({"zip": zipc, "count": n})
+
+    # Sort and compute percentages
+    beats_out = []
+    for beat, zlist in beat_zips.items():
+        total = beat_totals.get(beat, 0)
+        zlist_sorted = sorted(zlist, key=lambda x: (-x["count"], x["zip"]))
+        top = []
+        for item in zlist_sorted[:top_zips_per_beat]:
+            pct = (item["count"] / total * 100.0) if total else 0.0
+            top.append({**item, "pct": round(pct, 1)})
+        beats_out.append(
+            {
+                "beat": beat,
+                "total": total,
+                "top_zips": top,
+            }
+        )
+
+    beats_out.sort(key=lambda x: x["beat"])
+
+    return {
+        "summary": {
+            "generated_at": utc_now_iso(),
+            "dataset": "police_incidents",
+            "dataset_id": "qv6i-rri7",
+            "window_days": days,
+            "note": "Inferred from incident records: beats and ZIPs overlap imperfectly; use as a heuristic.",
+        },
+        "beats": beats_out,
+    }
+
+
 def main() -> None:
     DOCS_DATA.mkdir(parents=True, exist_ok=True)
 
@@ -292,6 +384,16 @@ def main() -> None:
     refs_path = DOCS_DATA / "references.json"
     refs_path.write_text(json.dumps(refs, indent=2), encoding="utf-8")
     print(f"Wrote {refs_path}")
+
+    # Beat→ZIP inference is generated ONLY when explicitly requested.
+    # Set BEATZIP_ENABLE=1. Optional: BEATZIP_DAYS=365, BEATZIP_TOP=5.
+    if os.getenv("BEATZIP_ENABLE") == "1":
+        days = int(os.getenv("BEATZIP_DAYS", "365"))
+        topn = int(os.getenv("BEATZIP_TOP", "5"))
+        beatzip = build_beat_zip_reference(days=days, top_zips_per_beat=topn)
+        beatzip_path = DOCS_DATA / "beat_zip_reference.json"
+        beatzip_path.write_text(json.dumps(beatzip, indent=2), encoding="utf-8")
+        print(f"Wrote {beatzip_path}")
 
     # Historical snapshot is generated ONLY when explicitly requested.
     # Set HISTORICAL_ENABLE=1 and provide at least one of:

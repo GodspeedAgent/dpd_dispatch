@@ -60,6 +60,65 @@ function setStatus(text, ok=true){
       {key:'type_count', label:'Mapped offense types'},
     ]);
 
+    // Beat→ZIP reference (optional)
+    async function tryBeatZip(){
+      try{
+        const bz = await fetchJson('./data/beat_zip_reference.json');
+        const beats = bz.beats ?? [];
+
+        const beatInput = document.getElementById('beatZipSearch');
+        const topSel = document.getElementById('beatZipTop');
+        const summary = document.getElementById('beatZipSummary');
+
+        function normalize(s){ return (s ?? '').toString().trim(); }
+
+        function render(){
+          const beatQ = normalize(beatInput?.value);
+          const topN = parseInt(topSel?.value ?? '5', 10);
+
+          let rows = beats;
+          if(beatQ){
+            rows = rows.filter(b => normalize(b.beat) === beatQ);
+          }
+
+          const out = [];
+          for(const b of rows){
+            for(const z of (b.top_zips ?? []).slice(0, topN)){
+              out.push({ beat: b.beat, total: b.total, zip: z.zip, count: z.count, pct: z.pct });
+            }
+          }
+
+          if(summary){
+            summary.textContent = `Window: ${bz?.summary?.window_days ?? '—'} days | Beats: ${rows.length} | Rows: ${out.length}` + (beatQ ? ` | beat=${beatQ}` : '');
+          }
+
+          renderTable('beatZipTable', out, [
+            {key:'beat', label:'Beat'},
+            {key:'zip', label:'ZIP'},
+            {key:'count', label:'Incidents'},
+            {key:'pct', label:'% of beat'},
+            {key:'total', label:'Beat total'},
+          ]);
+        }
+
+        beatInput?.addEventListener('input', render);
+        topSel?.addEventListener('change', render);
+        document.getElementById('beatZipClear')?.addEventListener('click', () => {
+          beatInput.value = '';
+          topSel.value = '5';
+          render();
+        });
+
+        render();
+      }catch(e){
+        console.warn('beat_zip_reference.json not available', e);
+        const summary = document.getElementById('beatZipSummary');
+        if(summary) summary.textContent = 'Beat→ZIP reference not generated yet.';
+      }
+    }
+
+    await tryBeatZip();
+
     // Flatten offense types for table
     const types = [];
     for(const item of (ref.offense_type_map ?? [])){

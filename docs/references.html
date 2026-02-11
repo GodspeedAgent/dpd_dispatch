@@ -34,6 +34,28 @@
       </section>
 
       <section class="card">
+        <h2>Beat → ZIP (inferred)</h2>
+        <p class="muted">Heuristic mapping inferred from historical incidents: for each beat, we list the most common ZIP codes in the selected window.</p>
+        <div class="controls">
+          <div class="control">
+            <label for="beatZipSearch">Beat</label>
+            <input id="beatZipSearch" placeholder="e.g. 215" />
+          </div>
+          <div class="control">
+            <label for="beatZipTop">Show top ZIPs</label>
+            <select id="beatZipTop">
+              <option value="3">3</option>
+              <option value="5" selected>5</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <button class="button" id="beatZipClear">Clear</button>
+        </div>
+        <p class="muted" id="beatZipSummary">—</p>
+        <div id="beatZipTable" class="table"></div>
+      </section>
+
+      <section class="card">
         <h2>Offense Types (official strings)</h2>
         <p class="muted">These are exact <code>offincident</code> strings the client can target for the historical dataset. (List is from the repo mapping, not a live scrape.)</p>
         <div id="offenseTypes" class="table"></div>
