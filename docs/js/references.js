@@ -76,10 +76,22 @@ function setStatus(text, ok=true){
           const beatQ = normalize(beatInput?.value);
           const topN = parseInt(topSel?.value ?? '5', 10);
 
-          let rows = beats;
-          if(beatQ){
-            rows = rows.filter(b => normalize(b.beat) === beatQ);
+          // Avoid rendering a giant table by default (mobile browsers struggle).
+          if(!beatQ){
+            if(summary){
+              summary.textContent = `Window: ${bz?.summary?.window_days ?? '—'} days | Enter a beat to view ZIPs.`;
+            }
+            renderTable('beatZipTable', [], [
+              {key:'beat', label:'Beat'},
+              {key:'zip', label:'ZIP'},
+              {key:'count', label:'Incidents'},
+              {key:'pct', label:'% of beat'},
+              {key:'total', label:'Beat total'},
+            ]);
+            return;
           }
+
+          const rows = beats.filter(b => normalize(b.beat) === beatQ);
 
           const out = [];
           for(const b of rows){
@@ -89,7 +101,7 @@ function setStatus(text, ok=true){
           }
 
           if(summary){
-            summary.textContent = `Window: ${bz?.summary?.window_days ?? '—'} days | Beats: ${rows.length} | Rows: ${out.length}` + (beatQ ? ` | beat=${beatQ}` : '');
+            summary.textContent = `Window: ${bz?.summary?.window_days ?? '—'} days | Matches: ${rows.length} beat(s) | Rows: ${out.length} | beat=${beatQ}`;
           }
 
           renderTable('beatZipTable', out, [
