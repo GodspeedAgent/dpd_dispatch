@@ -70,10 +70,15 @@ function setStatus(text, ok=true){
         const topSel = document.getElementById('beatZipTop');
         const summary = document.getElementById('beatZipSummary');
 
-        function normalize(s){ return (s ?? '').toString().trim(); }
+        function normalizeBeat(s){
+          // Accept inputs like "632", "beat 632", "Beat:632" etc.
+          const digits = (s ?? '').toString().match(/\d+/g);
+          return digits ? digits.join('') : '';
+        }
+        function normalizeStr(s){ return (s ?? '').toString().trim(); }
 
         function render(){
-          const beatQ = normalize(beatInput?.value);
+          const beatQ = normalizeBeat(beatInput?.value);
           const topN = parseInt(topSel?.value ?? '5', 10);
 
           // Avoid rendering a giant table by default (mobile browsers struggle).
@@ -91,7 +96,7 @@ function setStatus(text, ok=true){
             return;
           }
 
-          const rows = beats.filter(b => normalize(b.beat) === beatQ);
+          const rows = beats.filter(b => normalizeStr(b.beat) === beatQ);
 
           const out = [];
           for(const b of rows){
@@ -101,7 +106,11 @@ function setStatus(text, ok=true){
           }
 
           if(summary){
-            summary.textContent = `Window: ${bz?.summary?.window_days ?? '—'} days | Matches: ${rows.length} beat(s) | Rows: ${out.length} | beat=${beatQ}`;
+            const beatsCount = beats.length;
+            summary.textContent = `Window: ${bz?.summary?.window_days ?? '—'} days | Loaded beats: ${beatsCount} | Matches: ${rows.length} | Rows: ${out.length} | beat=${beatQ}`;
+            if(rows.length === 0){
+              summary.textContent += ' | (no match — try digits only, e.g. 632)';
+            }
           }
 
           renderTable('beatZipTable', out, [
