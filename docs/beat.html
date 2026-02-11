@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DPD Dispatch — Beat Profile</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">📟 DPD Dispatch</div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <a class="badge" href="./index.html">Dashboard</a>
+        <a class="badge" href="./visuals.html">Visuals</a>
+        <a class="badge" href="./references.html">References</a>
+        <a class="badge" href="./beat.html">Beat Profile</a>
+        <div class="status" id="status">Loading…</div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h1>Beat Profile</h1>
+        <p class="muted">This page reads pre-generated beat profile snapshots from <code>/docs/data/beats/</code>. Ask the bot to generate a beat profile (7/30/90 days) for a specific beat, then refresh.</p>
+      </section>
+
+      <section class="card">
+        <h2>Controls</h2>
+        <div class="controls">
+          <div class="control">
+            <label for="beat">Beat</label>
+            <input id="beat" placeholder="e.g. 254" />
+          </div>
+          <div class="control">
+            <label for="window">Window</label>
+            <select id="window">
+              <option value="7">7 days</option>
+              <option value="30" selected>30 days</option>
+              <option value="90">90 days</option>
+            </select>
+          </div>
+          <button class="button" id="load">Load</button>
+          <button class="button" id="clear">Clear</button>
+        </div>
+        <p class="muted" id="info">—</p>
+      </section>
+
+      <details class="card" open>
+        <summary><h2>Summary</h2></summary>
+        <div class="grid">
+          <div class="metric">
+            <div class="label">Incidents (window)</div>
+            <div class="value" id="total">—</div>
+          </div>
+          <div class="metric">
+            <div class="label">Generated</div>
+            <div class="value" id="generated">—</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="card" open>
+        <summary><h2>Top Offenses</h2></summary>
+        <div id="topOffenses" class="table"></div>
+      </details>
+
+      <details class="card">
+        <summary><h2>Top ZIPs</h2></summary>
+        <div id="topZips" class="table"></div>
+      </details>
+
+      <details class="card">
+        <summary><h2>Daily Counts</h2></summary>
+        <div id="daily" class="table"></div>
+      </details>
+    </main>
+
+    <script src="./js/beat.js"></script>
+  </body>
+</html>

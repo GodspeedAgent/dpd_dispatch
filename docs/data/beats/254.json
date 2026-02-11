@@ -1,0 +1,380 @@
+{
+  "summary": {
+    "generated_at": "2026-02-11T13:25:40+00:00",
+    "dataset": "police_incidents",
+    "dataset_id": "qv6i-rri7",
+    "beat": "254",
+    "windows": [
+      7,
+      30,
+      90
+    ],
+    "note": "Aggregations inferred from Police Incidents; counts depend on dataset freshness."
+  },
+  "windows": {
+    "7": {
+      "days": 7,
+      "start": "2026-02-04",
+      "end": "2026-02-11",
+      "total_incidents": 1,
+      "top_offenses": [
+        {
+          "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+          "count": 1
+        }
+      ],
+      "top_zips": [
+        {
+          "zip": "75243",
+          "count": 1,
+          "pct": 100.0
+        }
+      ],
+      "daily_counts": [
+        {
+          "day": "2026-02-05 00:00:00.0000000",
+          "count": 1
+        }
+      ]
+    },
+    "30": {
+      "days": 30,
+      "start": "2026-01-12",
+      "end": "2026-02-11",
+      "total_incidents": 19,
+      "top_offenses": [
+        {
+          "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+          "count": 4
+        },
+        {
+          "offincident": "ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+          "count": 2
+        },
+        {
+          "offincident": "UNLAWFUL RESTRAINT",
+          "count": 2
+        },
+        {
+          "offincident": "MOTOR VEHICLE THEFT",
+          "count": 2
+        },
+        {
+          "offincident": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
+          "count": 1
+        },
+        {
+          "offincident": "LOST PROPERTY (NO OFFENSE)",
+          "count": 1
+        },
+        {
+          "offincident": "ASSAULT (AGG) - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+          "count": 1
+        },
+        {
+          "offincident": "ASSAULT -VERBAL THREAT",
+          "count": 1
+        },
+        {
+          "offincident": "OPEN BUILDING (NO OFFENSE)",
+          "count": 1
+        },
+        {
+          "offincident": "ROBBERY OF INDIVIDUAL",
+          "count": 1
+        },
+        {
+          "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+          "count": 1
+        },
+        {
+          "offincident": "THEFT - PRELIMINARY INVESTIGATION",
+          "count": 1
+        },
+        {
+          "offincident": "CRIM MISCHIEF > OR EQUAL $2,500 < $30K",
+          "count": 1
+        }
+      ],
+      "top_zips": [
+        {
+          "zip": "75243",
+          "count": 19,
+          "pct": 100.0
+        }
+      ],
+      "daily_counts": [
+        {
+          "day": "2026-01-13 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-14 00:00:00.0000000",
+          "count": 4
+        },
+        {
+          "day": "2026-01-16 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-18 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2026-01-19 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-20 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-21 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-22 00:00:00.0000000",
+          "count": 3
+        },
+        {
+          "day": "2026-01-27 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2026-01-30 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-02-01 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-02-05 00:00:00.0000000",
+          "count": 1
+        }
+      ]
+    },
+    "90": {
+      "days": 90,
+      "start": "2025-11-13",
+      "end": "2026-02-11",
+      "total_incidents": 56,
+      "top_offenses": [
+        {
+          "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
+          "count": 8
+        },
+        {
+          "offincident": "MOTOR VEHICLE THEFT",
+          "count": 4
+        },
+        {
+          "offincident": "ASSAULT -BODILY INJURY ONLY",
+          "count": 3
+        },
+        {
+          "offincident": "LOST PROPERTY (NO OFFENSE)",
+          "count": 3
+        },
+        {
+          "offincident": "UNLAWFUL RESTRAINT",
+          "count": 2
+        },
+        {
+          "offincident": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
+          "count": 2
+        },
+        {
+          "offincident": "DEADLY CONDUCT DISCHARGE FIREARM (DAMAGE)",
+          "count": 2
+        },
+        {
+          "offincident": "RECOVERED OUT OF TOWN STOLEN PROPERTY (NO OFFENSE)",
+          "count": 2
+        },
+        {
+          "offincident": "ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+          "count": 2
+        },
+        {
+          "offincident": "RECKLESS DAMAGE",
+          "count": 2
+        },
+        {
+          "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
+          "count": 2
+        },
+        {
+          "offincident": "DEADLY CONDUCT DISCHARGE FIREARM (ASSAULT)",
+          "count": 2
+        },
+        {
+          "offincident": "BURGLARY OF HABITATION -NO FORCED ENTRY",
+          "count": 1
+        },
+        {
+          "offincident": "CRIM MISCHIEF >OR EQUAL $750 < $2,500",
+          "count": 1
+        },
+        {
+          "offincident": "BMV",
+          "count": 1
+        }
+      ],
+      "top_zips": [
+        {
+          "zip": "75243",
+          "count": 55,
+          "pct": 98.2
+        },
+        {
+          "zip": "75238",
+          "count": 1,
+          "pct": 1.8
+        }
+      ],
+      "daily_counts": [
+        {
+          "day": "2025-11-14 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2025-11-18 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-11-20 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2025-11-23 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-11-25 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-11-26 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-11-30 00:00:00.0000000",
+          "count": 3
+        },
+        {
+          "day": "2025-12-01 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2025-12-02 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-12-06 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-12-07 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-12-14 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-12-20 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2025-12-22 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-12-26 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2025-12-28 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2025-12-31 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2026-01-01 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2026-01-02 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-03 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-07 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-09 00:00:00.0000000",
+          "count": 6
+        },
+        {
+          "day": "2026-01-10 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-13 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-14 00:00:00.0000000",
+          "count": 4
+        },
+        {
+          "day": "2026-01-16 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-18 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2026-01-19 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-20 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-21 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-01-22 00:00:00.0000000",
+          "count": 3
+        },
+        {
+          "day": "2026-01-27 00:00:00.0000000",
+          "count": 2
+        },
+        {
+          "day": "2026-01-30 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-02-01 00:00:00.0000000",
+          "count": 1
+        },
+        {
+          "day": "2026-02-05 00:00:00.0000000",
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -11,6 +11,7 @@ Current outputs:
 - docs/data/beat_zip_reference.json (only when requested via env vars)
 - docs/data/historical_snapshot.json (only when requested via env vars)
 - docs/data/historical_snapshot.geojson (only when requested via env vars)
+- docs/data/beats/<beat>.json (only when requested via env vars)
 
 Env:
 - DALLAS_APP_TOKEN: optional Socrata app token
@@ -395,6 +396,107 @@ def main() -> None:
         beatzip_path = DOCS_DATA / "beat_zip_reference.json"
         beatzip_path.write_text(json.dumps(beatzip, indent=2), encoding="utf-8")
         print(f"Wrote {beatzip_path}")
+
+    def build_beat_profile(beat: str, windows: List[int] = [7, 30, 90], top_n: int = 15) -> Dict[str, Any]:
+        """Build a multi-window profile for a single beat."""
+        from datetime import date, timedelta
+
+        app_token = os.getenv("DALLAS_APP_TOKEN")
+        client = DallasIncidentsClient(preset="police_incidents", app_token=app_token)
+        dataset_id = client.config.dataset_id
+
+        out: Dict[str, Any] = {
+            "summary": {
+                "generated_at": utc_now_iso(),
+                "dataset": "police_incidents",
+                "dataset_id": dataset_id,
+                "beat": beat,
+                "windows": windows,
+                "note": "Aggregations inferred from Police Incidents; counts depend on dataset freshness.",
+            },
+            "windows": {},
+        }
+
+        today = date.today()
+
+        for days in windows:
+            end = today
+            start = end - timedelta(days=days)
+            where = (
+                f"date1 >= '{start.isoformat()}T00:00:00.000' AND "
+                f"date1 <= '{end.isoformat()}T23:59:59.999' AND "
+                f"beat = '{beat}'"
+            )
+
+            # Total incidents
+            total_rows = client.client.get(dataset_id, select="count(1) as n", where=where, limit=1)
+            total = int(total_rows[0].get("n", 0)) if total_rows else 0
+
+            # Top offenses
+            top_off = client.client.get(
+                dataset_id,
+                select="offincident, count(1) as n",
+                where=where,
+                group="offincident",
+                order="n DESC",
+                limit=top_n,
+            )
+            top_offenses = [
+                {"offincident": r.get("offincident"), "count": int(r.get("n", 0))}
+                for r in top_off
+            ]
+
+            # Top ZIPs
+            top_zip = client.client.get(
+                dataset_id,
+                select="zip_code, count(1) as n",
+                where=where + " AND zip_code IS NOT NULL",
+                group="zip_code",
+                order="n DESC",
+                limit=top_n,
+            )
+            top_zips = []
+            for r in top_zip:
+                n = int(r.get("n", 0))
+                pct = (n / total * 100.0) if total else 0.0
+                top_zips.append({"zip": r.get("zip_code"), "count": n, "pct": round(pct, 1)})
+
+            # Daily counts (dataset stores date1 as text-like timestamp; grouping by date1 works)
+            daily = client.client.get(
+                dataset_id,
+                select="date1, count(1) as n",
+                where=where,
+                group="date1",
+                order="date1 ASC",
+                limit=5000,
+            )
+            daily_counts = [{"day": r.get("date1"), "count": int(r.get("n", 0))} for r in daily]
+
+            out["windows"][str(days)] = {
+                "days": days,
+                "start": start.isoformat(),
+                "end": end.isoformat(),
+                "total_incidents": total,
+                "top_offenses": top_offenses,
+                "top_zips": top_zips,
+                "daily_counts": daily_counts,
+            }
+
+        return out
+
+    # Beat profile is generated ONLY when explicitly requested.
+    # Set BEATPROFILE_ENABLE=1 and BEATPROFILE_BEAT=<beat>. Optional: BEATPROFILE_TOP=15.
+    if os.getenv("BEATPROFILE_ENABLE") == "1":
+        beat = os.getenv("BEATPROFILE_BEAT")
+        if not beat:
+            raise SystemExit("BEATPROFILE_ENABLE=1 requires BEATPROFILE_BEAT")
+        top_n = int(os.getenv("BEATPROFILE_TOP", "15"))
+        profile = build_beat_profile(str(beat).strip(), windows=[7, 30, 90], top_n=top_n)
+        beats_dir = DOCS_DATA / "beats"
+        beats_dir.mkdir(parents=True, exist_ok=True)
+        out_path = beats_dir / f"{str(beat).strip()}.json"
+        out_path.write_text(json.dumps(profile, indent=2), encoding="utf-8")
+        print(f"Wrote {out_path}")
 
     # Historical snapshot is generated ONLY when explicitly requested.
     # Set HISTORICAL_ENABLE=1 and provide at least one of:
