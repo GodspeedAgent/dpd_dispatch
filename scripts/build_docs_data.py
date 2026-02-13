@@ -50,7 +50,57 @@ def _safe_get(d: Dict[str, Any], *keys: str) -> Any:
     return None
 
 
-def build_active_calls_snapshot(limit: int = 500) -> Dict[str, Any]:
+def _get_beats_for_zip(
+    *,
+    zip_code: str,
+    days: int = 365,
+    min_pct: float = 10.0,
+    top_beats_per_zip: int = 10,
+) -> List[str]:
+    """Infer likely beats for a ZIP using historical incidents."""
+    from datetime import date, timedelta
+
+    app_token = os.getenv("DALLAS_APP_TOKEN")
+    client = DallasIncidentsClient(preset="police_incidents", app_token=app_token)
+
+    end = date.today()
+    start = end - timedelta(days=days)
+
+    where = (
+        f"date1 >= '{start.isoformat()}T00:00:00.000' AND "
+        f"date1 <= '{end.isoformat()}T23:59:59.999' AND "
+        f"zip_code = '{zip_code}' AND beat IS NOT NULL"
+    )
+
+    total_rows = client.client.get(client.config.dataset_id, select="count(1) as n", where=where, limit=1)
+    total = int(total_rows[0].get("n", 0)) if total_rows else 0
+    if total <= 0:
+        return []
+
+    rows = client.client.get(
+        client.config.dataset_id,
+        select="beat, count(1) as n",
+        where=where,
+        group="beat",
+        order="n DESC",
+        limit=top_beats_per_zip,
+    )
+
+    beats = []
+    for r in rows:
+        beat = str(r.get("beat") or "").strip()
+        n = int(r.get("n", 0) or 0)
+        if not beat:
+            continue
+        pct = n / total * 100.0
+        if pct + 1e-9 < min_pct:
+            continue
+        beats.append(beat)
+
+    return beats
+
+
+def build_active_calls_snapshot(limit: int = 500, beats: List[str] | None = None, zip_code: str | None = None) -> Dict[str, Any]:
     app_token = os.getenv("DALLAS_APP_TOKEN")
 
     # Uses preset dataset_id 9fxf-t2tr (active calls all divisions)
@@ -61,11 +111,23 @@ def build_active_calls_snapshot(limit: int = 500) -> Dict[str, Any]:
 
     calls_raw: List[Dict[str, Any]] = resp.data if hasattr(resp, "data") else resp  # type: ignore
 
+    # Optional: infer beats from ZIP for active calls filtering (heuristic)
+    inferred_beats: List[str] = []
+    if zip_code:
+        inferred_beats = _get_beats_for_zip(zip_code=zip_code, days=365, min_pct=10.0)
+
+    beats_set = set([b.strip() for b in (beats or []) if b and b.strip()])
+    if inferred_beats:
+        beats_set = set(inferred_beats)
+
     calls: List[Dict[str, Any]] = []
     by_beat: Dict[str, int] = {}
 
     for row in calls_raw:
         beat = str(_safe_get(row, "beat") or "").strip()
+        if beats_set and beat not in beats_set:
+            continue
+
         nature = _safe_get(row, "nature_of_call", "nature")
         block = _safe_get(row, "block")
         location = _safe_get(row, "location")
@@ -83,15 +145,12 @@ def build_active_calls_snapshot(limit: int = 500) -> Dict[str, Any]:
 
         calls.append(
             {
-                # Active calls dataset does not expose call #; unit is the best available identifier
                 "unit": unit,
                 "nature": nature,
                 "nature_code": nature_code,
                 "nature_desc": nature_desc,
                 "beat": beat or None,
                 "address": address or None,
-
-                # Raw fields
                 "unit_number": unit,
                 "block": block,
                 "location": location,
@@ -102,11 +161,16 @@ def build_active_calls_snapshot(limit: int = 500) -> Dict[str, Any]:
         if beat:
             by_beat[beat] = by_beat.get(beat, 0) + 1
 
-    # Region mapping isn't defined in the dataset; we keep region as null for now.
     by_region_beat = [
         {"region": None, "beat": beat, "count": count}
         for beat, count in sorted(by_beat.items(), key=lambda kv: (-kv[1], kv[0]))
     ]
+
+    note = "Active Calls dataset does not include timestamps; generated_at is when the snapshot was built."
+    if zip_code:
+        note += f" Filtered heuristically to beats most associated with ZIP {zip_code} (365d, >=10% threshold)."
+    elif beats_set:
+        note += " Filtered to selected beats."
 
     return {
         "summary": {
@@ -114,7 +178,11 @@ def build_active_calls_snapshot(limit: int = 500) -> Dict[str, Any]:
             "total_calls": len(calls),
             "dataset": "active_calls_all",
             "dataset_id": "9fxf-t2tr",
-            "note": "Active Calls dataset does not include timestamps; generated_at is when the snapshot was built.",
+            "filter": {
+                "beats": sorted(list(beats_set)) if beats_set else None,
+                "zip": zip_code,
+            },
+            "note": note,
         },
         "by_region_beat": by_region_beat,
         "calls": calls,
@@ -387,7 +455,13 @@ def build_beat_zip_reference(days: int = 365, top_zips_per_beat: int = 5) -> Dic
 def main() -> None:
     DOCS_DATA.mkdir(parents=True, exist_ok=True)
 
-    active = build_active_calls_snapshot()
+    # Active calls snapshot (optional beat/zip filtering)
+    active_zip = os.getenv("ACTIVE_ZIP") or None
+    active_beats = None
+    if os.getenv("ACTIVE_BEATS"):
+        active_beats = [b.strip() for b in os.getenv("ACTIVE_BEATS", "").split(",") if b.strip()]
+
+    active = build_active_calls_snapshot(beats=active_beats, zip_code=active_zip)
     out_path = DOCS_DATA / "active_calls_snapshot.json"
     out_path.write_text(json.dumps(active, indent=2), encoding="utf-8")
     print(f"Wrote {out_path}")
