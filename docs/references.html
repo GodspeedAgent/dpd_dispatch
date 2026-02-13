@@ -57,6 +57,20 @@
       </section>
 
       <section class="card">
+        <h2>ZIP → Beat (inferred)</h2>
+        <p class="muted">Heuristic mapping inferred from historical incidents: for each ZIP code, we list beats that account for at least 10% of incidents in that ZIP (within the selected window).</p>
+        <div class="controls">
+          <div class="control">
+            <label for="zipBeatSearch">ZIP</label>
+            <input id="zipBeatSearch" placeholder="e.g. 75231" />
+          </div>
+          <button class="button" id="zipBeatClear">Clear</button>
+        </div>
+        <p class="muted" id="zipBeatSummary">—</p>
+        <div id="zipBeatTable" class="table"></div>
+      </section>
+
+      <section class="card">
         <h2>Offense Types (official strings)</h2>
         <p class="muted">These are exact <code>offincident</code> strings you can use for historical queries. (This list is a curated reference, not a live scrape.)</p>
         <div id="offenseTypes" class="table"></div>

@@ -9,6 +9,7 @@ Current outputs:
 - docs/data/active_calls_snapshot.json
 - docs/data/references.json
 - docs/data/beat_zip_reference.json (only when requested via env vars)
+- docs/data/zip_beat_reference.json (only when requested via env vars)
 - docs/data/historical_snapshot.json (only when requested via env vars)
 - docs/data/historical_snapshot.geojson (only when requested via env vars)
 - docs/data/beats/<beat>.json (only when requested via env vars)
@@ -405,6 +406,99 @@ def main() -> None:
         beatzip_path = DOCS_DATA / "beat_zip_reference.json"
         beatzip_path.write_text(json.dumps(beatzip, indent=2), encoding="utf-8")
         print(f"Wrote {beatzip_path}")
+
+    def build_zip_beat_reference(days: int = 365, min_pct: float = 10.0, top_beats_per_zip: int = 10) -> Dict[str, Any]:
+        """Infer ZIP → beat mapping from historical incident records.
+
+        For each ZIP, include beats that account for >= min_pct of incidents in that ZIP.
+        """
+        from datetime import date, timedelta
+
+        app_token = os.getenv("DALLAS_APP_TOKEN")
+        client = DallasIncidentsClient(preset="police_incidents", app_token=app_token)
+
+        end = date.today()
+        start = end - timedelta(days=days)
+
+        where = (
+            f"date1 >= '{start.isoformat()}T00:00:00.000' AND "
+            f"date1 <= '{end.isoformat()}T23:59:59.999' AND "
+            "beat IS NOT NULL AND zip_code IS NOT NULL"
+        )
+
+        # Aggregate counts by (zip, beat)
+        offset = 0
+        limit = 50000
+        rows: List[Dict[str, Any]] = []
+        while True:
+            params = {
+                "select": "zip_code, beat, count(1) as n",
+                "where": where,
+                "group": "zip_code, beat",
+                "order": "zip_code, n DESC",
+                "limit": limit,
+                "offset": offset,
+            }
+            batch = client.client.get(client.config.dataset_id, **params)
+            if not batch:
+                break
+            rows.extend(batch)
+            offset += limit
+            if len(batch) < limit:
+                break
+
+        zip_totals: Dict[str, int] = {}
+        zip_beats: Dict[str, List[Dict[str, Any]]] = {}
+
+        for r in rows:
+            zipc = str(r.get("zip_code") or "").strip()
+            beat = str(r.get("beat") or "").strip()
+            try:
+                n = int(r.get("n") or 0)
+            except Exception:
+                n = 0
+            if not zipc or not beat:
+                continue
+            zip_totals[zipc] = zip_totals.get(zipc, 0) + n
+            zip_beats.setdefault(zipc, []).append({"beat": beat, "count": n})
+
+        out_zips = []
+        for zipc, blist in zip_beats.items():
+            total = zip_totals.get(zipc, 0)
+            if total <= 0:
+                continue
+            blist_sorted = sorted(blist, key=lambda x: (-x["count"], x["beat"]))
+            beats_out = []
+            for item in blist_sorted[:top_beats_per_zip]:
+                pct = item["count"] / total * 100.0
+                if pct + 1e-9 < min_pct:
+                    continue
+                beats_out.append({**item, "pct": round(pct, 1)})
+            out_zips.append({"zip": zipc, "total": total, "beats": beats_out})
+
+        out_zips.sort(key=lambda x: x["zip"])
+
+        return {
+            "summary": {
+                "generated_at": utc_now_iso(),
+                "dataset": "police_incidents",
+                "dataset_id": "qv6i-rri7",
+                "window_days": days,
+                "min_pct": min_pct,
+                "note": "Inferred from incident records; ZIPs and beats overlap imperfectly; use as a heuristic.",
+            },
+            "zips": out_zips,
+        }
+
+    # ZIP→beat inference is generated ONLY when explicitly requested.
+    # Set ZIPBEAT_ENABLE=1. Optional: ZIPBEAT_DAYS=365, ZIPBEAT_MINPCT=10.
+    if os.getenv("ZIPBEAT_ENABLE") == "1":
+        days = int(os.getenv("ZIPBEAT_DAYS", "365"))
+        min_pct = float(os.getenv("ZIPBEAT_MINPCT", "10"))
+        zipbeat = build_zip_beat_reference(days=days, min_pct=min_pct)
+        zipbeat_path = DOCS_DATA / "zip_beat_reference.json"
+        zipbeat_path.write_text(json.dumps(zipbeat, indent=2), encoding="utf-8")
+        print(f"Wrote {zipbeat_path}")
 
     def build_beat_profile(beat: str, windows: List[int] = [7, 30, 90], top_n: int = 15) -> Dict[str, Any]:
         """Build a multi-window profile for a single beat."""
