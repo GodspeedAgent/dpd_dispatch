@@ -457,11 +457,24 @@ def main() -> None:
 
     # Active calls snapshot (optional beat/zip filtering)
     active_zip = os.getenv("ACTIVE_ZIP") or None
+    active_zips = None
+    if os.getenv("ACTIVE_ZIPS"):
+        active_zips = [z.strip() for z in os.getenv("ACTIVE_ZIPS", "").split(",") if z.strip()]
+
     active_beats = None
     if os.getenv("ACTIVE_BEATS"):
         active_beats = [b.strip() for b in os.getenv("ACTIVE_BEATS", "").split(",") if b.strip()]
 
-    active = build_active_calls_snapshot(beats=active_beats, zip_code=active_zip)
+    # If multiple ZIPs are provided, infer beats for each ZIP and union them.
+    if active_zips:
+        inferred = set()
+        for z in active_zips:
+            for b in _get_beats_for_zip(zip_code=z, days=365, min_pct=10.0):
+                inferred.add(b)
+        active_beats = sorted(list(inferred))
+        active_zip = ",".join(active_zips)
+
+    active = build_active_calls_snapshot(beats=active_beats, zip_code=None)
     out_path = DOCS_DATA / "active_calls_snapshot.json"
     out_path.write_text(json.dumps(active, indent=2), encoding="utf-8")
     print(f"Wrote {out_path}")

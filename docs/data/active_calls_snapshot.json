@@ -1,38 +1,41 @@
 {
   "summary": {
-    "generated_at": "2026-02-13T14:30:00+00:00",
+    "generated_at": "2026-02-13T14:35:25+00:00",
     "total_calls": 1,
     "dataset": "active_calls_all",
     "dataset_id": "9fxf-t2tr",
     "filter": {
       "beats": [
-        "551",
-        "552",
-        "553"
+        "211",
+        "215",
+        "216",
+        "252",
+        "256",
+        "257"
       ],
-      "zip": "75234"
+      "zip": null
     },
-    "note": "Active Calls dataset does not include timestamps; generated_at is when the snapshot was built. Filtered heuristically to beats most associated with ZIP 75234 (365d, >=10% threshold)."
+    "note": "Active Calls dataset does not include timestamps; generated_at is when the snapshot was built. Filtered to selected beats."
   },
   "by_region_beat": [
     {
       "region": null,
-      "beat": "552",
+      "beat": "257",
       "count": 1
     }
   ],
   "calls": [
     {
-      "unit": "D524",
-      "nature": "12B - Business Alarm",
-      "nature_code": "12B",
-      "nature_desc": "Business Alarm",
-      "beat": "552",
-      "address": "11200 Indian Trl",
-      "unit_number": "D524",
-      "block": "11200",
-      "location": "Indian Trl",
-      "nature_of_call": "12B - Business Alarm"
+      "unit": "B299",
+      "nature": "11R - Burg of Res",
+      "nature_code": "11R",
+      "nature_desc": "Burg of Res",
+      "beat": "257",
+      "address": "11500 Leisure Dr",
+      "unit_number": "B299",
+      "block": "11500",
+      "location": "Leisure Dr",
+      "nature_of_call": "11R - Burg of Res"
     }
   ]
 }
