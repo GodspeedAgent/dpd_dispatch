@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at": "2026-02-11T14:09:58+00:00",
+    "generated_at": "2026-02-13T04:30:07+00:00",
     "dataset": "police_incidents",
     "dataset_id": "qv6i-rri7",
     "beat": "254",
@@ -14,41 +14,24 @@
   "windows": {
     "7": {
       "days": 7,
-      "start": "2026-02-04",
-      "end": "2026-02-11",
-      "total_incidents": 1,
-      "top_offenses": [
-        {
-          "offincident": "THEFT OF PROP <$100 - OTHER THAN SHOPLIFT",
-          "offincident_label": "Theft Of Prop <$100: Other Than Shoplift",
-          "count": 1
-        }
-      ],
-      "top_zips": [
-        {
-          "zip": "75243",
-          "count": 1,
-          "pct": 100.0
-        }
-      ],
-      "daily_counts": [
-        {
-          "day": "2026-02-05 00:00:00.0000000",
-          "count": 1
-        }
-      ],
+      "start": "2026-02-06",
+      "end": "2026-02-13",
+      "total_incidents": 0,
+      "top_offenses": [],
+      "top_zips": [],
+      "daily_counts": [],
       "narrative": null
     },
     "30": {
       "days": 30,
-      "start": "2026-01-12",
-      "end": "2026-02-11",
-      "total_incidents": 19,
+      "start": "2026-01-14",
+      "end": "2026-02-13",
+      "total_incidents": 14,
       "top_offenses": [
         {
           "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
           "offincident_label": "Motor Vehicle Theft (attempt)",
-          "count": 4
+          "count": 2
         },
         {
           "offincident": "ASSAULT - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
@@ -56,14 +39,9 @@
           "count": 2
         },
         {
-          "offincident": "UNLAWFUL RESTRAINT",
-          "offincident_label": "Unlawful Restraint",
-          "count": 2
-        },
-        {
-          "offincident": "MOTOR VEHICLE THEFT",
-          "offincident_label": "Motor Vehicle Theft",
-          "count": 2
+          "offincident": "CRIM MISCHIEF > OR EQUAL $2,500 < $30K",
+          "offincident_label": "Crim Mischief > Or Equal $2,500 < $30k",
+          "count": 1
         },
         {
           "offincident": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
@@ -73,16 +51,6 @@
         {
           "offincident": "LOST PROPERTY (NO OFFENSE)",
           "offincident_label": "Lost Property (no Offense)",
-          "count": 1
-        },
-        {
-          "offincident": "ASSAULT (AGG) - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
-          "offincident_label": "Assault (agg): Preliminary Investigation *non Family Violence",
-          "count": 1
-        },
-        {
-          "offincident": "ASSAULT -VERBAL THREAT",
-          "offincident_label": "Assault -verbal Threat",
           "count": 1
         },
         {
@@ -106,27 +74,29 @@
           "count": 1
         },
         {
-          "offincident": "CRIM MISCHIEF > OR EQUAL $2,500 < $30K",
-          "offincident_label": "Crim Mischief > Or Equal $2,500 < $30k",
+          "offincident": "ASSAULT (AGG) - PRELIMINARY INVESTIGATION *NON FAMILY VIOLENCE",
+          "offincident_label": "Assault (agg): Preliminary Investigation *non Family Violence",
+          "count": 1
+        },
+        {
+          "offincident": "UNLAWFUL RESTRAINT",
+          "offincident_label": "Unlawful Restraint",
+          "count": 1
+        },
+        {
+          "offincident": "ASSAULT -VERBAL THREAT",
+          "offincident_label": "Assault -verbal Threat",
           "count": 1
         }
       ],
       "top_zips": [
         {
           "zip": "75243",
-          "count": 19,
+          "count": 14,
           "pct": 100.0
         }
       ],
       "daily_counts": [
-        {
-          "day": "2026-01-13 00:00:00.0000000",
-          "count": 1
-        },
-        {
-          "day": "2026-01-14 00:00:00.0000000",
-          "count": 4
-        },
         {
           "day": "2026-01-16 00:00:00.0000000",
           "count": 1
@@ -172,9 +142,9 @@
     },
     "90": {
       "days": 90,
-      "start": "2025-11-13",
-      "end": "2026-02-11",
-      "total_incidents": 56,
+      "start": "2025-11-15",
+      "end": "2026-02-13",
+      "total_incidents": 54,
       "top_offenses": [
         {
           "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
@@ -197,6 +167,11 @@
           "count": 3
         },
         {
+          "offincident": "DEADLY CONDUCT DISCHARGE FIREARM (ASSAULT)",
+          "offincident_label": "Deadly Conduct Discharge Firearm (assault)",
+          "count": 2
+        },
+        {
           "offincident": "UNLAWFUL RESTRAINT",
           "offincident_label": "Unlawful Restraint",
           "count": 2
@@ -204,11 +179,6 @@
         {
           "offincident": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
           "offincident_label": "Discharge Firearm In Certain Municipalities",
-          "count": 2
-        },
-        {
-          "offincident": "DEADLY CONDUCT DISCHARGE FIREARM (DAMAGE)",
-          "offincident_label": "Deadly Conduct Discharge Firearm (damage)",
           "count": 2
         },
         {
@@ -232,18 +202,18 @@
           "count": 2
         },
         {
-          "offincident": "DEADLY CONDUCT DISCHARGE FIREARM (ASSAULT)",
-          "offincident_label": "Deadly Conduct Discharge Firearm (assault)",
+          "offincident": "DEADLY CONDUCT DISCHARGE FIREARM (DAMAGE)",
+          "offincident_label": "Deadly Conduct Discharge Firearm (damage)",
           "count": 2
+        },
+        {
+          "offincident": "FOUND PROPERTY (NO OFFENSE)",
+          "offincident_label": "Found Property (no Offense)",
+          "count": 1
         },
         {
           "offincident": "BURGLARY OF HABITATION -NO FORCED ENTRY",
           "offincident_label": "Burglary Of Habitation -no Forced Entry",
-          "count": 1
-        },
-        {
-          "offincident": "CRIM MISCHIEF >OR EQUAL $750 < $2,500",
-          "offincident_label": "Crim Mischief >or Equal $750 < $2,500",
           "count": 1
         },
         {
@@ -255,20 +225,16 @@
       "top_zips": [
         {
           "zip": "75243",
-          "count": 55,
-          "pct": 98.2
+          "count": 53,
+          "pct": 98.1
         },
         {
           "zip": "75238",
           "count": 1,
-          "pct": 1.8
+          "pct": 1.9
         }
       ],
       "daily_counts": [
-        {
-          "day": "2025-11-14 00:00:00.0000000",
-          "count": 2
-        },
         {
           "day": "2025-11-18 00:00:00.0000000",
           "count": 1
@@ -408,21 +374,21 @@
       ],
       "narrative": {
         "headline": "Beat 254 \u2014 90-day analysis",
-        "text": "Beat 254 logged 56 incidents over the last 90 days (0.62/day). Top offense types were: MOTOR VEHICLE THEFT - ATTEMPT (8), MOTOR VEHICLE THEFT (4), ASSAULT -BODILY INJURY ONLY (3). Compared with the prior 90-day window, activity is lower (-13 incidents, -18.8%). Spike attribution: 2026-01-09 was led by Motor Vehicle Theft (2); 2026-01-14 was led by Motor Vehicle Theft (2). Time pattern: most common watch: 3, most common weekday label: Fri. NIBRS framing: mostly PROPERTY (29).",
+        "text": "Beat 254 logged 54 incidents over the last 90 days (0.6/day). Top offense types were: MOTOR VEHICLE THEFT - ATTEMPT (8), MOTOR VEHICLE THEFT (4), ASSAULT -BODILY INJURY ONLY (3). Compared with the prior 90-day window, activity is lower (-17 incidents, -23.9%). Spike attribution: 2026-01-09 was led by Motor Vehicle Theft (2); 2026-01-14 was led by Motor Vehicle Theft (2). Time pattern: most common watch: 3, most common weekday label: Fri. NIBRS framing: mostly PROPERTY (27).",
         "bullets": [
           "Top offense driver: Motor Vehicle Theft (attempt) (8)",
-          "Versus prior 90d: down by 13 incidents (-18.8%)",
-          "Pace: 0.62 incidents/day (prev 0.77/day)",
+          "Versus prior 90d: down by 17 incidents (-23.9%)",
+          "Pace: 0.6 incidents/day (prev 0.79/day)",
           "Spike days: 2026-01-09 (6), 2026-01-14 (4), 2025-11-30 (3)",
-          "Largest mix shift: MOTOR VEHICLE THEFT - ATTEMPT (11.39 pp)"
+          "Largest mix shift: MOTOR VEHICLE THEFT - ATTEMPT (12.0 pp)"
         ],
         "baseline": {
-          "current_total": 56,
-          "previous_total": 69,
-          "delta": -13,
-          "pct": -18.8,
-          "current_rate_per_day": 0.62,
-          "previous_rate_per_day": 0.77
+          "current_total": 54,
+          "previous_total": 71,
+          "delta": -17,
+          "pct": -23.9,
+          "current_rate_per_day": 0.6,
+          "previous_rate_per_day": 0.79
         },
         "spikes": [
           {
@@ -494,49 +460,49 @@
             "offincident": "MOTOR VEHICLE THEFT - ATTEMPT",
             "cur": 8,
             "prev": 2,
-            "share_pp": 11.39
+            "share_pp": 12.0
           },
           {
             "offincident": "BMV",
             "cur": 1,
             "prev": 8,
-            "share_pp": -9.81
+            "share_pp": -9.42
           },
           {
             "offincident": "THEFT OF PROP > OR EQUAL $100 <$750 (NOT SHOPLIFT) PC31.03(e2A)",
             "cur": 0,
             "prev": 4,
-            "share_pp": -5.8
+            "share_pp": -5.63
           },
           {
             "offincident": "NATURAL DEATH (NO OFFENSE)",
             "cur": 0,
             "prev": 4,
-            "share_pp": -5.8
-          },
-          {
-            "offincident": "LOST PROPERTY (NO OFFENSE)",
-            "cur": 3,
-            "prev": 0,
-            "share_pp": 5.36
+            "share_pp": -5.63
           },
           {
             "offincident": "ASSAULT -BODILY INJURY ONLY",
             "cur": 3,
             "prev": 0,
-            "share_pp": 5.36
+            "share_pp": 5.56
           },
           {
-            "offincident": "BURGLARY OF BUILDING - FORCED ENTRY",
-            "cur": 0,
-            "prev": 3,
-            "share_pp": -4.35
+            "offincident": "LOST PROPERTY (NO OFFENSE)",
+            "cur": 3,
+            "prev": 0,
+            "share_pp": 5.56
           },
           {
             "offincident": "THEFT OF PROP > OR EQUAL $750 <$2,500 (NOT SHOPLIFT) PC31.03(e3)",
             "cur": 0,
             "prev": 3,
-            "share_pp": -4.35
+            "share_pp": -4.23
+          },
+          {
+            "offincident": "BURGLARY OF BUILDING - FORCED ENTRY",
+            "cur": 0,
+            "prev": 3,
+            "share_pp": -4.23
           }
         ],
         "time_patterns": {
@@ -547,17 +513,17 @@
             },
             {
               "watch": "2",
-              "count": 18
+              "count": 17
             },
             {
               "watch": "1",
-              "count": 14
+              "count": 13
             }
           ],
           "day_of_week": [
             {
               "day": "Fri",
-              "count": 13
+              "count": 11
             },
             {
               "day": "Sun",
@@ -589,7 +555,7 @@
           "crimeagainst": [
             {
               "name": "PROPERTY",
-              "count": 29
+              "count": 27
             },
             {
               "name": "MISCELLANEOUS",
@@ -611,7 +577,7 @@
           "type": [
             {
               "name": "Coded",
-              "count": 33
+              "count": 31
             },
             {
               "name": "999 - No Coded",
@@ -633,7 +599,7 @@
           "group": [
             {
               "name": "A",
-              "count": 40
+              "count": 38
             },
             {
               "name": "C",
