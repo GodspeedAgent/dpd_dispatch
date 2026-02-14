@@ -34,11 +34,11 @@
     <main class="container">
       <section class="card">
         <h1>Visuals</h1>
-        <p class="muted">Map points come from the most recently published historical view. If you need a different beat/date range, ask me to generate it and then refresh.</p>
+        <p class="muted" id="scope">—</p>
       </section>
 
       <section class="card">
-        <h2>Historical Map — Filters (client-side)</h2>
+        <h2>Filters</h2>
         <div class="controls">
           <div class="control">
             <label for="vBeat">Beat</label>
@@ -49,11 +49,25 @@
             <input id="vDivision" placeholder="e.g. NORTHEAST" />
           </div>
           <div class="control">
-            <label for="vText">Offense/address contains</label>
-            <input id="vText" placeholder="e.g. burglary" />
+            <label for="vText">Offense / address contains</label>
+            <input id="vText" placeholder="e.g. shooting" />
+          </div>
+          <div class="control">
+            <label for="vZip">ZIP</label>
+            <select id="vZip">
+              <option value="">All</option>
+            </select>
+          </div>
+          <div class="control">
+            <label for="vViolent">Violence highlight</label>
+            <select id="vViolent">
+              <option value="on" selected>On</option>
+              <option value="off">Off</option>
+            </select>
           </div>
           <button class="button" id="vClear">Clear</button>
         </div>
+        <div id="chips" style="margin-top:10px;"></div>
         <p class="muted" id="vSummary">—</p>
       </section>
 
