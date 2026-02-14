@@ -1,7 +1,7 @@
 {
   "summary": {
-    "generated_at": "2026-02-14T13:24:18+00:00",
-    "total_calls": 46,
+    "generated_at": "2026-02-14T13:29:43+00:00",
+    "total_calls": 49,
     "dataset": "active_calls_all",
     "dataset_id": "9fxf-t2tr",
     "filter": {
@@ -14,7 +14,7 @@
     {
       "region": null,
       "beat": "434",
-      "count": 8
+      "count": 7
     },
     {
       "region": null,
@@ -33,6 +33,11 @@
     },
     {
       "region": null,
+      "beat": "114",
+      "count": 2
+    },
+    {
+      "region": null,
       "beat": "241",
       "count": 2
     },
@@ -43,12 +48,12 @@
     },
     {
       "region": null,
-      "beat": "422",
+      "beat": "417",
       "count": 2
     },
     {
       "region": null,
-      "beat": "523",
+      "beat": "422",
       "count": 2
     },
     {
@@ -63,17 +68,17 @@
     },
     {
       "region": null,
+      "beat": "714",
+      "count": 2
+    },
+    {
+      "region": null,
       "beat": "842",
       "count": 2
     },
     {
       "region": null,
       "beat": "113",
-      "count": 1
-    },
-    {
-      "region": null,
-      "beat": "114",
       "count": 1
     },
     {
@@ -123,7 +128,7 @@
     },
     {
       "region": null,
-      "beat": "437",
+      "beat": "532",
       "count": 1
     },
     {
@@ -133,7 +138,12 @@
     },
     {
       "region": null,
-      "beat": "714",
+      "beat": "721",
+      "count": 1
+    },
+    {
+      "region": null,
+      "beat": "722",
       "count": 1
     }
   ],
@@ -151,18 +161,6 @@
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "unit": "E790",
-      "nature": "DASF-Dist Active Shooter Foot",
-      "nature_code": null,
-      "nature_desc": null,
-      "beat": "741",
-      "address": "3800 S Tyler St",
-      "unit_number": "E790",
-      "block": "3800",
-      "location": "S Tyler St",
-      "nature_of_call": "DASF-Dist Active Shooter Foot"
-    },
-    {
       "unit": "E781",
       "nature": "DASF-Dist Active Shooter Foot",
       "nature_code": null,
@@ -170,6 +168,18 @@
       "beat": "741",
       "address": "3800 S Tyler St",
       "unit_number": "E781",
+      "block": "3800",
+      "location": "S Tyler St",
+      "nature_of_call": "DASF-Dist Active Shooter Foot"
+    },
+    {
+      "unit": "E790",
+      "nature": "DASF-Dist Active Shooter Foot",
+      "nature_code": null,
+      "nature_desc": null,
+      "beat": "741",
+      "address": "3800 S Tyler St",
+      "unit_number": "E790",
       "block": "3800",
       "location": "S Tyler St",
       "nature_of_call": "DASF-Dist Active Shooter Foot"
@@ -271,18 +281,6 @@
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "unit": "D315",
-      "nature": "40/01 - Other",
-      "nature_code": "40/01",
-      "nature_desc": "Other",
-      "beat": "313",
-      "address": "Scyene Rd / Dixon Ave",
-      "unit_number": "D315",
-      "block": null,
-      "location": "Scyene Rd / Dixon Ave",
-      "nature_of_call": "40/01 - Other"
-    },
-    {
       "unit": "B331",
       "nature": "40/01 - Other",
       "nature_code": "40/01",
@@ -295,49 +293,25 @@
       "nature_of_call": "40/01 - Other"
     },
     {
-      "unit": "B445",
-      "nature": "15 - Assist Officer",
-      "nature_code": "15",
-      "nature_desc": "Assist Officer",
-      "beat": "434",
-      "address": "4900 W ILLINOIS AVE",
-      "unit_number": "B445",
-      "block": "4900",
-      "location": "W ILLINOIS AVE",
-      "nature_of_call": "15 - Assist Officer"
+      "unit": "D315",
+      "nature": "40/01 - Other",
+      "nature_code": "40/01",
+      "nature_desc": "Other",
+      "beat": "313",
+      "address": "Scyene Rd / Dixon Ave",
+      "unit_number": "D315",
+      "block": null,
+      "location": "Scyene Rd / Dixon Ave",
+      "nature_of_call": "40/01 - Other"
     },
     {
-      "unit": "B450",
+      "unit": "B411",
       "nature": "15 - Assist Officer",
       "nature_code": "15",
       "nature_desc": "Assist Officer",
       "beat": "434",
       "address": "4900 W ILLINOIS AVE",
-      "unit_number": "B450",
-      "block": "4900",
-      "location": "W ILLINOIS AVE",
-      "nature_of_call": "15 - Assist Officer"
-    },
-    {
-      "unit": "UAS42",
-      "nature": "15 - Assist Officer",
-      "nature_code": "15",
-      "nature_desc": "Assist Officer",
-      "beat": "434",
-      "address": "4900 W ILLINOIS AVE",
-      "unit_number": "UAS42",
-      "block": "4900",
-      "location": "W ILLINOIS AVE",
-      "nature_of_call": "15 - Assist Officer"
-    },
-    {
-      "unit": "B453",
-      "nature": "15 - Assist Officer",
-      "nature_code": "15",
-      "nature_desc": "Assist Officer",
-      "beat": "434",
-      "address": "4900 W ILLINOIS AVE",
-      "unit_number": "B453",
+      "unit_number": "B411",
       "block": "4900",
       "location": "W ILLINOIS AVE",
       "nature_of_call": "15 - Assist Officer"
@@ -355,6 +329,42 @@
       "nature_of_call": "15 - Assist Officer"
     },
     {
+      "unit": "UAS42",
+      "nature": "15 - Assist Officer",
+      "nature_code": "15",
+      "nature_desc": "Assist Officer",
+      "beat": "434",
+      "address": "4900 W ILLINOIS AVE",
+      "unit_number": "UAS42",
+      "block": "4900",
+      "location": "W ILLINOIS AVE",
+      "nature_of_call": "15 - Assist Officer"
+    },
+    {
+      "unit": "B450",
+      "nature": "15 - Assist Officer",
+      "nature_code": "15",
+      "nature_desc": "Assist Officer",
+      "beat": "434",
+      "address": "4900 W ILLINOIS AVE",
+      "unit_number": "B450",
+      "block": "4900",
+      "location": "W ILLINOIS AVE",
+      "nature_of_call": "15 - Assist Officer"
+    },
+    {
+      "unit": "B445",
+      "nature": "15 - Assist Officer",
+      "nature_code": "15",
+      "nature_desc": "Assist Officer",
+      "beat": "434",
+      "address": "4900 W ILLINOIS AVE",
+      "unit_number": "B445",
+      "block": "4900",
+      "location": "W ILLINOIS AVE",
+      "nature_of_call": "15 - Assist Officer"
+    },
+    {
       "unit": "B451",
       "nature": "15 - Assist Officer",
       "nature_code": "15",
@@ -367,25 +377,13 @@
       "nature_of_call": "15 - Assist Officer"
     },
     {
-      "unit": "B411",
+      "unit": "B453",
       "nature": "15 - Assist Officer",
       "nature_code": "15",
       "nature_desc": "Assist Officer",
       "beat": "434",
       "address": "4900 W ILLINOIS AVE",
-      "unit_number": "B411",
-      "block": "4900",
-      "location": "W ILLINOIS AVE",
-      "nature_of_call": "15 - Assist Officer"
-    },
-    {
-      "unit": "B444",
-      "nature": "15 - Assist Officer",
-      "nature_code": "15",
-      "nature_desc": "Assist Officer",
-      "beat": "434",
-      "address": "4900 W ILLINOIS AVE",
-      "unit_number": "B444",
+      "unit_number": "B453",
       "block": "4900",
       "location": "W ILLINOIS AVE",
       "nature_of_call": "15 - Assist Officer"
@@ -401,18 +399,6 @@
       "block": null,
       "location": "Bruton Rd / N Prairie Creek Rd",
       "nature_of_call": "7X - Major Accident"
-    },
-    {
-      "unit": "B512",
-      "nature": "41/20 - Robbery - In Progress",
-      "nature_code": "41/20",
-      "nature_desc": "Robbery - In Progress",
-      "beat": "543",
-      "address": "4600 MAPLE AVE",
-      "unit_number": "B512",
-      "block": "4600",
-      "location": "MAPLE AVE",
-      "nature_of_call": "41/20 - Robbery - In Progress"
     },
     {
       "unit": "D531",
@@ -439,6 +425,18 @@
       "nature_of_call": "41/20 - Robbery - In Progress"
     },
     {
+      "unit": "B512",
+      "nature": "41/20 - Robbery - In Progress",
+      "nature_code": "41/20",
+      "nature_desc": "Robbery - In Progress",
+      "beat": "543",
+      "address": "4600 MAPLE AVE",
+      "unit_number": "B512",
+      "block": "4600",
+      "location": "MAPLE AVE",
+      "nature_of_call": "41/20 - Robbery - In Progress"
+    },
+    {
       "unit": "B454",
       "nature": "11B - Burg of Bus",
       "nature_code": "11B",
@@ -449,6 +447,18 @@
       "block": "400",
       "location": "S Zang Blvd",
       "nature_of_call": "11B - Burg of Bus"
+    },
+    {
+      "unit": "UAS32",
+      "nature": "DAEV-Dist Armed Encounter Veh",
+      "nature_code": null,
+      "nature_desc": null,
+      "beat": "343",
+      "address": "3000 Park Row Ave",
+      "unit_number": "UAS32",
+      "block": "3000",
+      "location": "Park Row Ave",
+      "nature_of_call": "DAEV-Dist Armed Encounter Veh"
     },
     {
       "unit": "B344",
@@ -475,16 +485,16 @@
       "nature_of_call": "DAEV-Dist Armed Encounter Veh"
     },
     {
-      "unit": "UAS32",
-      "nature": "DAEV-Dist Armed Encounter Veh",
-      "nature_code": null,
-      "nature_desc": null,
-      "beat": "343",
-      "address": "3000 Park Row Ave",
-      "unit_number": "UAS32",
-      "block": "3000",
-      "location": "Park Row Ave",
-      "nature_of_call": "DAEV-Dist Armed Encounter Veh"
+      "unit": "B633",
+      "nature": "6X - Major Dist (Violence)",
+      "nature_code": "6X",
+      "nature_desc": "Major Dist (Violence)",
+      "beat": "644",
+      "address": "13600 N Central Serv Sb",
+      "unit_number": "B633",
+      "block": "13600",
+      "location": "N Central Serv Sb",
+      "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
       "unit": "B621",
@@ -499,16 +509,16 @@
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "unit": "B633",
-      "nature": "6X - Major Dist (Violence)",
-      "nature_code": "6X",
-      "nature_desc": "Major Dist (Violence)",
-      "beat": "644",
-      "address": "13600 N Central Serv Sb",
-      "unit_number": "B633",
-      "block": "13600",
-      "location": "N Central Serv Sb",
-      "nature_of_call": "6X - Major Dist (Violence)"
+      "unit": "CE441",
+      "nature": "06 - Minor Disturbance",
+      "nature_code": "06",
+      "nature_desc": "Minor Disturbance",
+      "beat": "422",
+      "address": "3700 Goldman St",
+      "unit_number": "CE441",
+      "block": "3700",
+      "location": "Goldman St",
+      "nature_of_call": "06 - Minor Disturbance"
     },
     {
       "unit": "CE444",
@@ -518,18 +528,6 @@
       "beat": "422",
       "address": "3700 Goldman St",
       "unit_number": "CE444",
-      "block": "3700",
-      "location": "Goldman St",
-      "nature_of_call": "06 - Minor Disturbance"
-    },
-    {
-      "unit": "CE441",
-      "nature": "06 - Minor Disturbance",
-      "nature_code": "06",
-      "nature_desc": "Minor Disturbance",
-      "beat": "422",
-      "address": "3700 Goldman St",
-      "unit_number": "CE441",
       "block": "3700",
       "location": "Goldman St",
       "nature_of_call": "06 - Minor Disturbance"
@@ -595,30 +593,6 @@
       "nature_of_call": "6X - Major Dist (Violence)"
     },
     {
-      "unit": "B553",
-      "nature": "16A - Injured Person w/Amb",
-      "nature_code": "16A",
-      "nature_desc": "Injured Person w/Amb",
-      "beat": "523",
-      "address": "3700 Miles St",
-      "unit_number": "B553",
-      "block": "3700",
-      "location": "Miles St",
-      "nature_of_call": "16A - Injured Person w/Amb"
-    },
-    {
-      "unit": "B554",
-      "nature": "16A - Injured Person w/Amb",
-      "nature_code": "16A",
-      "nature_desc": "Injured Person w/Amb",
-      "beat": "523",
-      "address": "3700 Miles St",
-      "unit_number": "B554",
-      "block": "3700",
-      "location": "Miles St",
-      "nature_of_call": "16A - Injured Person w/Amb"
-    },
-    {
       "unit": "B653",
       "nature": "40 - Other",
       "nature_code": "40",
@@ -643,25 +617,25 @@
       "nature_of_call": "06 - Minor Disturbance"
     },
     {
-      "unit": "B415",
-      "nature": "12B - Business Alarm",
-      "nature_code": "12B",
-      "nature_desc": "Business Alarm",
-      "beat": "437",
-      "address": "4200 S Walton Walker Blvd",
-      "unit_number": "B415",
-      "block": "4200",
-      "location": "S Walton Walker Blvd",
-      "nature_of_call": "12B - Business Alarm"
-    },
-    {
-      "unit": "B726",
+      "unit": "B734",
       "nature": "DAEF-Dist Armed Encounter Foot",
       "nature_code": null,
       "nature_desc": null,
       "beat": "714",
       "address": "Southerland Ave / Belknap Ave",
-      "unit_number": "B726",
+      "unit_number": "B734",
+      "block": null,
+      "location": "Southerland Ave / Belknap Ave",
+      "nature_of_call": "DAEF-Dist Armed Encounter Foot"
+    },
+    {
+      "unit": "D711",
+      "nature": "DAEF-Dist Armed Encounter Foot",
+      "nature_code": null,
+      "nature_desc": null,
+      "beat": "714",
+      "address": "Southerland Ave / Belknap Ave",
+      "unit_number": "D711",
       "block": null,
       "location": "Southerland Ave / Belknap Ave",
       "nature_of_call": "DAEF-Dist Armed Encounter Foot"
@@ -689,6 +663,78 @@
       "block": "600",
       "location": "Pleasant Vista Dr",
       "nature_of_call": "13 - Prowler"
+    },
+    {
+      "unit": "B431",
+      "nature": "40 - Other",
+      "nature_code": "40",
+      "nature_desc": "Other",
+      "beat": "417",
+      "address": "900 W 12th St",
+      "unit_number": "B431",
+      "block": "900",
+      "location": "W 12th St",
+      "nature_of_call": "40 - Other"
+    },
+    {
+      "unit": "B414",
+      "nature": "6M - Loud Music Disturbance",
+      "nature_code": "6M",
+      "nature_desc": "Loud Music Disturbance",
+      "beat": "417",
+      "address": "S Van Buren Ave / Centre St",
+      "unit_number": "B414",
+      "block": null,
+      "location": "S Van Buren Ave / Centre St",
+      "nature_of_call": "6M - Loud Music Disturbance"
+    },
+    {
+      "unit": "UAS79",
+      "nature": "12B - Business Alarm",
+      "nature_code": "12B",
+      "nature_desc": "Business Alarm",
+      "beat": "722",
+      "address": "3000 S Lancaster Rd",
+      "unit_number": "UAS79",
+      "block": "3000",
+      "location": "S Lancaster Rd",
+      "nature_of_call": "12B - Business Alarm"
+    },
+    {
+      "unit": "B744",
+      "nature": "40 - Other",
+      "nature_code": "40",
+      "nature_desc": "Other",
+      "beat": "721",
+      "address": "200 E Saner Ave",
+      "unit_number": "B744",
+      "block": "200",
+      "location": "E Saner Ave",
+      "nature_of_call": "40 - Other"
+    },
+    {
+      "unit": "D515",
+      "nature": "40/01 - Other",
+      "nature_code": "40/01",
+      "nature_desc": "Other",
+      "beat": "532",
+      "address": "11100 Goodnight Ln",
+      "unit_number": "D515",
+      "block": "11100",
+      "location": "Goodnight Ln",
+      "nature_of_call": "40/01 - Other"
+    },
+    {
+      "unit": "B133",
+      "nature": "**PD Requested by Fire",
+      "nature_code": null,
+      "nature_desc": null,
+      "beat": "114",
+      "address": "4600 Columbia Ave",
+      "unit_number": "B133",
+      "block": "4600",
+      "location": "Columbia Ave",
+      "nature_of_call": "**PD Requested by Fire"
     }
   ]
 }
